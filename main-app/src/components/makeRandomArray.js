@@ -12,6 +12,7 @@ function makeArray(size, min=1, max=20) {
       for (let j = 0; j < usedNumbers.length; j++) {
         while (newNumber == usedNumbers[j]) {
           newNumber = getRandomInt(min, max);
+          j = 0;
         }
       }
       usedNumbers[i] = newNumber;
