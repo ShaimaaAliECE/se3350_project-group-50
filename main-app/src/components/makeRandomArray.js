@@ -4,7 +4,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
   }
   
-  function makeArray(size) {
+  function makeArray(size, min=0, max=20) {
     const myArray = new Array(size);
     for (let i = 0; i < myArray.length; i++) {
       myArray[i] = getRandomInt(1, 20);
