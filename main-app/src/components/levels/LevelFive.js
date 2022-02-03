@@ -3,7 +3,7 @@ import Number from "../Number";
 import DropBox from "../DropBox";
 
 function LevelFive(){
-    let array = makeArray(50);
+    let array = makeArray(50, 1, 100);
     let temp = [];
     for(let i = 0; i<array.length; i++){
         temp.push(Number(array[i]))
