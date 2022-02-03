@@ -44,7 +44,7 @@ function LevelOne(){
       console.log(rightTemp)
 
 
-        ReactDOM.render(<table><tbody><tr>{leftTemp}</tr> <tr> {rightTemp}</tr></tbody></table>, document.getElementById('stepOne'))
+        ReactDOM.render(<table><tbody><tr>{leftTemp} {rightTemp}</tr></tbody></table>, document.getElementById('stepOne'))
       }else if (step == 2) {
         ReactDOM.render(<h1>Step 2</h1>, document.getElementById('stepTwo'))
       }
