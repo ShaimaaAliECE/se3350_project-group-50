@@ -2,7 +2,6 @@ import Number from "../Number";
 import makeArray from "../makeRandomArray";
 import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom';
-import { TimeoutError } from "bluebird/js/release/errors";
 
 function LevelOne(){
     let array = makeArray(10);
@@ -44,7 +43,7 @@ function LevelOne(){
       console.log(rightTemp)
 
 
-        ReactDOM.render(<table><tbody><tr>{leftTemp} {rightTemp}</tr></tbody></table>, document.getElementById('stepOne'))
+        ReactDOM.render(<table><tbody><tr><td className="steps">{leftTemp}</td> <td className="steps">{rightTemp}</td></tr></tbody></table>, document.getElementById('stepOne'))
       }else if (step == 2) {
         ReactDOM.render(<h1>Step 2</h1>, document.getElementById('stepTwo'))
       }

@@ -34,3 +34,6 @@ table, tr{
   min-width: 32px;
 }
 
+.steps { 
+  padding-right: 50px;
+}
