@@ -1,4 +1,5 @@
 import Number from "./Number";
+import ReactDOM from 'react-dom';
 import makeArray from "./makeRandomArray";
 import { useState, useEffect } from "react";
 import { TimeoutError } from "bluebird/js/release/errors";
@@ -7,7 +8,7 @@ function LevelOne(){
     let array = makeArray(10);
     let temp = [];
 
-    const [step, setStep] = useState(0)
+    const [step, setStep] = useState(1)
 
     for(let i = 0; i<array.length; i++){
         temp.push(Number(array[i]))
@@ -24,6 +25,14 @@ function LevelOne(){
       setStep(step + 1)
 
       console.log(step)
+
+      if (step == 1){
+        ReactDOM.render(<h1>Step 1</h1>, document.getElementById('stepOne'))
+      }else if (step == 2) {
+        ReactDOM.render(<h1>Step 2</h1>, document.getElementById('stepTwo'))
+      }
+      
+      
     }
 
     return(
