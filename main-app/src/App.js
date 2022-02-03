@@ -1,11 +1,13 @@
+import ReactDOM from 'react-dom';
 import LevelTwo from "./components/LevelTwo";
+import LevelOne from "./components/LevelOne";
 
 let draggedItem = null;
 
 function App() {
   return(
     <div>
-      <LevelTwo />
+      <HomePage />
     </div>
   )
 }
@@ -14,7 +16,20 @@ function setDraggedItem(item){
   draggedItem = item;
 }
 
+function HomePage(){
+  
+}
 
+function MergeSortMenu(){
+  return(
+    <div>
+      Algorithm
+      <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
+      <br />
+      <button onClick= {()=> {ReactDOM.render(<LevelTwo/>, document.getElementById('root'))}}>Level Two</button>
+    </div>
+  )
+}
 
 
 function mergeSort(array) {
