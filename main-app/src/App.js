@@ -33,7 +33,4 @@ function makeArray(size) {
   return myArray;
 }
 
-let testing = makeArray(10);
-console.log(testing[2]);
-
 export default App;
