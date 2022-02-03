@@ -8,6 +8,9 @@ function LevelOne(){
     let temp = [];
     let leftTemp = [];
     let rightTemp = [];
+    let leftTemp1 = [];
+    let rightTemp1 = [];
+
     let step = 0
 
     //const [step, setStep] = useState(1)
@@ -41,11 +44,20 @@ function LevelOne(){
       }
       
       console.log(rightTemp)
-
-
         ReactDOM.render(<table><tbody><tr><td className="steps">{leftTemp}</td> <td className="steps">{rightTemp}</td></tr></tbody></table>, document.getElementById('stepOne'))
+      
       }else if (step == 2) {
-        ReactDOM.render(<h1>Step 2</h1>, document.getElementById('stepTwo'))
+
+        for(let i=0; i<leftTemp.length/2; i++){
+          leftTemp1.push(leftTemp[i])
+        }
+
+        for(let i=3; i<leftTemp.length; i++){
+          rightTemp1.push(leftTemp[i])
+        }
+  
+
+        ReactDOM.render(<table><tbody><tr><td className="steps">{leftTemp1}</td> <td className="steps">{rightTemp1}</td></tr></tbody></table>, document.getElementById('stepTwo'))
       }
       
       
