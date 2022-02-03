@@ -14,6 +14,10 @@ function App() {
       <table><tr>{temp}</tr></table>
       
       <DropBox />
+      <DropBox />
+      <DropBox />
+      <DropBox />
+      <DropBox />
     </div>
   )
 }
