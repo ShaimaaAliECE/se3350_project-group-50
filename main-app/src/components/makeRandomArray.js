@@ -4,7 +4,11 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
   }
   
+<<<<<<< HEAD
 function makeArray(size) {
+=======
+  function makeArray(size, min=0, max=20) {
+>>>>>>> 37f98836cd868607cc477c7693352adcd1d6d11a
     const myArray = new Array(size);
     const usedNumbers = new Array(size);
     for (let i = 0; i < myArray.length; i++) {
