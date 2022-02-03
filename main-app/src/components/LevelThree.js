@@ -1,4 +1,6 @@
 import makeArray from "./makeRandomArray";
+import Number from "./Number";
+import DropBox from "./DropBox";
 
 function LevelThree(){
     let array = makeArray(10);

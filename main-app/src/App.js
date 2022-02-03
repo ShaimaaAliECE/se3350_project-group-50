@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom';
 import LevelTwo from "./components/LevelTwo";
 import LevelOne from "./components/LevelOne";
-import LevelThree from "./components/LevelOne";
-import LevelFour from "./components/LevelOne";
-import LevelFive from "./components/LevelOne";
+import LevelThree from "./components/LevelThree";
+import LevelFour from "./components/LevelFour";
+import LevelFive from "./components/LevelFive";
 
 let draggedItem = null;
 
@@ -63,6 +63,21 @@ function MergeSortMenu(){
       <button onClick= {()=> {ReactDOM.render(<LevelFour/>, document.getElementById('root'))}}>Level Four</button>
       <br />
       <button onClick= {()=> {ReactDOM.render(<LevelFive/>, document.getElementById('root'))}}>Level Five</button>
+    </div>
+  )
+}
+
+function FuilurePageMenu(){
+  return(
+    <div>
+      You Lost<br />
+      <button onClick= {()=> {ReactDOM.render(<div />, document.getElementById('root'))}}>Replay Level</button>
+      <br />
+      <button onClick= {()=> {ReactDOM.render(<MergeSortMenu/>, document.getElementById('root'))}}>Choose Another Level</button>
+      <br />
+      <button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}>Pick Algorithm</button>
+      <br />
+      <button onClick= {()=> {ReactDOM.render(<HomePage/>, document.getElementById('root'))}}>Quit</button>
     </div>
   )
 }
