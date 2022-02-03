@@ -31,7 +31,13 @@ code {
 
 table, tr{
   min-height: 32px;
-  min-width: 32px;
+  min-width: 30%;
+  margin-left: 30%; 
+
+}
+
+td{
+  text-align: center;
 }
 
 .steps { 
