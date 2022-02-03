@@ -1,6 +1,8 @@
 import Number from "./components/Number";
 import DropBox from "./components/DropBox";
 
+let draggedItem = null;
+
 function App() {
   let array = makeArray(10);
   let temp = [];
@@ -14,6 +16,10 @@ function App() {
       <DropBox />
     </div>
   )
+}
+
+function setDraggedItem(item){
+  draggedItem = item;
 }
 
 function getRandomInt(min, max) {
@@ -60,4 +66,4 @@ function merge(left, right) {
     return [ ...arr, ...left, ...right ]
 }
 
-export default App;
+export {App, draggedItem, setDraggedItem}
