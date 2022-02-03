@@ -7,8 +7,9 @@ import { TimeoutError } from "bluebird/js/release/errors";
 function LevelOne(){
     let array = makeArray(10);
     let temp = [];
+    let step = 0
 
-    const [step, setStep] = useState(1)
+    //const [step, setStep] = useState(1)
 
     for(let i = 0; i<array.length; i++){
         temp.push(Number(array[i]))
@@ -22,9 +23,11 @@ function LevelOne(){
       //   leftTemp.push(temp[i])
       // }
 
-      setStep(step + 1)
+      // setStep(step + 1)
 
-      console.log(step)
+      // console.log(step)
+
+      step += 1
 
       if (step == 1){
         ReactDOM.render(<h1>Step 1</h1>, document.getElementById('stepOne'))
