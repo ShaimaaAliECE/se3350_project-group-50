@@ -1,4 +1,5 @@
 import Number from "./components/Number";
+import DropBox from "./components/DropBox";
 
 function App() {
   let array = makeArray(10);
@@ -8,7 +9,9 @@ function App() {
   }
   return(
     <div>
-      {temp}
+      <table><tr>{temp}</tr></table>
+      
+      <DropBox />
     </div>
   )
 }
