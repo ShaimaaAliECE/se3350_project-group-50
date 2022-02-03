@@ -22,9 +22,15 @@ code {
 
 .dropBox{
   min-width: 20px;
-  max-width: 20px;
-  min-height: 20px;
-  max-height: 20px;
+  min-height: 50px;
+  
   border-style: solid;
+  margin: 15px;
+  text-align: center;
+}
+
+table, tr{
+  min-height: 32px;
+  min-width: 32px;
 }
 

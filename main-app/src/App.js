@@ -11,13 +11,19 @@ function App() {
   }
   return(
     <div>
-      <table><tr>{temp}</tr></table>
+      <table><tbody><tr>{temp}</tr></tbody></table>
+      <table>
+        <tbody>
+        <tr>
+          <DropBox />
+          <DropBox />
+          <DropBox />
+          <DropBox />
+          <DropBox />
+        </tr>
+        </tbody>
+      </table>
       
-      <DropBox />
-      <DropBox />
-      <DropBox />
-      <DropBox />
-      <DropBox />
     </div>
   )
 }

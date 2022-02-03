@@ -5,9 +5,9 @@ import { useState } from "react";
 function DropBox(){
     const [number, setNumber] = useState(null)
     return(
-    <div className="dropBox" onDragOver={(e)=> e.preventDefault()} onDragEnd={(e)=> e.preventDefault()} onDrop={() => setNumber(draggedItem)}>
+    <td className="dropBox" onDragOver={(e)=> e.preventDefault()} onDragEnd={(e)=> e.preventDefault()} onDrop={() => setNumber(draggedItem)}>
         {number}
-    </div>
+    </td>
     )
 }
 
