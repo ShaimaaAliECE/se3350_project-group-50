@@ -1,7 +1,7 @@
 import makeArray from "../makeRandomArray";
 import Number from "../Number";
 import DropBox from "../DropBox";
-import FuilurePageMenu from "../FuilurePageMenu";
+import FuilurePageMenu from "../FailurePageMenu";
 import ReactDOM from 'react-dom';
 
 function LevelThree(){
