@@ -13,8 +13,8 @@ function makeArray(size, min=1, max=20) {
         while (newNumber == usedNumbers[j]) {
           newNumber = getRandomInt(min, max);
         }
-        usedNumbers[i] = newNumber;
       }
+      usedNumbers[i] = newNumber;
       myArray[i] = newNumber;
     }
     return myArray;
