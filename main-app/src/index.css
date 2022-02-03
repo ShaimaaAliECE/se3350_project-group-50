@@ -13,10 +13,9 @@ code {
 }
 
 .number{
-  display: table-cell;
-  min-width: 20px;
+  min-width: 25px;
+  max-width: max-content;
   min-height: 10px;
-  max-height: 10px;
   text-align: center;
   background-color: aqua;
 }
@@ -28,3 +27,4 @@ code {
   max-height: 20px;
   border-style: solid;
 }
+

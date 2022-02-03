@@ -1,13 +1,12 @@
 //function for dragable numbers
 function Number(num){
     return(
-    <div className="number" draggable>
-        <p>
+    <td className="number" draggable>
         {
             num
         }
-        </p>
-    </div>
+    </td>
+    
     )
 }
 
