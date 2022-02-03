@@ -5,59 +5,50 @@ import ReactDOM from 'react-dom';
 
 function LevelOne(){
     let array = makeArray(10);
-    let temp = [];
-    let leftTemp = [];
-    let rightTemp = [];
-    let leftTemp1 = [];
-    let rightTemp1 = [];
+    let unsortedArray = [];
+
+    // -- STEP 1 --
+    let unsortedArray_LeftHalf = [];
+    let unsortedArray_RightHalf = [];
+
+    // -- STEP 2 --
+    let leftArray_LeftHalf = [];
+    let leftArray_RightHalf = [];
+
+    let rightArray_LeftHalf = [];
+    let rightArray_RightHalf = [];
+
+    // --
 
     let step = 0
 
     //const [step, setStep] = useState(1)
 
     for(let i = 0; i<array.length; i++){
-        temp.push(Number(array[i]))
+        unsortedArray.push(Number(array[i]))
     }
 
 
     const onClick = () => {
-      // let leftTemp = []
-
-      // for (let i = 0; i < temp.length/2; i++){
-      //   leftTemp.push(temp[i])
-      // }
-
-      // setStep(step + 1)
-
-      // console.log(step)
 
       step += 1
 
       if (step == 1){
 
-      for (let i = 0; i < temp.length/2; i++){
-        leftTemp.push(temp[i])
-      }
+        unsortedArray_LeftHalf = [...unsortedArray].splice(0, unsortedArray.length/2)
+        unsortedArray_RightHalf = [...unsortedArray].splice(unsortedArray.length/2, unsortedArray.length)
 
-      for (let i=5; i < temp.length; i++){
-        rightTemp.push(temp[i])
-      }
-      
-      console.log(rightTemp)
-        ReactDOM.render(<table><tbody><tr><td className="steps">{leftTemp}</td> <td className="steps">{rightTemp}</td></tr></tbody></table>, document.getElementById('stepOne'))
+        ReactDOM.render(<table><tbody><tr><td className="steps">{unsortedArray_LeftHalf}</td> <td className="steps">{unsortedArray_RightHalf}</td></tr></tbody></table>, document.getElementById('stepOne'))
       
       }else if (step == 2) {
 
-        for(let i=0; i<leftTemp.length/2; i++){
-          leftTemp1.push(leftTemp[i])
-        }
+        leftArray_LeftHalf = [...unsortedArray_LeftHalf].splice(0 , unsortedArray_LeftHalf.length/2)
+        leftArray_RightHalf = [...unsortedArray_LeftHalf].splice(unsortedArray_LeftHalf.length/2 , unsortedArray_LeftHalf.length)
 
-        for(let i=3; i<leftTemp.length; i++){
-          rightTemp1.push(leftTemp[i])
-        }
-  
+        rightArray_LeftHalf = [...unsortedArray_RightHalf].splice(0 , unsortedArray_RightHalf.length/2)
+        rightArray_RightHalf = [...unsortedArray_RightHalf].splice(unsortedArray_RightHalf.length/2 , unsortedArray_RightHalf.length)
 
-        ReactDOM.render(<table><tbody><tr><td className="steps">{leftTemp1}</td> <td className="steps">{rightTemp1}</td></tr></tbody></table>, document.getElementById('stepTwo'))
+        ReactDOM.render(<table><tbody><tr><td className="steps">{leftArray_LeftHalf}</td> <td className="steps">{leftArray_RightHalf}</td><td className="steps">{rightArray_LeftHalf}</td> <td className="steps">{rightArray_RightHalf}</td></tr></tbody></table>, document.getElementById('stepTwo'))
       }
       
       
@@ -66,7 +57,7 @@ function LevelOne(){
     return(
         <div>
         <button onClick = {onClick}>Next Step</button>
-        <table><tbody><tr>{temp}</tr></tbody></table>
+        <table><tbody><tr>{unsortedArray}</tr></tbody></table>
         </div>
     )
 }
