@@ -1,8 +1,10 @@
-import makeArray from "./makeRandomArray";
-import Number from "./Number";
-import DropBox from "./DropBox";
+import makeArray from "../makeRandomArray";
+import Number from "../Number";
+import DropBox from "../DropBox";
+import FuilurePageMenu from "../FuilurePageMenu";
+import ReactDOM from 'react-dom';
 
-function LevelTwo(){
+function LevelThree(){
     let array = makeArray(10);
     let temp = [];
     for(let i = 0; i<array.length; i++){
@@ -22,10 +24,10 @@ function LevelTwo(){
             </tr>
             </tbody>
         </table>
+        <button onClick= {()=> {ReactDOM.render(<FuilurePageMenu/>, document.getElementById('root'))}}>Die</button>
         
         </div>
     )
 }
 
-
-export default LevelTwo;
+export default LevelThree;

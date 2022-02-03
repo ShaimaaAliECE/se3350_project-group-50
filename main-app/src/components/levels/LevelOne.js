@@ -1,5 +1,5 @@
-import Number from "./Number";
-import makeArray from "./makeRandomArray";
+import Number from "../Number";
+import makeArray from "../makeRandomArray";
 import { useState, useEffect } from "react";
 import { TimeoutError } from "bluebird/js/release/errors";
 
