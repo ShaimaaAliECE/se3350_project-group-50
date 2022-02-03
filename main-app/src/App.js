@@ -1,5 +1,5 @@
 function App() {
-
+//cool stuff
 }
 
 function getRandomInt(min, max) {
