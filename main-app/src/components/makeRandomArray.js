@@ -4,14 +4,14 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
   }
   
-function makeArray(size) {
+function makeArray(size, min=1, max=20) {
     const myArray = new Array(size);
     const usedNumbers = new Array(size);
     for (let i = 0; i < myArray.length; i++) {
-      let newNumber = getRandomInt(1, 20);
+      let newNumber = getRandomInt(min, max);
       for (let j = 0; j < usedNumbers.length; j++) {
         while (newNumber == usedNumbers[j]) {
-          newNumber = getRandomInt(1, 20);
+          newNumber = getRandomInt(min, max);
         }
       }
       myArray[i] = newNumber;
