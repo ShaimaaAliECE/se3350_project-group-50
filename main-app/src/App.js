@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom';
 import LevelTwo from "./components/LevelTwo";
 import LevelOne from "./components/LevelOne";
-import LevelThree from "./components/LevelOne";
-import LevelFour from "./components/LevelOne";
-import LevelFive from "./components/LevelOne";
+import LevelThree from "./components/LevelThree";
+import LevelFour from "./components/LevelFour";
+import LevelFive from "./components/LevelFive";
 
 let draggedItem = null;
 
