@@ -1,5 +1,16 @@
-function App() {
+import Number from "./components/Number";
 
+function App() {
+  let array = makeArray(10);
+  let temp = [];
+  for(let i = 0; i<array.length; i++){
+    temp.push(Number(array[i]))
+  }
+  return(
+    <div>
+      {temp}
+    </div>
+  )
 }
 
 function getRandomInt(min, max) {
