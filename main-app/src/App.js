@@ -7,7 +7,7 @@ let draggedItem = null;
 function App() {
   return(
     <div>
-      <HomePage />
+      <MergeSortMenu />
     </div>
   )
 }
@@ -17,7 +17,7 @@ function setDraggedItem(item){
 }
 
 function HomePage(){
-  
+
 }
 
 function MergeSortMenu(){
