@@ -34,10 +34,8 @@ function print(node, level){
 function LevelOneTest(){
     let array = makeArray(10);
     let unsortedArray = [];
-    // -- STEP 1 --
+    
     let step = 0;
-
-    let temp = {}
 
     for(let i = 0; i<array.length; i++){
         unsortedArray.push(Number(array[i]))
@@ -59,25 +57,38 @@ function LevelOneTest(){
         for(let i = 0; i<content.length; i++){
             let tempArray = [];
             for(let c of content[i]){
-                tempArray.push(<td>{c}, </td>)
+                tempArray.push(<td style={{paddingRight: "10px"}}>{c}, </td>)
             }
-            tempArray.push(<td style={{padding: "10px"}}></td>)
-            tempArray.push(<td></td>)
-            unsortedArray[i] = Number(tempArray)
+            switch(step){
+                case 2:
+                    tempArray.push(<td style={{paddingRight: "150px", paddingTop: "50px"}}></td>)
+                    break;
+                case 3: 
+                    tempArray.push(<td style={{paddingRight: "100px", paddingTop: "50px"}}></td>)
+                    break;
+                case 4:
+                    tempArray.push(<td style={{paddingRight: "60px", paddingTop: "50px"}}></td>)
+                    break;
+                case 5:
+                    
+                    tempArray.push(<td style={{paddingRight: "30px", paddingTop: "50px"}}></td>)
+            }
+            
+            unsortedArray[i] = tempArray
         }
         content = [];
         switch(step){
             case 2:
-                ReactDOM.render(<table><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepOne'))
+                ReactDOM.render(<table style={{marginLeft: "25%"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepOne'))
                 break;
             case 3:
-                ReactDOM.render(<table><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepTwo'))
+                ReactDOM.render(<table style={{marginLeft: "20%"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepTwo'))
                 break;
             case 4:
-                ReactDOM.render(<table style={{marginLeft: "350px"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepThree'))
+                ReactDOM.render(<table style={{marginLeft: "16%"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepThree'))
                 break;
             case 5:
-                ReactDOM.render(<table style={{marginLeft: "250px"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepFour'))
+                ReactDOM.render(<table style={{marginLeft: "13%"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepFour'))
                 break;
         }
         
