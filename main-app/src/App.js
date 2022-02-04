@@ -6,6 +6,7 @@ import LevelFour from "./components/levels/LevelFour";
 import LevelFive from "./components/levels/LevelFive";
 
 let draggedItem = null;
+let currentLevel = "Level1";
 
 function App() {
   return(
