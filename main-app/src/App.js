@@ -4,9 +4,10 @@ import LevelOne from "./components/levels/LevelOne";
 import LevelThree from "./components/levels/LevelThree";
 import LevelFour from "./components/levels/LevelFour";
 import LevelFive from "./components/levels/LevelFive";
+import LevelOneTest from "./components/levels/LevelOneTest";
 
 let draggedItem = null;
-let currentLevel = "Level1";
+//let currentLevel = "Level1"; will not be used till probably sprint 3
 
 function App() {
   return(
@@ -55,7 +56,7 @@ function MergeSortMenu(){
   return(
     <div>
       Choose Level<br />
-      <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
+      <button onClick= {()=> {ReactDOM.render(<LevelOneTest/>, document.getElementById('root'))}}>Level One</button>
       <br />
       <button onClick= {()=> {ReactDOM.render(<LevelTwo/>, document.getElementById('root'))}}>Level Two</button>
       <br />
