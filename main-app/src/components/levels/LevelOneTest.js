@@ -18,7 +18,6 @@ function divide(node){
 }
 
 function print(node, level){
-
     if (node == null)
         return;
     if (level == 1){
@@ -48,46 +47,35 @@ function LevelOneTest(){
     let tree = {value: array, left:null, right:null};
     console.log(tree)
 
-    const onClick = () => {
+    function onClick() {
+        if(step == 0){
+            step += 1;
+            divide(tree);
+        }
         step += 1;
         divide(tree);
         print(tree, step);
-        if(step = 2){
-            console.log(content)
-            unsortedArray = [];
-            for(let i = 0; i<content.length; i++){
-                unsortedArray[i] = Number(content[i])
-            }
-            content = [];
-            ReactDOM.render(<table><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepOne'))
+        console.log(content)
+        unsortedArray = [];
+        for(let i = 0; i<content.length; i++){
+            unsortedArray[i] = Number(content[i])
         }
-        else if(step = 3){
-            console.log(content)
-            unsortedArray = [];
-            for(let i = 0; i<content.length; i++){
-                unsortedArray[i] = Number(content[i])
-            }
-            content = [];
-            ReactDOM.render(<table><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepTwo'))
+        content = [];
+        switch(step){
+            case 2:
+                ReactDOM.render(<table><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepOne'))
+                break;
+            case 3:
+                ReactDOM.render(<table><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepTwo'))
+                break;
+            case 4:
+                ReactDOM.render(<table><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepThree'))
+                break;
+            case 5:
+                ReactDOM.render(<table><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepFour'))
+                break;
         }
-        else if(step=4){
-            console.log(content)
-            unsortedArray = [];
-            for(let i = 0; i<content.length; i++){
-                unsortedArray[i] = Number(content[i])
-            }
-            content = [];
-            ReactDOM.render(<table><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepThree'))
-        }
-        else if(step=5){
-            console.log(content)
-            unsortedArray = [];
-            for(let i = 0; i<content.length; i++){
-                unsortedArray[i] = Number(content[i])
-            }
-            content = [];
-            ReactDOM.render(<table><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepFour'))
-        }
+        
 
     }
     
