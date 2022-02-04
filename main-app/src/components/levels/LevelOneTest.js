@@ -22,7 +22,6 @@ function print(node, level){
         return;
     if (level == 1){
         content.push(node.value);
-        content.push([]);
     }
     else if (level > 1)
     {
@@ -58,7 +57,13 @@ function LevelOneTest(){
         console.log(content)
         unsortedArray = [];
         for(let i = 0; i<content.length; i++){
-            unsortedArray[i] = Number(content[i])
+            let tempArray = [];
+            for(let c of content[i]){
+                tempArray.push(<td>{c}, </td>)
+            }
+            tempArray.push(<td style={{padding: "10px"}}></td>)
+            tempArray.push(<td></td>)
+            unsortedArray[i] = Number(tempArray)
         }
         content = [];
         switch(step){
@@ -69,10 +74,10 @@ function LevelOneTest(){
                 ReactDOM.render(<table><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepTwo'))
                 break;
             case 4:
-                ReactDOM.render(<table><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepThree'))
+                ReactDOM.render(<table style={{marginLeft: "350px"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepThree'))
                 break;
             case 5:
-                ReactDOM.render(<table><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepFour'))
+                ReactDOM.render(<table style={{marginLeft: "250px"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepFour'))
                 break;
         }
         
