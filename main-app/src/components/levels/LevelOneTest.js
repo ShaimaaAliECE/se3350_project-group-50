@@ -96,7 +96,8 @@ function LevelOneTest(){
         if(step > 5){
             switch(step){
                 case 6:
-                    ReactDOM.render(<></>, document.getElementById('stepFour')) 
+                    ReactDOM.render(<></>, document.getElementById('stepFour'))
+                    
                     break;
                 case 7:
                     ReactDOM.render(<></>, document.getElementById('stepThree')) 
