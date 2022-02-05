@@ -42,7 +42,6 @@ function AdminLoginMenu(){
   )
 }
 
-
 function ChooseAlgoMenu(){
   return(
     <div>
