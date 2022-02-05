@@ -1,5 +1,6 @@
 import Number from "../Number";
 import makeArray from "../makeRandomArray";
+import LevelTwo from "./LevelTwo";
 import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom';
 
@@ -50,49 +51,67 @@ function LevelOneTest(){
             divide(tree);
         }
         step += 1;
-        divide(tree);
-        print(tree, step);
-        console.log(content)
-        unsortedArray = [];
-        for(let i = 0; i<content.length; i++){
-            let tempArray = [];
-            for(let c of content[i]){
-                tempArray.push(<td style={{paddingRight: "10px"}}>{c}, </td>)
+        if(step < 6){
+            divide(tree);
+            print(tree, step);
+            console.log(content)
+            unsortedArray = [];
+            for(let i = 0; i<content.length; i++){
+                let tempArray = [];
+                for(let c of content[i]){
+                    tempArray.push(<td style={{paddingRight: "10px"}}>{c}, </td>)
+                }
+                switch(step){
+                    case 2:
+                        tempArray.push(<td style={{paddingRight: "150px", paddingTop: "50px"}}></td>)
+                        break;
+                    case 3: 
+                        tempArray.push(<td style={{paddingRight: "100px", paddingTop: "50px"}}></td>)
+                        break;
+                    case 4:
+                        tempArray.push(<td style={{paddingRight: "60px", paddingTop: "50px"}}></td>)
+                        break;
+                    case 5:
+                        tempArray.push(<td style={{paddingRight: "30px", paddingTop: "50px"}}></td>)
+                }
+                
+                unsortedArray[i] = tempArray
             }
+            content = [];
             switch(step){
                 case 2:
-                    tempArray.push(<td style={{paddingRight: "150px", paddingTop: "50px"}}></td>)
+                    ReactDOM.render(<table style={{marginLeft: "25%"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepOne'))
                     break;
-                case 3: 
-                    tempArray.push(<td style={{paddingRight: "100px", paddingTop: "50px"}}></td>)
+                case 3:
+                    ReactDOM.render(<table style={{marginLeft: "20%"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepTwo'))
                     break;
                 case 4:
-                    tempArray.push(<td style={{paddingRight: "60px", paddingTop: "50px"}}></td>)
+                    ReactDOM.render(<table style={{marginLeft: "16%"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepThree'))
                     break;
                 case 5:
-                    
-                    tempArray.push(<td style={{paddingRight: "30px", paddingTop: "50px"}}></td>)
+                    ReactDOM.render(<table style={{marginLeft: "13%"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepFour'))
+                    break;
             }
-            
-            unsortedArray[i] = tempArray
         }
-        content = [];
-        switch(step){
-            case 2:
-                ReactDOM.render(<table style={{marginLeft: "25%"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepOne'))
-                break;
-            case 3:
-                ReactDOM.render(<table style={{marginLeft: "20%"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepTwo'))
-                break;
-            case 4:
-                ReactDOM.render(<table style={{marginLeft: "16%"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepThree'))
-                break;
-            case 5:
-                ReactDOM.render(<table style={{marginLeft: "13%"}}><tbody><tr>{unsortedArray}</tr></tbody></table>, document.getElementById('stepFour'))
-                break;
-        }
-        
+        if(step > 5){
+            switch(step){
+                case 6:
+                    ReactDOM.render(<></>, document.getElementById('stepFour')) 
+                    break;
+                case 7:
+                    ReactDOM.render(<></>, document.getElementById('stepThree')) 
+                    break;
+                case 8:
+                    ReactDOM.render(<></>, document.getElementById('stepTwo'))
+                    break;
+                case 9:
+                    ReactDOM.render(<></>, document.getElementById('stepOne')) 
+                    break;
+                case 10:
+                    ReactDOM.render(<LevelTwo />, document.getElementById('root')) 
 
+            }
+        }
     }
     
     
