@@ -17,6 +17,31 @@ function App() {
   )
 }
 
+function setDraggedItem(item){
+  draggedItem = item;
+}
+
+function HomePage(){
+  return(
+    <div>
+      Algorothm Quiz<br />
+      <button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}>Choose Algorithm</button>
+      <br />
+      <button onClick= {()=> {ReactDOM.render(<AdminLoginMenu/>, document.getElementById('root'))}}>Admin Login</button>
+    </div>
+  )
+}
+
+function AdminLoginMenu(){
+  return(
+    <div>
+      Login<br/>
+      Enter UserName: <input type={"text"}></input><br/>
+      Enter Password: <input type={"text"}></input>
+    </div>
+  )
+}
+
 
 function ChooseAlgoMenu(){
   return(
