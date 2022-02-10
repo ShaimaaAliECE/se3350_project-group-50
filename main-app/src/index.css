@@ -13,31 +13,26 @@ code {
 }
 
 .number{
-  min-width: 25px;
-  max-width: max-content;
-  min-height: 10px;
+  margin-left: 30%;
+  min-width: 40px;
+  min-height: 40px;
   text-align: center;
   background-color: aqua;
 }
 
-.dropBox{
-  min-width: 20px;
-  min-height: 50px;
-  
+.dropBox{  
   border-style: solid;
-  margin: 15px;
+  padding:10px;
   text-align: center;
 }
 
 table, tr{
-  min-height: 32px;
-  min-width: 30%;
-  margin-left: 30%; 
-
+  margin-left: 35%; 
 }
 
-td{
+td{  
   text-align: center;
+  background-color: aqua;
 }
 
 .steps { 

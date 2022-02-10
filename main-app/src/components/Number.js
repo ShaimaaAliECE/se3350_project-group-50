@@ -1,18 +1,15 @@
 import PropTypes from 'prop-types'
 import {draggedItem, setDraggedItem} from '../App.js'
 //function for dragable numbers
-function Number(num){
+function Number(props){
     return(
-    <td className="number" draggable onDragStart={() => {setDraggedItem(num)}}>
+    <td className="number" draggable onDragStart={() => {setDraggedItem(props.num)}}>
         {
-            num
+            props.num
         }
     </td>
     )
 }
 
-Number.propTypes = {
-    num : PropTypes.number,
-}
 
 export default Number;

@@ -56,7 +56,7 @@ function MergeSortMenu(){
   return(
     <div>
       Choose Level<br />
-      <button onClick= {()=> {ReactDOM.render(<LevelOneTest/>, document.getElementById('root'))}}>Level One</button>
+      <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
       <br />
       <button onClick= {()=> {ReactDOM.render(<LevelTwo/>, document.getElementById('root'))}}>Level Two</button>
       <br />
