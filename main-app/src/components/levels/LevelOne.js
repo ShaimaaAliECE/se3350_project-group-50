@@ -20,7 +20,7 @@ function LevelOne(){
     console.log(unsortedArray)
     switch(step){
       case 2:
-        ReactDOM.render(<Temp style={{marginLeft: "35%"}} array={unsortedArray}/>, document.getElementById('stepOne'));
+        ReactDOM.render(<Temp style={{marginLeft: "34%"}} array={unsortedArray}/>, document.getElementById('stepOne'));
         break;
       case 3:
         ReactDOM.render(<Temp style={{marginLeft: "32%"}} array={unsortedArray}/>, document.getElementById('stepTwo'))
@@ -29,7 +29,7 @@ function LevelOne(){
         ReactDOM.render(<Temp style={{marginLeft: "30%"}} array={unsortedArray}/>, document.getElementById('stepThree'));
         break;
       case 5:
-        ReactDOM.render(<Temp style={{marginLeft: "40%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
+        ReactDOM.render(<Temp style={{marginLeft: "31%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
         break;
     }
   }
