@@ -35,13 +35,19 @@ function HomePage(){
 function UserLogin(){
 return(
   <div>
+  <form id="login-form">
 <label for="email">Email</label>
-<input type="text" placeholder="Enter Email" name="Email" required/>
+<input type="text" placeholder="Enter Email" name="Email" id="email-field" class="login-form-field"/>
 <br/>
-<button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}} type="submit">Login</button>
-</div>
-)
+<input type="submit" value="login" id="login-form-submit" onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}} onclick="saveEmail"/>
+</form>
+</div>)
 }
+const loginButton = document.getElementById("login-form-submit");
+loginButton.addEventListener("click", (e) => {
+
+
+})
 function UserLoginMenu(){
   return(
   <div>
