@@ -43,11 +43,11 @@ return(
 </form>
 </div>)
 }
-const loginButton = document.getElementById("login-form-submit");
+/*const loginButton = document.getElementById("login-form-submit");
 loginButton.addEventListener("click", (e) => {
 
 
-})
+})*/
 function UserLoginMenu(){
   return(
   <div>
