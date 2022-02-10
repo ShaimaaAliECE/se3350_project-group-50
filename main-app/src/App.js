@@ -82,6 +82,7 @@ function mergeSort(array) {
   return merge(mergeSort(left),mergeSort(array))
 }
 
+//function for merging on left and right
 function merge(left, right) {
     let arr = []
     // Break out of loop if any one of the array gets empty
