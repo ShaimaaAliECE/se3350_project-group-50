@@ -29,7 +29,7 @@ function LevelOne(){
         ReactDOM.render(<Temp style={{marginLeft: "30%"}} array={unsortedArray}/>, document.getElementById('stepThree'));
         break;
       case 5:
-        ReactDOM.render(<Temp style={{marginLeft: "31%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
+        ReactDOM.render(<Temp style={{marginLeft: "23%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
         break;
     }
   }
@@ -42,7 +42,7 @@ function LevelOne(){
       createTree(node.left);
       createTree(node.right)
     } else{
-      node.left = {value: [], left: null, right: null}
+      node.left = {value: node.value, left: null, right: null}
       node.right = {value: [], left: null, right: null}
     }
     
