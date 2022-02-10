@@ -16,6 +16,13 @@ function LevelTwo(){
             <DropBox />
             <DropBox />
             <DropBox />
+            &nbsp;
+            &nbsp;    
+            <DropBox />
+            <DropBox />
+            <DropBox />
+            <DropBox />
+            <DropBox />
             </tr>
             </tbody>
         </table>
