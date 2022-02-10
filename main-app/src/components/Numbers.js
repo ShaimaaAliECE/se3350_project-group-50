@@ -9,7 +9,7 @@ function Numbers(props){
                 <Number key = {a} num={a} /> 
             ))
         }
-        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </>
     )
 }
