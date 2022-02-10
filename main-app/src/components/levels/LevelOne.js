@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 
 function LevelOne(){
   const[array, setArray] = useState(makeArray(10))
-  const[step, setStep] = useState(1) 
+  const[step, setStep] = useState(2) 
   let tree = {value: array, left:null, right:null};
   
   let unsortedArray = [];
@@ -20,19 +20,16 @@ function LevelOne(){
     console.log(unsortedArray)
     switch(step){
       case 2:
-        ReactDOM.render(<Temp array={unsortedArray}/>, document.getElementById('stepOne'));
+        ReactDOM.render(<Temp style={{marginLeft: "35%"}} array={unsortedArray}/>, document.getElementById('stepOne'));
         break;
       case 3:
-        ReactDOM.render(<Temp array={unsortedArray}/>, document.getElementById('stepTwo'))
+        ReactDOM.render(<Temp style={{marginLeft: "32%"}} array={unsortedArray}/>, document.getElementById('stepTwo'))
         break;
       case 4:
-        ReactDOM.render(<Temp array={unsortedArray}/>, document.getElementById('stepThree'));
+        ReactDOM.render(<Temp style={{marginLeft: "30%"}} array={unsortedArray}/>, document.getElementById('stepThree'));
         break;
       case 5:
-        ReactDOM.render(<Temp array={unsortedArray}/>, document.getElementById('stepFour'));
-        break;
-      case 6:
-        ReactDOM.render(<Temp array={unsortedArray}/>, document.getElementById('stepFive'));
+        ReactDOM.render(<Temp style={{marginLeft: "40%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
         break;
     }
   }
@@ -69,14 +66,14 @@ function LevelOne(){
   return(
     <div>
       <button onClick = {onClick}>Next Step</button>
-      <table><tr><Numbers array={tree.value}/></tr></table>       
+      <table style={{marginLeft: "35%"}}><tr><Numbers  array={tree.value}/></tr></table>       
     </div>
   )
 }
 
 function Temp(props){
   return(
-    <table><tr>
+    <table style={props.style}><tr>
       {props.array.map(a => (
         <Numbers array={a}/>
       ))}
