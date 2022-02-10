@@ -2,10 +2,10 @@ const mysql = require('mysql');
 
 function establishConnection(){
     let connection = mysql.createConnection({
-        host: 'localhost',
+        host: '104.155.146.37',
         user: 'root',
         password: 'password',
-        database: 'mergesort'
+        database: 'projectDB'
     });
 
     return connection;
