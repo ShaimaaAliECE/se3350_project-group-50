@@ -1,5 +1,5 @@
 import makeArray from "../makeRandomArray";
-import Number from "../Number";
+import Numbers from "../Numbers";
 import DropBox from "../DropBox";
 
 function LevelFour(){
@@ -10,7 +10,7 @@ function LevelFour(){
     }
     return(
         <div>
-        <table><tbody><tr>{temp}</tr></tbody></table>
+        <table><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table>
             <tbody>
             <tr>
