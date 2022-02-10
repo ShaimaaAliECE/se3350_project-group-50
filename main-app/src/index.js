@@ -4,13 +4,16 @@ import './index.css';
 import {App} from './App';
 import reportWebVitals from './reportWebVitals';
 
-const newConnection = require('./DBConnection');
+const newConnection = require('./SQL/databaseConnection');
 const express = require('express');
 
 const app = express()
 
 app.get('/login', (req, res) => {
-  
+
+
+
+
 })
 
 ReactDOM.render(
