@@ -38,7 +38,7 @@ return(
 <label for="email">Email</label>
 <input type="text" placeholder="Enter Email" name="Email" required/>
 <br/>
-<button type="submit">Login</button>
+<button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}} type="submit">Login</button>
 </div>
 )
 }
