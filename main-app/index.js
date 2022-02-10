@@ -11,7 +11,22 @@ app.use(express.urlencoded({
 
 app.get('/user-login', (req, res) => {
 
+let email = req.query.email;
 
+let conn = newConnection();
+
+conn.connect();
+    conn.query(`SELECT * FROM Customer WHERE emailAddress = "${email}";`
+    ,(err, rows, fields) =>{
+        if(err)
+            console.log(err)
+        else
+            console.log("Im working here RASHID")
+
+
+    }
+    
+    )
 
 
 })
