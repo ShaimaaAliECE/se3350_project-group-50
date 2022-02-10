@@ -39,7 +39,7 @@ return(
 <label for="email">Email</label>
 <input type="text" placeholder="Enter Email" name="Email" id="email-field" class="login-form-field"/>
 <br/>
-<input type="submit" value="login" id="login-form-submit" onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}} onclick="saveEmail"/>
+<input type="submit" value="login" id="login-form-submit" onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}/>
 </form>
 </div>)
 }
