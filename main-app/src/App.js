@@ -25,13 +25,29 @@ function HomePage(){
   return(
     <div>
       Algorothm Quiz<br />
-      <button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}>Choose Algorithm</button>
+      <button onClick= {()=> {ReactDOM.render(<UserLogin/>, document.getElementById('root'))}}>User Login</button>
       <br />
       <button onClick= {()=> {ReactDOM.render(<AdminLoginMenu/>, document.getElementById('root'))}}>Admin Login</button>
     </div>
   )
 }
 
+function UserLogin(){
+return(
+  <div>
+<label for="email">Email</label>
+<input type="text" placeholder="Enter Email" name="Email" required/>
+<br/>
+<button type="submit">Login</button>
+</div>
+)
+}
+function UserLoginMenu(){
+  return(
+  <div>
+    <button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}>Choose Algorithm</button>
+  </div>)
+}
 function AdminLoginMenu(){
   return(
     <div>
@@ -100,4 +116,4 @@ function merge(left, right) {
     return [ ...arr, ...left, ...right ]
 }
 
-export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage}
+export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage, UserLoginMenu, UserLogin}
