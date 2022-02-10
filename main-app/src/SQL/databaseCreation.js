@@ -20,7 +20,7 @@ connection.query(`DROP TABLE Customer`, (err, rows, fields) => {
 });
 
 connection.query(`CREATE TABLE Customer(
-                  userID INT NOT NULL AUTO_INCREMENT,
+                  userID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
                   emailAddress VARCHAR(80) UNIQUE,
                   LevelOneTime DOUBLE,
                   LevelTwoTime DOUBLE,
