@@ -1,4 +1,4 @@
-const newConnection = require('./SQL/databaseConnection');
+const newConnection = require('./src/SQL/databaseConnection');
 const express = require('express');
 const cookieParser = require('cookie-parser')
 
