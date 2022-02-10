@@ -1,4 +1,5 @@
 import Number from "../Number";
+import { mergeSort } from "../../App";
 import Numbers from "../Numbers";
 import makeArray from "../makeRandomArray";
 import { useState, useEffect } from "react";
@@ -6,31 +7,43 @@ import ReactDOM from 'react-dom';
 
 function LevelOne(){
   const[array, setArray] = useState(makeArray(10))
-  const[step, setStep] = useState(2) 
-  let tree = {value: array, left:null, right:null};
-  
+  const[step, setStep] = useState(1) 
+  const[merging, setMerging] = useState(false)
+  const[tree, setTree] = useState({value: array, left:null, right:null})
+
+
   let unsortedArray = [];
 
   createTree(tree);
   
   const onClick = () => {
-    setStep(step+1)
+    if(!merging)
+      setStep(step+1)
+    else
+      setStep(step+1)
     unsortedArray = [];
-    print(tree, step)
+    print(tree, step+1)
     console.log(unsortedArray)
+    if(merging)
+      sortLevel(tree, step)
+
     switch(step){
-      case 2:
+      case 1:
         ReactDOM.render(<Temp style={{marginLeft: "34%"}} array={unsortedArray}/>, document.getElementById('stepOne'));
         break;
-      case 3:
+      case 2:
         ReactDOM.render(<Temp style={{marginLeft: "32%"}} array={unsortedArray}/>, document.getElementById('stepTwo'))
         break;
-      case 4:
+      case 3:
         ReactDOM.render(<Temp style={{marginLeft: "30%"}} array={unsortedArray}/>, document.getElementById('stepThree'));
         break;
-      case 5:
+      case 4:
         ReactDOM.render(<Temp style={{marginLeft: "23%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
+        createTree(tree);
+        setMerging(true)
         break;
+      case 5:
+        
     }
   }
 
@@ -50,9 +63,22 @@ function LevelOne(){
 
   function print(node, level){
     if (node == null)
+      return;
+    if (level == 1){
+      unsortedArray.push(node.value)
+    }
+    else if (level > 1)
+    {
+      print(node.left, level-1);
+      print(node.right, level-1);
+    }
+  }
+
+  function sortLevel(node, level){
+    if (node == null)
         return;
     if (level == 1){
-        unsortedArray.push(node.value)
+      node.value = mergeSort([...node.value])
     }
     else if (level > 1)
     {
@@ -60,7 +86,6 @@ function LevelOne(){
         print(node.right, level-1);
     }
   }
-
   
 
   return(
