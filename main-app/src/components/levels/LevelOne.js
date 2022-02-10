@@ -18,15 +18,30 @@ function LevelOne(){
     unsortedArray = [];
     print(tree, step)
     console.log(unsortedArray)
-    //ReactDOM.render(<Temp array={unsortedArray}/>, document.getElementById('stepOne'))
-    
+    switch(step){
+      case 2:
+        ReactDOM.render(<Temp array={unsortedArray}/>, document.getElementById('stepOne'));
+        break;
+      case 3:
+        ReactDOM.render(<Temp array={unsortedArray}/>, document.getElementById('stepTwo'))
+        break;
+      case 4:
+        ReactDOM.render(<Temp array={unsortedArray}/>, document.getElementById('stepThree'));
+        break;
+      case 5:
+        ReactDOM.render(<Temp array={unsortedArray}/>, document.getElementById('stepFour'));
+        break;
+      case 6:
+        ReactDOM.render(<Temp array={unsortedArray}/>, document.getElementById('stepFive'));
+        break;
+    }
   }
 
   function createTree(node){
     let nodeValue = node.value;
     if(nodeValue.length > 1){
-      node.left = {value: [...nodeValue].splice(0, node.value.length/2), left: null, right: null}
-      node.right = {value: [...nodeValue].splice(node.value.length/2, node.value.length), left: null, right: null}
+      node.left = {value: [...nodeValue].splice(0, nodeValue.length/2), left: null, right: null}
+      node.right = {value: [...nodeValue].splice(nodeValue.length/2, nodeValue.length), left: null, right: null}
       createTree(node.left);
       createTree(node.right)
     } else{
@@ -54,24 +69,20 @@ function LevelOne(){
   return(
     <div>
       <button onClick = {onClick}>Next Step</button>
-      <table><tr><Numbers array={tree.value}/></tr></table>
-      <div className="stepOne">
-        
-      </div>
-       
+      <table><tr><Numbers array={tree.value}/></tr></table>       
     </div>
   )
 }
 
-// function Temp(props){
-//   return(
-//     <table>
-//       {props.array.map(a => (
-//         <Numbers array={a}/>
-//       ))}
-//     </table>
-//   )
-// }
+function Temp(props){
+  return(
+    <table><tr>
+      {props.array.map(a => (
+        <Numbers array={a}/>
+      ))}
+      </tr></table>
+  )
+}
 
 
 export default LevelOne;
