@@ -21,7 +21,16 @@ conn.connect();
         if(err)
             console.log(err)
         else
-            console.log("Im working here RASHID")
+
+            if(rows.length == 1){
+                console.log("EMAIL EXISTS")
+                
+
+            }
+            else if(rows.length == 0){
+                console.log("ADDING EMAIL TO DATABASE")
+            }
+            
 
 
     }
