@@ -1,5 +1,5 @@
 import makeArray from "../makeRandomArray";
-import Number from "../Number";
+import Numbers from "../Numbers";
 import DropBox from "../DropBox";
 import FuilurePageMenu from "../FailurePageMenu";
 import ReactDOM from 'react-dom';
@@ -12,7 +12,7 @@ function LevelThree(){
     }
     return(
         <div>
-        <table><tbody><tr>{temp}</tr></tbody></table>
+        <table><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table>
             <tbody>
             <tr>
