@@ -15,7 +15,7 @@ app.use(express.urlencoded({
   extended: true
 }))
 
-app.get('/login', (req, res) => {
+app.get('/user-login', (req, res) => {
 
 
 
