@@ -21,21 +21,24 @@ conn.connect();
         if(err)
             console.log(err)
         else
-
             if(rows.length == 1){
                 console.log("EMAIL EXISTS")
-                
-
             }
+
             else if(rows.length == 0){
-                console.log("ADDING EMAIL TO DATABASE")
+                    connection.query(`INSERT INTO Customer (emailAddress, LevelReached)
+                                      VALUES ('${email}', 1)`
+                    , (err, rows, fields) => {
+                    if (err){
+                        console.log(err);
+                    }
+                    
+                    else{
+                        response.send('Successfully inserted email');
+                    }
+                    });
+                    connection.end();
             }
-            
-
-
     }
-    
     )
-
-
 })
