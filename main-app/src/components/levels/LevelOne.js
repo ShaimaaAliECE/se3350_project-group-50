@@ -54,7 +54,7 @@ function LevelOne(){
         }
           break;
       case 3:
-        ReactDOM.render(<NumbersRow style={{marginLeft: "30%"}} array={unsortedArray}/>, document.getElementById('stepThree'));
+        ReactDOM.render(<NumbersRow style={{marginLeft: "27%"}} array={unsortedArray}/>, document.getElementById('stepThree'));
         document.getElementById("feedback").innerText = feedback[2];
         if(merging){
           ReactDOM.render(<></>, document.getElementById('stepFour'));
@@ -62,7 +62,7 @@ function LevelOne(){
         }
         break;
       case 4:
-        ReactDOM.render(<NumbersRow style={{marginLeft: "23%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
+        ReactDOM.render(<NumbersRow style={{marginLeft: "21%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
         document.getElementById("feedback").innerText = feedback[3];
         setMerging(true)
         setStep(step-1);
@@ -113,8 +113,9 @@ function LevelOne(){
   return(
     <div>
       <button onClick = {onClick} id='nextBtn'>Next Step</button>
+      <p id="feedback">Merge Sort Algorithm</p> 
       <table style={{marginLeft: "35%"}}><tr><Numbers  array={tree.value}/></tr></table>   
-      <p id="feedback"></p>    
+         
     </div>
   )
 }
