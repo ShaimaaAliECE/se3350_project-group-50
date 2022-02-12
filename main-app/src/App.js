@@ -35,9 +35,9 @@ function HomePage(){
 function UserLogin(){
 return(
   <div>
-  <form id="login-form">
+  <form id="login-form" action='/user-login' method='get'>
 <label for="email">Email</label>
-<input type="text" placeholder="Enter Email" name="Email" id="email-field" class="login-form-field"/>
+<input type="text" placeholder="Enter Email" name="email" id="email-field" class="login-form-field"/>
 <br/>
 <input type="submit" value="login" id="login-form-submit" onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}/>
 </form>
@@ -122,4 +122,4 @@ function merge(left, right) {
     return [ ...arr, ...left, ...right ]
 }
 
-export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage, UserLoginMenu, UserLogin}
+export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage, UserLoginMenu, UserLogin, mergeSort}
