@@ -33,15 +33,19 @@ function HomePage(){
 }
 
 function UserLogin(){
-return(
-  <div>
-  <form id="login-form" action='/user-login' method='get'>
-<label for="email">Email</label>
-<input type="text" placeholder="Enter Email" name="email" id="email-field" class="login-form-field"/>
-<br/>
-<input type="submit" value="login" id="login-form-submit" onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}/>
-</form>
-</div>)
+  function onClick(){
+    ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'));
+  }
+
+  return(
+    <div>
+    <form id="login-form" action='/user-login' method='get'>
+    <label for="email">Email</label>
+    <input type="text" placeholder="Enter Email" name="email" id="email-field" class="login-form-field"/>
+    <br/>
+    <input type="submit" value="login" id="login-form-submit" onClick= {onClick}/>
+    </form>
+    </div>)
 }
 /*const loginButton = document.getElementById("login-form-submit");
 loginButton.addEventListener("click", (e) => {
