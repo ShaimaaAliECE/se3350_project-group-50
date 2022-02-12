@@ -37,7 +37,7 @@ function UserLogin(){
       ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'));
       var emails=[];
       emails.push(document.getElementById("email-field").value);
-      alert(emails);
+      console.log(emails);
     }
   
 return(
