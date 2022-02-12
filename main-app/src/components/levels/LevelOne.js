@@ -12,6 +12,7 @@ function LevelOne(){
   const[merging, setMerging] = useState(false)
   const[tree, setTree] = useState({value: array, left:null, right:null})
 
+  let feedback = ["stepone text", "stepTwo text"]
 
   let unsortedArray = [];
 
@@ -26,7 +27,6 @@ function LevelOne(){
     if(step != 0){
       unsortedArray = [];
       print(tree, step+1)
-      //console.log(unsortedArray)
       if(merging){
         for(let u in unsortedArray){
           unsortedArray[u] = mergeSort(unsortedArray[u])
@@ -36,22 +36,23 @@ function LevelOne(){
       
     switch(step){
       case 1:
-        ReactDOM.render(<Temp style={{marginLeft: "34%"}} array={unsortedArray}/>, document.getElementById('stepOne'));
+        ReactDOM.render(<NumbersRow style={{marginLeft: "34%"}} array={unsortedArray}/>, document.getElementById('stepOne'));
+        document.getElementById("feedback").innerText = feedback[0];
         if(merging)
           ReactDOM.render(<></>, document.getElementById('stepTwo'));
         break;
       case 2:
-        ReactDOM.render(<Temp style={{marginLeft: "32%"}} array={unsortedArray}/>, document.getElementById('stepTwo'))
+        ReactDOM.render(<NumbersRow style={{marginLeft: "32%"}} array={unsortedArray}/>, document.getElementById('stepTwo'))
         if(merging)
           ReactDOM.render(<></>, document.getElementById('stepThree'));
         break;
       case 3:
-        ReactDOM.render(<Temp style={{marginLeft: "30%"}} array={unsortedArray}/>, document.getElementById('stepThree'));
+        ReactDOM.render(<NumbersRow style={{marginLeft: "30%"}} array={unsortedArray}/>, document.getElementById('stepThree'));
         if(merging)
           ReactDOM.render(<></>, document.getElementById('stepFour'));
         break;
       case 4:
-        ReactDOM.render(<Temp style={{marginLeft: "23%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
+        ReactDOM.render(<NumbersRow style={{marginLeft: "23%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
         setMerging(true)
         setStep(step-1);
         break;
@@ -100,12 +101,13 @@ function LevelOne(){
   return(
     <div>
       <button onClick = {onClick} id='nextBtn'>Next Step</button>
-      <table style={{marginLeft: "35%"}}><tr><Numbers  array={tree.value}/></tr></table>       
+      <table style={{marginLeft: "35%"}}><tr><Numbers  array={tree.value}/></tr></table>   
+      <p id="feedback"></p>    
     </div>
   )
 }
 
-function Temp(props){
+function NumbersRow(props){
   return(
     <table style={props.style}><tr>
       {props.array.map(a => (
