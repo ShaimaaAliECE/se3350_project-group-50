@@ -12,7 +12,7 @@ function LevelOne(){
   const[merging, setMerging] = useState(false)
   const[tree, setTree] = useState({value: array, left:null, right:null})
 
-  let feedback = ["stepone text", "stepTwo text"]
+  let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array"]
 
   let unsortedArray = [];
 
@@ -33,31 +33,43 @@ function LevelOne(){
         }
       }
     }
+
+
       
     switch(step){
       case 1:
         ReactDOM.render(<NumbersRow style={{marginLeft: "34%"}} array={unsortedArray}/>, document.getElementById('stepOne'));
         document.getElementById("feedback").innerText = feedback[0];
-        if(merging)
+        if(merging){
           ReactDOM.render(<></>, document.getElementById('stepTwo'));
+          document.getElementById("feedback").innerText = feedback[4];
+        }
         break;
       case 2:
         ReactDOM.render(<NumbersRow style={{marginLeft: "32%"}} array={unsortedArray}/>, document.getElementById('stepTwo'))
-        if(merging)
+        document.getElementById("feedback").innerText = feedback[1];
+        if(merging){
           ReactDOM.render(<></>, document.getElementById('stepThree'));
-        break;
+          document.getElementById("feedback").innerText = feedback[5];
+        }
+          break;
       case 3:
         ReactDOM.render(<NumbersRow style={{marginLeft: "30%"}} array={unsortedArray}/>, document.getElementById('stepThree'));
-        if(merging)
+        document.getElementById("feedback").innerText = feedback[2];
+        if(merging){
           ReactDOM.render(<></>, document.getElementById('stepFour'));
+          document.getElementById("feedback").innerText = feedback[6];
+        }
         break;
       case 4:
         ReactDOM.render(<NumbersRow style={{marginLeft: "23%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
+        document.getElementById("feedback").innerText = feedback[3];
         setMerging(true)
         setStep(step-1);
         break;
       case 0:
         ReactDOM.render(<></>, document.getElementById('stepOne'));
+        document.getElementById("feedback").innerText = feedback[7];
         document.getElementById('nextBtn').onclick = nextLevel;
         document.getElementById('nextBtn').innerText = "Next Level";
         let tempArray = mergeSort([...array]);
