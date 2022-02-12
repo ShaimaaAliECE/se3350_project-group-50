@@ -1,2 +1,2 @@
 # Kareem is best
-# NFTS are not scam
+# NFTS are a scam
