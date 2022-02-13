@@ -4,7 +4,7 @@ import Numbers from "../Numbers";
 import makeArray from "../makeRandomArray";
 import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom';
-import LevelTwo from "./LevelTwo";
+import {LevelTwo} from "./LevelTwo";
 
 function LevelOne(){
   const[array, setArray] = useState(makeArray(10))
