@@ -62,7 +62,7 @@ function LevelOne(){
         }
         break;
       case 4:
-        ReactDOM.render(<NumbersRow style={{marginLeft: "21%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
+        ReactDOM.render(<NumbersRow style={{marginLeft: "18%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
         document.getElementById("feedback").innerText = feedback[3];
         setMerging(true)
         setStep(step-1);

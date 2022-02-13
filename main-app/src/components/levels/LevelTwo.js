@@ -1,9 +1,12 @@
 import makeArray from "../makeRandomArray";
 import Numbers from "../Numbers";
 import DropBox from "../DropBox";
+import { useState, useEffect } from "react";
+import { mergeSort } from "../../App";
+
 
 function LevelTwo(){
-    let array = makeArray(10);
+    const[array, setArray] = useState(makeArray(10))
     
     return(
         <div>
@@ -11,22 +14,22 @@ function LevelTwo(){
         <table>
             <tbody>
             <tr>
-            <DropBox />
-            <DropBox />
-            <DropBox />
-            <DropBox />
-            <DropBox />
+            <DropBox key={array[0]} divideVal={array[0]} />
+            <DropBox key={array[1]}/>
+            <DropBox key={array[2]}/>
+            <DropBox key={array[3]}/>
+            <DropBox key={array[4]}/>
             &nbsp;
             &nbsp;    
-            <DropBox />
-            <DropBox />
-            <DropBox />
-            <DropBox />
-            <DropBox />
+            <DropBox key={array[5]}/>
+            <DropBox key={array[6]}/>
+            <DropBox key={array[7]}/>
+            <DropBox key={array[8]}/>
+            <DropBox key={array[9]}/>
             </tr>
             </tbody>
         </table>
-        
+        <button id="nextBtn">Click</button>
         </div>
     )
 }
