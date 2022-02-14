@@ -22,7 +22,7 @@ function LevelOne(){
     if(!merging)
       setStep(step+1)
     else
-      setStep(step-1)
+      setStep(step-1) // if in merging steps then go backwards(decrement step)
 
     if(step != 0){
       tempArray = [];
@@ -33,8 +33,7 @@ function LevelOne(){
         }
       }
     }
-
-
+    
       
     switch(step){
       case 1:
@@ -64,34 +63,34 @@ function LevelOne(){
       case 4:
         ReactDOM.render(<NumbersRow style={{marginLeft: "18%"}} array={tempArray}/>, document.getElementById('stepFour'));
         document.getElementById("feedback").innerText = feedback[3];
-        setMerging(true)
+        setMerging(true) //start merging process
         setStep(step-1);
         break;
-      case 0:
+      case 0: // case 0 is the last step in the level 
         ReactDOM.render(<></>, document.getElementById('stepOne'));
         document.getElementById("feedback").innerText = feedback[7];
         document.getElementById('nextBtn').onclick = nextLevel;
         document.getElementById('nextBtn').innerText = "Next Level";
-        let tempArray = mergeSort([...array]);
-        tree.value = tempArray
+        tree.value = mergeSort([...array])
         break;        
     }
   }
 
   function createTree(node){
     let nodeValue = node.value;
-    if(nodeValue.length > 1){
+    if(nodeValue.length > 1){   //if the length of the array in the current node is more than 1 then split the array into left and right nodes and recurse  
       node.left = {value: [...nodeValue].splice(0, nodeValue.length/2), left: null, right: null}
       node.right = {value: [...nodeValue].splice(nodeValue.length/2, nodeValue.length), left: null, right: null}
       createTree(node.left);
       createTree(node.right)
-    } else{
+    } else{    // else only copy the node value to the left node (so that the last dividing step still show the arrays that had 1 element from the previous step)
       node.left = {value: node.value, left: null, right: null}
       node.right = {value: [], left: null, right: null}
     }
     
   }
 
+  //function to get the nodes in a specific level of the tree
   function print(node, level){
     if (node == null)
       return;
@@ -106,7 +105,7 @@ function LevelOne(){
   }
 
   function nextLevel(){
-    //Backend code goes here
+    //send to Backend code goes here
     ReactDOM.render(<LevelTwo />, document.getElementById('root'));
   }
 
@@ -120,6 +119,7 @@ function LevelOne(){
   )
 }
 
+//React component
 function NumbersRow(props){
   return(
     <table style={props.style}><tr>

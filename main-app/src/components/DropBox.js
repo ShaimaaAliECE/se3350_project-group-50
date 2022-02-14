@@ -7,7 +7,7 @@ let dumb = ["Are you dumb?", "Wow, you really did something here", "The light is
 
 //component to drop numbers in 
 function DropBox(props){
-    const [number, setNumber] = useState(props.num);
+    const [number, setNumber] = useState(0);
     const [divideVal, setDivideVal] = useState(props.divideVal);
     const [isDone, setIsDone] = useState(false);
    
@@ -29,7 +29,7 @@ function DropBox(props){
             setScore(getScore() + 1)
             if(getScore() == 10){
 
-                setScore(0)
+                
             }
             setIsDone(true);
         } else if(!isDone){

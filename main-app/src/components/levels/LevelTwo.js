@@ -21,18 +21,18 @@ function LevelTwo(){
         <table>
             <tbody>
             <tr>
-            <DropBox key={array[0]} divideVal={array[0]} num={0}/>
-            <DropBox key={array[1]} divideVal={array[1]} num={0}/>
-            <DropBox key={array[2]} divideVal={array[2]} num={0}/>
-            <DropBox key={array[3]} divideVal={array[3]} num={0}/>
-            <DropBox key={array[4]} divideVal={array[4]} num={0}/>
+            <DropBox key={array[0]} divideVal={array[0]}/>
+            <DropBox key={array[1]} divideVal={array[1]}/>
+            <DropBox key={array[2]} divideVal={array[2]}/>
+            <DropBox key={array[3]} divideVal={array[3]}/>
+            <DropBox key={array[4]} divideVal={array[4]}/>
             &nbsp;
             &nbsp;    
-            <DropBox key={array[5]} divideVal={array[5]} num={0}/>
-            <DropBox key={array[6]} divideVal={array[6]} num={0}/>
-            <DropBox key={array[7]} divideVal={array[7]} num={0}/>
-            <DropBox key={array[8]} divideVal={array[8]} num={0}/>
-            <DropBox key={array[9]} divideVal={array[9]} num={0}/>
+            <DropBox key={array[5]} divideVal={array[5]}/>
+            <DropBox key={array[6]} divideVal={array[6]}/>
+            <DropBox key={array[7]} divideVal={array[7]}/>
+            <DropBox key={array[8]} divideVal={array[8]}/>
+            <DropBox key={array[9]} divideVal={array[9]}/>
             </tr>
             </tbody>
         </table>
@@ -43,6 +43,7 @@ function LevelTwo(){
         </div>
     )
 }
+
 
 
 export {LevelTwo, setScore, getScore};
