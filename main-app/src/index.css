@@ -20,11 +20,7 @@ code {
   background-color: aqua;
 }
 
-.dropBox{  
-  border-style: solid;
-  padding:10px;
-  text-align: center;
-}
+
 
 table, tr{
   min-width: max-content;
@@ -38,4 +34,12 @@ td{
 
 .steps { 
   padding-right: 50px;
+}
+
+.dropBox{  
+  border-style: solid;
+  padding:10px;
+  text-align: center;
+  min-width: 20px;
+  height: 20px;
 }

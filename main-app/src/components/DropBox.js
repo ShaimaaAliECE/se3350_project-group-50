@@ -20,20 +20,29 @@ function DropBox(props){
     //         console.log("matching");
     //     }
     // );
+    useEffect(()=>{$(`#${props.id}`).hide()})
 
-    
     function dropNumber(){
         if(draggedItem === divideVal && !isDone){
             setNumber(draggedItem);
             document.getElementById("feedback").innerText = "Correct";
             setScore(getScore() + 1)
             if(getScore() == 10){
-
                 
             }
+            if(getScore() == 20){
+                
+            }
+            if(getScore() == 30){
+                
+            } //and so on (each 10 is one step)
+            //audio feedback goes here
             setIsDone(true);
         } else if(!isDone){
-            //life deduction goes here
+            //life deduction code goes here
+            $(`#${props.id}`).show()
+            $(`#${props.id}`).fadeOut(400)
+            //audio feedback goes here goes here 
             document.getElementById("feedback").innerText = "Wrong"
             console.log("unmatching")
         } else 
@@ -44,6 +53,7 @@ function DropBox(props){
     return(
     <td className="dropBox" onDragOver={(e)=> e.preventDefault()} onDragEnd={(e)=> e.preventDefault()} onDrop={() => {dropNumber()}}>
         {(number == 0)?null:number}
+        <div id={props.id} style={{color:"red"}}>X</div>
     </td>
     )    
 }
