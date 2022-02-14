@@ -15,7 +15,7 @@ code {
 .number{
   margin-left: 30%;
   min-width: 40px;
-  min-height: 40px;
+  height: 30px;
   text-align: center;
   background-color: aqua;
 }

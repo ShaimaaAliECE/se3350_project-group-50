@@ -36,13 +36,19 @@ function DropBox(props){
             if(getScore() == 30){
                 
             } //and so on (each 10 is one step)
-            //audio feedback goes here
+
+            //Audio feedback for correct goes here
+
+
             setIsDone(true);
         } else if(!isDone){
             //life deduction code goes here
             $(`#${props.id}`).show()
             $(`#${props.id}`).fadeOut(400)
-            //audio feedback goes here goes here 
+
+            //Audio feedback for wrong goes here goes here 
+
+
             document.getElementById("feedback").innerText = "Wrong"
             console.log("unmatching")
         } else 
