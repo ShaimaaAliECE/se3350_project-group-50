@@ -8,15 +8,15 @@ import {LevelTwo} from "./LevelTwo";
 
 function LevelOne(){
   const[array, setArray] = useState(makeArray(10))
-  const[step, setStep] = useState(1) 
-  const[merging, setMerging] = useState(false)
+  const[step, setStep] = useState(1) // store which step the player is at
+  const[merging, setMerging] = useState(false); // When player reaches merging steps this changes to true
   const[tree, setTree] = useState({value: array, left:null, right:null})
 
   let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array"]
 
-  let unsortedArray = [];
+  let tempArray = [];
 
-  createTree(tree);
+  createTree(tree); // function to build the full tree by dividing the array till array length becomes one
   
   const onClick = () => {
     if(!merging)
@@ -25,11 +25,11 @@ function LevelOne(){
       setStep(step-1)
 
     if(step != 0){
-      unsortedArray = [];
+      tempArray = [];
       print(tree, step+1)
       if(merging){
-        for(let u in unsortedArray){
-          unsortedArray[u] = mergeSort(unsortedArray[u])
+        for(let u in tempArray){
+          tempArray[u] = mergeSort(tempArray[u])
         }
       }
     }
@@ -38,7 +38,7 @@ function LevelOne(){
       
     switch(step){
       case 1:
-        ReactDOM.render(<NumbersRow style={{marginLeft: "34%"}} array={unsortedArray}/>, document.getElementById('stepOne'));
+        ReactDOM.render(<NumbersRow style={{marginLeft: "34%"}} array={tempArray}/>, document.getElementById('stepOne'));
         document.getElementById("feedback").innerText = feedback[0];
         if(merging){
           ReactDOM.render(<></>, document.getElementById('stepTwo'));
@@ -46,7 +46,7 @@ function LevelOne(){
         }
         break;
       case 2:
-        ReactDOM.render(<NumbersRow style={{marginLeft: "32%"}} array={unsortedArray}/>, document.getElementById('stepTwo'))
+        ReactDOM.render(<NumbersRow style={{marginLeft: "32%"}} array={tempArray}/>, document.getElementById('stepTwo'))
         document.getElementById("feedback").innerText = feedback[1];
         if(merging){
           ReactDOM.render(<></>, document.getElementById('stepThree'));
@@ -54,7 +54,7 @@ function LevelOne(){
         }
           break;
       case 3:
-        ReactDOM.render(<NumbersRow style={{marginLeft: "27%"}} array={unsortedArray}/>, document.getElementById('stepThree'));
+        ReactDOM.render(<NumbersRow style={{marginLeft: "27%"}} array={tempArray}/>, document.getElementById('stepThree'));
         document.getElementById("feedback").innerText = feedback[2];
         if(merging){
           ReactDOM.render(<></>, document.getElementById('stepFour'));
@@ -62,7 +62,7 @@ function LevelOne(){
         }
         break;
       case 4:
-        ReactDOM.render(<NumbersRow style={{marginLeft: "18%"}} array={unsortedArray}/>, document.getElementById('stepFour'));
+        ReactDOM.render(<NumbersRow style={{marginLeft: "18%"}} array={tempArray}/>, document.getElementById('stepFour'));
         document.getElementById("feedback").innerText = feedback[3];
         setMerging(true)
         setStep(step-1);
@@ -96,7 +96,7 @@ function LevelOne(){
     if (node == null)
       return;
     if (level == 1){
-      unsortedArray.push(node.value)
+      tempArray.push(node.value)
     }
     else if (level > 1)
     {
