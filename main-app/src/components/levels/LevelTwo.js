@@ -3,6 +3,8 @@ import Numbers from "../Numbers";
 import DropBox from "../DropBox";
 import { useState, useEffect } from "react";
 import { mergeSort } from "../../App";
+import $ from "jquery";
+
 
 let score = 0;
 function setScore(newScore){
@@ -15,12 +17,19 @@ function getScore(){
 function LevelTwo(){
     const[array, setArray] = useState(makeArray(10))
     
+    useEffect(()=>{
+        //$("#stepOne").hide()
+        
+    }, []) 
+    
+    
+    
     return(
         <div>
         <table><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table>
             <tbody>
-            <tr>
+            <tr id="stepOne">
             <DropBox key={array[0]} divideVal={array[0]} id="1"/>
             <DropBox key={array[1]} divideVal={array[1]} id="2"/>
             <DropBox key={array[2]} divideVal={array[2]} id="3"/>

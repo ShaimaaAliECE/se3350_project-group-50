@@ -29,6 +29,7 @@ function DropBox(props){
             setScore(getScore() + 1)
             if(getScore() == 10){
                 document.getElementById("feedback").innerText = "Next Step";
+                $("#stepTwo").show();
             }
             if(getScore() == 20){
                 document.getElementById("feedback").innerText = "Next Step";
