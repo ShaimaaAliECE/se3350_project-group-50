@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { setScore, getScore } from "./levels/LevelTwo";
 import $ from "jquery";
 
-let dumb = ["Are you dumb?", "Wow, you really did something here", "The light is on but nobody's home.", "Has an IQ of 2 and it takes 3 to grunt", "Did you get an Oscar yet?", "The wheel is spinning but the hamster's dead", "Bruh"]
+let dumb = ["Are you dumb?", "Wow, you really did something here.", "The light is on but nobody's home.", "Has an IQ of 2 and it takes 3 to grunt", "Did you get a nobel prize yet?", "The wheel is spinning but the hamster's dead", "Bruh", "You are just bring silly now.", "Stop monkeying around to see if it works."]
 
 //component to drop numbers in 
 function DropBox(props){
