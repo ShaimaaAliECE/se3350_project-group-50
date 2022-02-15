@@ -28,10 +28,10 @@ function DropBox(props){
             document.getElementById("feedback").innerText = "Correct";
             setScore(getScore() + 1)
             if(getScore() == 10){
-                
+                document.getElementById("feedback").innerText = "Next Step";
             }
             if(getScore() == 20){
-                
+                document.getElementById("feedback").innerText = "Next Step";
             }
             if(getScore() == 30){
                 
