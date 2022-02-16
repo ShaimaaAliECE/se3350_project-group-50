@@ -37,9 +37,10 @@ function DropBox(props){
             if(getScore() == 30){
                 
             } //and so on (each 10 is one step)
-
+           
             //Audio feedback for correct goes here
-
+            var music = new Audio('Correct.mp3');
+            music.play();
 
             setIsDone(true);
         } else if(!isDone){
@@ -48,7 +49,8 @@ function DropBox(props){
             $(`#${props.id}`).fadeOut(400)
 
             //Audio feedback for wrong goes here goes here 
-
+            var music=new Audio('Wrong.mp3');
+            music.play();
 
             document.getElementById("feedback").innerText = "Wrong"
             console.log("unmatching")
