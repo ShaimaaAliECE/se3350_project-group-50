@@ -1,3 +1,6 @@
+import LevelOne from '../components/levels/LevelOne';
+
+
 const mysql = require('mysql');
 
 let connection = mysql.createConnection({
@@ -19,12 +22,17 @@ connection.query(`DROP TABLE Customer`, (err, rows, fields) => {
     }
 });
 
-app.post('/update', function(req, res) {
-    // Get sent data.
-    var user = req.body;
-    // Do a MySQL query.
-    var query = connection.query('INSERT INTO Customer SET LevelOneTime = LevelOneTime + 1', user, function(err, result) { // update level one
-    });
 
-    res.end();
+var query = connection.query(`UPDATE Customer 
+                              SET LevelOneTime = LevelOneTime + 1,
+                                  LevelTwoTime = LevelTwoTime + 1,
+                                  LevelThreeTime = LevelThreeTime + 1,
+                                  LevelFourTime = LevelFourTime + 1,
+                                  LevelFiveTime = LevelFiveTime + 1,`
+            ,(err, rows, fields) => { // update level one
 });
+
+res.end();
+
+
+connection.end();

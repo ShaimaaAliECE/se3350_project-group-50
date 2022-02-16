@@ -5,6 +5,8 @@ import LevelThree from "./components/levels/LevelThree";
 import LevelFour from "./components/levels/LevelFour";
 import LevelFive from "./components/levels/LevelFive";
 import {useState, useEffect} from 'react';
+import AdminPage from './components/AdminPage';
+import { useImperativeHandle } from 'react';
 
 let draggedItem = null;
 //let currentLevel = "Level1"; will not be used till probably sprint 3
@@ -72,23 +74,37 @@ return(
 </form>
 </div>)
 }
-/*const loginButton = document.getElementById("login-form-submit");
-loginButton.addEventListener("click", (e) => {
 
 
-})*/
+
 function UserLoginMenu(){
   return(
   <div>
     <button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}>Choose Algorithm</button>
   </div>)
 }
+
 function AdminLoginMenu(){
+  //e.preventDefault()
+  function onClick(){
+    if(document.getElementsByName("userName")[0].value == "admin" && document.getElementsByName("password")[0].value == "123"){
+      ReactDOM.render(<AdminPage/>, document.getElementById('root'))
+    }else {
+      document.getElementById("incorrect").innerText = "Incorrect User Name or Password"
+      
+    }
+    
+  }
+
   return(
     <div>
-      Login<br/>
-      Enter UserName: <input type={"text"}></input><br/>
-      Enter Password: <input type={"text"}></input>
+      Admin Login Page<br/>
+      <form id="login-form" onSubmit={(event)=>{event.preventDefault(); onClick();}}>
+        Enter UserName: <input name='userName' type={"text"}></input><br/>
+        Enter Password: <input name='password' type={"text"}></input>
+        <input type={"submit"}></input>
+      </form>
+      <p id='incorrect'></p>
     </div>
   )
 }
