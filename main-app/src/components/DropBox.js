@@ -2,6 +2,8 @@ import { draggedItem } from "../App";
 import { useEffect, useState } from "react";
 import { setScore, getScore } from "./levels/LevelTwo";
 import $ from "jquery";
+import correct from '../Correct.mp3'
+import wrong from '../Wrong.mp3'
 
 let dumb = ["Are you dumb?", "Wow, you really did something here.", "The light is on but nobody's home.", "Has an IQ of 2 and it takes 3 to grunt", "Did you get a nobel prize yet?", "The wheel is spinning but the hamster's dead", "Bruh", "You are just bring silly now.", "Stop monkeying around to see if it works."]
 
@@ -39,8 +41,9 @@ function DropBox(props){
             } //and so on (each 10 is one step)
            
             //Audio feedback for correct goes here
-            var music = new Audio('Correct.mp3');
-            music.play();
+            const audio = new Audio(correct)
+            audio.play();
+            console.log(audio)
 
             setIsDone(true);
         } else if(!isDone){
@@ -49,8 +52,8 @@ function DropBox(props){
             $(`#${props.id}`).fadeOut(400)
 
             //Audio feedback for wrong goes here goes here 
-            var music=new Audio('Wrong.mp3');
-            music.play();
+            const audio = new Audio(wrong)
+            audio.play();
 
             document.getElementById("feedback").innerText = "Wrong"
             console.log("unmatching")
