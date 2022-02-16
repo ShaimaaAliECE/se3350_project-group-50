@@ -34,9 +34,10 @@ function DropBox(props){
                 $("#stepTwo").show();
             }
             if(getScore() == 20){
-
+                $("#stepThree").show();
             }
             if(getScore() == 30){
+                $("#stepFour").show();
                 
             } //and so on (each 10 is one step)
            
