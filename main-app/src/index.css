@@ -15,16 +15,12 @@ code {
 .number{
   margin-left: 30%;
   min-width: 40px;
-  min-height: 40px;
+  height: 30px;
   text-align: center;
   background-color: aqua;
 }
 
-.dropBox{  
-  border-style: solid;
-  padding:10px;
-  text-align: center;
-}
+
 
 table, tr{
   min-width: max-content;
@@ -38,4 +34,12 @@ td{
 
 .steps { 
   padding-right: 50px;
+}
+
+.dropBox{  
+  border-style: solid;
+  padding:10px;
+  text-align: center;
+  min-width: 20px;
+  height: 20px;
 }
