@@ -10,7 +10,7 @@ app.use(express.urlencoded({
 }))
 
 app.post('/test', (req, res) => {
-console.log(req.body.email);
+console.log("hi");
     })
 
 app.get('/user-login', (req, res) => {
