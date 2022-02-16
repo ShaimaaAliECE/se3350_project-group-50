@@ -1,10 +1,9 @@
 import ReactDOM from 'react-dom';
-import LevelTwo from "./components/levels/LevelTwo";
+import {LevelTwo} from "./components/levels/LevelTwo";
 import LevelOne from "./components/levels/LevelOne";
 import LevelThree from "./components/levels/LevelThree";
 import LevelFour from "./components/levels/LevelFour";
 import LevelFive from "./components/levels/LevelFive";
-import LevelOneTest from "./components/levels/LevelOneTest";
 
 let draggedItem = null;
 //let currentLevel = "Level1"; will not be used till probably sprint 3
