@@ -4,6 +4,7 @@ import LevelOne from "./components/levels/LevelOne";
 import LevelThree from "./components/levels/LevelThree";
 import LevelFour from "./components/levels/LevelFour";
 import LevelFive from "./components/levels/LevelFive";
+import {useState, useEffect} from 'react';
 
 let draggedItem = null;
 //let currentLevel = "Level1"; will not be used till probably sprint 3
@@ -32,12 +33,33 @@ function HomePage(){
 }
 
 function UserLogin(){
+
+  const [initialState, setInitialState] = useState([])
+
+  useEffect(() => {
+    fetch('/test').then(res => {
+      if(res.ok){
+        return res.json()
+      }
+    }).then(jsonResponse => setInitialState(jsonResponse))
+  }, [])
+  
     function onClick(){
       ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'));
       var emails=[];
       emails.push(document.getElementById("email-field").value);
       console.log(emails);
+
+      for (let key in initialState) {
+        let value = initialState[key];
+        console.log(key, value);
+
+        if (emails[0] == value) {
+          console.log("CORRECT")
+          break;
+        }
       }
+    }
     
   
 return(

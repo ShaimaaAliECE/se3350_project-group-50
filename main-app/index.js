@@ -9,9 +9,12 @@ app.use(express.urlencoded({
   extended: true
 }))
 
-app.post('/test', (req, res) => {
-console.log("hi");
+app.get('/test', (req, res) => {
+    res.json({
+        "email1": "test@hotmail.com",
+        "email2": "test2@hotmail.com"
     })
+})
 
 app.get('/user-login', (req, res) => {
 let email = req.params.email;
