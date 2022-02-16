@@ -23,7 +23,7 @@ function setDraggedItem(item){
 function HomePage(){
   return(
     <div>
-      Algorothm Quiz<br />
+      Algorithm Quiz<br />
       <button onClick= {()=> {ReactDOM.render(<UserLogin/>, document.getElementById('root'))}}>User Login</button>
       <br />
       <button onClick= {()=> {ReactDOM.render(<AdminLoginMenu/>, document.getElementById('root'))}}>Admin Login</button>
