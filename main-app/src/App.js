@@ -38,7 +38,8 @@ function UserLogin(){
       var emails=[];
       emails.push(document.getElementById("email-field").value);
       console.log(emails);
-    }
+      }
+    
   
 return(
   <div>
