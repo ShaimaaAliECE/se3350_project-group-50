@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "axios": "^0.26.0",
-    "express": "^4.17.2",
-    "jquery": "^3.6.0"
-  }
-}
