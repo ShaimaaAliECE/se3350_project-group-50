@@ -9,12 +9,13 @@ app.use(express.urlencoded({
   extended: true
 }))
 
+app.post('/test', (req, res) => {
+console.log(req.body.email);
+    })
+
 app.get('/user-login', (req, res) => {
-
-let email = req.query.email;
-
+let email = req.params.email;
 let conn = newConnection();
-
 conn.connect();
     conn.query(`SELECT * FROM Customer WHERE emailAddress = "${email}";`
     ,(err, rows, fields) =>{
@@ -42,3 +43,5 @@ conn.connect();
     }
     )
 })
+
+app.listen(80);
