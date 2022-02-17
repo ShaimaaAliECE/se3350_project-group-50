@@ -72,6 +72,7 @@ return(
 <br/>
 <input type="submit" value="login" id="login-form-submit" onClick= {onClick}/>
 </form>
+<button onClick= {()=> {ReactDOM.render(<HomePage/>, document.getElementById('root'))}}>Back</button>
 </div>)
 }
 
@@ -104,6 +105,7 @@ function AdminLoginMenu(){
         Enter Password: <input name='password' type={"text"}></input>
         <input type={"submit"}></input>
       </form>
+      <button onClick= {()=> {ReactDOM.render(<HomePage/>, document.getElementById('root'))}}>Back</button>
       <p id='incorrect'></p>
     </div>
   )
@@ -114,7 +116,7 @@ function ChooseAlgoMenu(){
     <div>
       Choose Algorithm<br />
       <button onClick= {()=> {ReactDOM.render(<MergeSortMenu/>, document.getElementById('root'))}}>Merge Sort</button>
-
+      <button onClick= {()=> {ReactDOM.render(<UserLogin/>, document.getElementById('root'))}}>Back</button>
     </div>
   )
 }
@@ -132,6 +134,8 @@ function MergeSortMenu(){
       <button onClick= {()=> {ReactDOM.render(<LevelFour/>, document.getElementById('root'))}}>Level Four</button>
       <br />
       <button onClick= {()=> {ReactDOM.render(<LevelFive/>, document.getElementById('root'))}}>Level Five</button>
+      <br/>
+      <button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}>Back</button>
     </div>
   )
 }
