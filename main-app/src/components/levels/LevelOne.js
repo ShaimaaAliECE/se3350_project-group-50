@@ -14,6 +14,7 @@ function LevelOne(){
 
   let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array"]
 
+  
   let tempArray = [];
 
   createTree(tree); // function to build the full tree by dividing the array till array length becomes one
@@ -34,10 +35,9 @@ function LevelOne(){
       }
     }
     
-      
     switch(step){
       case 1:
-        ReactDOM.render(<NumbersRow style={{marginLeft: "34%"}} array={tempArray}/>, document.getElementById('stepOne'));
+        ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepOne'));
         document.getElementById("feedback").innerText = feedback[0];
         if(merging){
           ReactDOM.render(<></>, document.getElementById('stepTwo'));
@@ -45,7 +45,7 @@ function LevelOne(){
         }
         break;
       case 2:
-        ReactDOM.render(<NumbersRow style={{marginLeft: "32%"}} array={tempArray}/>, document.getElementById('stepTwo'))
+        ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepTwo'))
         document.getElementById("feedback").innerText = feedback[1];
         if(merging){
           ReactDOM.render(<></>, document.getElementById('stepThree'));
@@ -53,7 +53,7 @@ function LevelOne(){
         }
           break;
       case 3:
-        ReactDOM.render(<NumbersRow style={{marginLeft: "27%"}} array={tempArray}/>, document.getElementById('stepThree'));
+        ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepThree'));
         document.getElementById("feedback").innerText = feedback[2];
         if(merging){
           ReactDOM.render(<></>, document.getElementById('stepFour'));
@@ -61,7 +61,7 @@ function LevelOne(){
         }
         break;
       case 4:
-        ReactDOM.render(<NumbersRow style={{marginLeft: "18%"}} array={tempArray}/>, document.getElementById('stepFour'));
+        ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepFour'));
         document.getElementById("feedback").innerText = feedback[3];
         setMerging(true) //start merging process
         setStep(step-1);
@@ -75,6 +75,7 @@ function LevelOne(){
         break;        
     }
   }
+    
 
   function createTree(node){
     let nodeValue = node.value;
@@ -113,7 +114,7 @@ function LevelOne(){
     <div>
       <button onClick = {onClick} id='nextBtn'>Next Step</button>
       <p id="feedback">Merge Sort Algorithm</p> 
-      <table style={{marginLeft: "35%"}}><tr><Numbers  array={tree.value}/></tr></table>   
+      <table><tr><Numbers  array={tree.value}/></tr></table>   
          
     </div>
   )

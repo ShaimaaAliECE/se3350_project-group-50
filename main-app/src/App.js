@@ -26,10 +26,9 @@ function setDraggedItem(item){
 
 function HomePage(){
   return(
-    <div>
-      Algorithm Quiz<br />
+    <div style={{textAlign: 'center' , lineHeight: 2.5, fontSize: 50, }}>
+      ALGORITHM QUIZ<br />
       <button onClick= {()=> {ReactDOM.render(<UserLogin/>, document.getElementById('root'))}}>User Login</button>
-      <br />
       <button onClick= {()=> {ReactDOM.render(<AdminLoginMenu/>, document.getElementById('root'))}}>Admin Login</button>
     </div>
   )
@@ -68,13 +67,13 @@ function UserLogin(){
   
 return(
   <div>
-  <form id="login-form" action='/user-login' method='get'>
+  <button onClick= {()=> {ReactDOM.render(<HomePage/>, document.getElementById('root'))}}>Back</button>
+  <form id="login-form" action='/user-login' method='get' style={{textAlign: 'center' , lineHeight: 2.5, fontSize: 16, }}>
 <label for="email">Email</label>
 <input type="text" placeholder="Enter Email" name="email" id="email-field" class="login-form-field"/>
 <br/>
 <input type="submit" value="login" id="login-form-submit" onClick= {onClick}/>
 </form>
-<button onClick= {()=> {ReactDOM.render(<HomePage/>, document.getElementById('root'))}}>Back</button>
 </div>)
 }
 */
@@ -135,10 +134,13 @@ function AdminLoginMenu(){
 
 function ChooseAlgoMenu(){
   return(
+
     <div>
+    <button onClick= {()=> {ReactDOM.render(<UserLogin/>, document.getElementById('root'))}}>Back</button>
+    <table style={{textAlign: 'center' , lineHeight: 2.5, fontSize: 30, }}>
       Choose Algorithm<br />
       <button onClick= {()=> {ReactDOM.render(<MergeSortMenu/>, document.getElementById('root'))}}>Merge Sort</button>
-      <button onClick= {()=> {ReactDOM.render(<UserLogin/>, document.getElementById('root'))}}>Back</button>
+      </table>
     </div>
   )
 }
