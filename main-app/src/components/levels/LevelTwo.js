@@ -6,6 +6,8 @@ import { mergeSort } from "../../App";
 import $ from "jquery";
 
 
+
+
 let score = 0;
 function setScore(newScore){
     score = newScore;
