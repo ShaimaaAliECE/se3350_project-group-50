@@ -109,7 +109,7 @@ function LevelTwo(){
             </tr>, document.getElementById("stepThree"))
         }
         {
-            ReactDOM.render(            <tr id="stepFour">
+            ReactDOM.render(            <tr >
             &nbsp;
             &nbsp;
             &nbsp;
@@ -160,6 +160,65 @@ function LevelTwo(){
             &nbsp;
             <DropBox key={"40"} divideVal={array[9]} id="40"/>
             </tr>, document.getElementById("stepFour"))
+        }
+        {
+            ReactDOM.render(<tr>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <DropBox key={"41"} divideVal={array[0]} id="41"/>
+            <DropBox key={"42"} divideVal={array[1]} id="42"/>  
+            &nbsp;
+            <DropBox key={"43"} divideVal={array[2]} id="43"/> 
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+           
+            <DropBox key={"44"} divideVal={array[3]} id="44"/>
+            &nbsp;
+            <DropBox key={"45"} divideVal={array[4]} id="45"/>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <DropBox key={"46"} divideVal={array[5]} id="46"/>
+            <DropBox key={"47"} divideVal={array[6]} id="47"/>  
+            &nbsp;
+            <DropBox key={"48"} divideVal={array[7]} id="48"/> 
+            &nbsp;
+            &nbsp;
+            <DropBox key={"49"} divideVal={array[8]} id="49"/>
+            &nbsp;
+            <DropBox key={"50"} divideVal={array[9]} id="50"/>
+            </tr>, document.getElementById("stepFive"))
+        }
+
+{
+        ReactDOM.render(<tr>
+            &nbsp;
+            &nbsp;
+            <DropBox key={"51"} divideVal={array[0]} id="51"/>
+            <DropBox key={"52"} divideVal={array[1]} id="52"/>
+            <DropBox key={"53"} divideVal={array[2]} id="53"/>
+            &nbsp;
+            <DropBox key={"54"} divideVal={array[3]} id="54"/>
+            <DropBox key={"55"} divideVal={array[4]} id="55"/>
+            &nbsp;
+            &nbsp; 
+            &nbsp;
+            &nbsp;
+            <DropBox key={"56"} divideVal={array[5]} id="56"/>
+            <DropBox key={"57"} divideVal={array[6]} id="57"/>
+            <DropBox key={"58"} divideVal={array[7]} id="58"/>
+            &nbsp;
+            <DropBox key={"59"} divideVal={array[8]} id="59"/>
+            <DropBox key={"60"} divideVal={array[9]} id="60"/> 
+            </tr>, document.getElementById("stepTwo"))
         }
         </tbody>
         </table>
