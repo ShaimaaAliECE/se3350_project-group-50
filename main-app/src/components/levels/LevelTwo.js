@@ -245,9 +245,7 @@ function LevelTwo(){
             <DropBox key={"72"} divideVal={array[1]} id="72"/>
             <DropBox key={"73"} divideVal={array[2]} id="73"/>
             <DropBox key={"74"} divideVal={array[3]} id="74"/>
-            <DropBox key={"75"} divideVal={array[4]} id="75"/>
-            
-            &nbsp;    
+            <DropBox key={"75"} divideVal={array[4]} id="75"/> 
             <DropBox key={"76"} divideVal={array[5]} id="76"/>
             <DropBox key={"77"} divideVal={array[6]} id="77"/>
             <DropBox key={"78"} divideVal={array[7]} id="78"/>
