@@ -35,7 +35,46 @@ function LevelOne(){
       }
     }
     
-      
+    switch(step){
+      case 1:
+        ReactDOM.render(<NumbersRow style={{marginLeft: "34%"}} array={tempArray}/>, document.getElementById('stepOne'));
+        document.getElementById("feedback").innerText = feedback[0];
+        if(merging){
+          ReactDOM.render(<></>, document.getElementById('stepTwo'));
+          document.getElementById("feedback").innerText = feedback[4];
+        }
+        break;
+      case 2:
+        ReactDOM.render(<NumbersRow style={{marginLeft: "32%"}} array={tempArray}/>, document.getElementById('stepTwo'))
+        document.getElementById("feedback").innerText = feedback[1];
+        if(merging){
+          ReactDOM.render(<></>, document.getElementById('stepThree'));
+          document.getElementById("feedback").innerText = feedback[5];
+        }
+          break;
+      case 3:
+        ReactDOM.render(<NumbersRow style={{marginLeft: "27%"}} array={tempArray}/>, document.getElementById('stepThree'));
+        document.getElementById("feedback").innerText = feedback[2];
+        if(merging){
+          ReactDOM.render(<></>, document.getElementById('stepFour'));
+          document.getElementById("feedback").innerText = feedback[6];
+        }
+        break;
+      case 4:
+        ReactDOM.render(<NumbersRow style={{marginLeft: "18%"}} array={tempArray}/>, document.getElementById('stepFour'));
+        document.getElementById("feedback").innerText = feedback[3];
+        setMerging(true) //start merging process
+        setStep(step-1);
+        break;
+      case 0: // case 0 is the last step in the level 
+        ReactDOM.render(<></>, document.getElementById('stepOne'));
+        document.getElementById("feedback").innerText = feedback[7];
+        document.getElementById('nextBtn').onclick = nextLevel;
+        document.getElementById('nextBtn').innerText = "Next Level";
+        tree.value = mergeSort([...array])
+        break;        
+    }
+  }
     
 
   function createTree(node){
