@@ -7,6 +7,7 @@ import LevelFive from "./components/levels/LevelFive";
 import {useState, useEffect} from 'react';
 import AdminPage from './components/AdminPage';
 import { useImperativeHandle } from 'react';
+import axios from 'axios';
 
 let draggedItem = null;
 //let currentLevel = "Level1"; will not be used till probably sprint 3
@@ -34,48 +35,25 @@ function HomePage(){
 }
 
 function UserLogin(){
-
-  const [initialState, setInitialState] = useState([])
-
-  useEffect(() => {
-    fetch('/test').then(res => {
-      if(res.ok){
-        return res.json()
+  function onClick(){
+    axios({
+      method: "POST",
+      url: "/test2",
+      data: {
+        email: `${document.getElementById("email-field").value}`
       }
-    }).then(jsonResponse => setInitialState(jsonResponse))
-  }, [])
-  
-    function onClick(){
-      ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'));
-      var emails=[];
-      emails.push(document.getElementById("email-field").value);
-      console.log(emails);
+    })
+    ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'));
+  }
 
-      for (let key in initialState) {
-        let value = initialState[key];
-        console.log(key, value);
-
-        if (emails[0] == value) {
-          console.log("CORRECT")
-          break;
-        }
-      }
-    }
-    
-  
 return(
-  <div>
-  <button onClick= {()=> {ReactDOM.render(<HomePage/>, document.getElementById('root'))}}>Back</button>
-  <form id="login-form" action='/user-login' method='get' style={{textAlign: 'center' , lineHeight: 2.5, fontSize: 16, }}>
+<div>
 <label for="email">Email</label>
 <input type="text" placeholder="Enter Email" name="email" id="email-field" class="login-form-field"/>
 <br/>
-<input type="submit" value="login" id="login-form-submit" onClick= {onClick}/>
-</form>
+<button onClick= {onClick}/>
 </div>)
 }
-
-
 
 function UserLoginMenu(){
   return(

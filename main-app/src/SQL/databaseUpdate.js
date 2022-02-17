@@ -24,7 +24,7 @@ connection.query(`DROP TABLE Customer`, (err, rows, fields) => {
     }
 });
 
-app.get('/leveltime', (res,req) =>{
+app.get('/levelTime', (res,req) =>{
 var query = connection.query(`UPDATE Customer 
                               SET LevelOneTime = LevelOneTime + 1,
                               LevelTwoTime = LevelTwoTime + 1,
@@ -37,6 +37,7 @@ var query = connection.query(`UPDATE Customer
         }
 
         else{
+            response.send('Successfully updated progress');
             }
     });
 })
