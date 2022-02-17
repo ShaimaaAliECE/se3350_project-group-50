@@ -2,8 +2,6 @@ import { draggedItem } from "../App";
 import { useEffect, useState } from "react";
 import { setScore, getScore } from "./levels/LevelTwo";
 import $ from "jquery";
-import correct from '../Correct.mp3'
-import wrong from '../Wrong.mp3'
 import sike from '../Sike.mp3'
 import ding from '../Ding.mp3'
 
