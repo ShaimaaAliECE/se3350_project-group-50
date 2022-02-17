@@ -6,6 +6,7 @@ function Number(props){
     <td className="number" draggable onDragStart={() => {setDraggedItem(props.num)}}>
         {
             props.num
+           
         }
     </td>
     )
