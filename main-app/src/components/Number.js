@@ -12,5 +12,5 @@ function Number(props){
     )
 }
 
-console.log('test');
+console.log('This is working');
 export default Number;
