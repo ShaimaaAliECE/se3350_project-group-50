@@ -27,6 +27,9 @@ function LevelTwo(){
        // $("#stepTwo").hide()
        // $("#stepThree").hide()
         //$("#stepFour").hide()
+        // $("#stepFive").hide()
+        //$("#stepSix").hide()
+
     }, []) 
     
     
@@ -109,7 +112,7 @@ function LevelTwo(){
             </tr>, document.getElementById("stepThree"))
         }
         {
-            ReactDOM.render(            <tr >
+            ReactDOM.render(            <tr>
             &nbsp;
             &nbsp;
             &nbsp;
@@ -218,7 +221,7 @@ function LevelTwo(){
             &nbsp;
             <DropBox key={"59"} divideVal={array[8]} id="59"/>
             <DropBox key={"60"} divideVal={array[9]} id="60"/> 
-            </tr>, document.getElementById("stepTwo"))
+            </tr>, document.getElementById("stepSix"))
         }
         </tbody>
         </table>
