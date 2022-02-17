@@ -6,10 +6,11 @@ function Number(props){
     <td className="number" draggable onDragStart={() => {setDraggedItem(props.num)}}>
         {
             props.num
+           
         }
     </td>
     )
 }
 
-
+console.log('test');
 export default Number;
