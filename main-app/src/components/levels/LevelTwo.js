@@ -28,7 +28,7 @@ function LevelTwo(){
     
     return(
         <div>
-        <table><tbody><tr><Numbers style={{marginLeft: "34%"}} array={array}/></tr></tbody></table>
+        <table><tbody><tr style={{marginLeft: "34%"}}><Numbers array={array}/></tr></tbody></table>
         <table>
             <tbody>
             <tr id="stepOne" style={{marginLeft: "34%"}}>
