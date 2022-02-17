@@ -254,7 +254,7 @@ function LevelTwo(){
             <DropBox key={"79"} divideVal={array[8]} id="79"/>
             <DropBox key={"80"} divideVal={array[9]} id="80"/>
             </tr>
-        , document.getElementById("stepSeven"))}
+        , document.getElementById("stepEight"))}
         </tbody>
         </table>
         <button onClick={()=>{document.getElementById("feedback").innerText = ""}}>Clear text</button>
