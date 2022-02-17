@@ -62,15 +62,15 @@ function LevelTwo(){
             <DropBox key={"12"} divideVal={array[1]} id="12"/>
             <DropBox key={"13"} divideVal={array[2]} id="13"/>
             &nbsp;
+            &nbsp;
             <DropBox key={"14"} divideVal={array[3]} id="14"/>
             <DropBox key={"15"} divideVal={array[4]} id="15"/>
             &nbsp;
             &nbsp; 
-            &nbsp;
-            &nbsp;
             <DropBox key={"16"} divideVal={array[5]} id="16"/>
             <DropBox key={"17"} divideVal={array[6]} id="17"/>
             <DropBox key={"18"} divideVal={array[7]} id="18"/>
+            &nbsp;
             &nbsp;
             <DropBox key={"19"} divideVal={array[8]} id="19"/>
             <DropBox key={"20"} divideVal={array[9]} id="20"/> 
@@ -89,25 +89,25 @@ function LevelTwo(){
             <DropBox key={"21"} divideVal={array[0]} id="21"/>
             <DropBox key={"22"} divideVal={array[1]} id="22"/>  
             &nbsp;
+            &nbsp;
             <DropBox key={"23"} divideVal={array[2]} id="23"/> 
             &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-           
+            &nbsp;         
             <DropBox key={"24"} divideVal={array[3]} id="24"/>
             &nbsp;
-            <DropBox key={"25"} divideVal={array[4]} id="25"/>
             &nbsp;
+            <DropBox key={"25"} divideVal={array[4]} id="25"/>
             &nbsp;
             &nbsp;
             <DropBox key={"26"} divideVal={array[5]} id="26"/>
             <DropBox key={"27"} divideVal={array[6]} id="27"/>  
             &nbsp;
+            &nbsp;
             <DropBox key={"28"} divideVal={array[7]} id="28"/> 
             &nbsp;
             &nbsp;
             <DropBox key={"29"} divideVal={array[8]} id="29"/>
+            &nbsp;
             &nbsp;
             <DropBox key={"30"} divideVal={array[9]} id="30"/>
             </tr>, document.getElementById("stepThree"))
