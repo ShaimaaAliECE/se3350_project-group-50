@@ -24,9 +24,9 @@ function LevelTwo(){
     const[array, setArray] = useState(makeArray(10))
     
     useEffect(()=>{
-        $("#stepTwo").hide()
-        $("#stepThree").hide()
-        $("#stepFour").hide()
+       // $("#stepTwo").hide()
+       // $("#stepThree").hide()
+        //$("#stepFour").hide()
     }, []) 
     
     
@@ -110,6 +110,30 @@ function LevelTwo(){
         }
         {
             ReactDOM.render(            <tr id="stepFour">
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
             <DropBox key={"31"} divideVal={array[0]} id="31"/>
             &nbsp;
             <DropBox key={"32"} divideVal={array[1]} id="32"/>
