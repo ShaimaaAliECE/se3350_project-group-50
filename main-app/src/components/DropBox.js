@@ -4,6 +4,8 @@ import { setScore, getScore } from "./levels/LevelTwo";
 import $ from "jquery";
 import correct from '../Correct.mp3'
 import wrong from '../Wrong.mp3'
+import sike from '../Sike.mp3'
+import ding from '../Ding.mp3'
 
 
 let dumb = ["Are you dumb?", "Wow, you really did something here.", "The light is on but nobody's home.", "Has an IQ of 2 and it takes 3 to grunt", "Did you get a nobel prize yet?", "The wheel is spinning but the hamster's dead", "Bruh", "You are just bring silly now.", "Stop monkeying around to see if it works."]
@@ -42,7 +44,7 @@ function DropBox(props){
             } //and so on (each 10 is one step)
            
             //Audio feedback for correct goes here
-            const audio = new Audio(correct)
+            const audio = new Audio(ding)
             audio.play();
             console.log(audio)
 
@@ -53,7 +55,7 @@ function DropBox(props){
             $(`#${props.id}`).fadeOut(400)
 
             //Audio feedback for wrong goes here goes here 
-            const audio = new Audio(wrong)
+            const audio = new Audio(sike)
             audio.play();
 
             document.getElementById("feedback").innerText = "Wrong"
