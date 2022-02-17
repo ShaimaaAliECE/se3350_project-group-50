@@ -8,6 +8,8 @@ import ding from '../Ding.mp3'
 
 let dumb = ["Are you dumb?", "Wow, you really did something here.", "The light is on but nobody's home.", "Has an IQ of 2 and it takes 3 to grunt", "Did you get a nobel prize yet?", "The wheel is spinning but the hamster's dead", "Bruh", "You are just bring silly now.", "Stop monkeying around to see if it works."]
 
+let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array"]
+
 //component to drop numbers in 
 function DropBox(props){
     const [number, setNumber] = useState(0);
@@ -32,6 +34,7 @@ function DropBox(props){
             setScore(getScore() + 1)
             if(getScore() == 10){
                 $("#stepTwo").show();
+                document.getElementById("feedback").innerText = feedback[1];
             }
             if(getScore() == 20){
                 $("#stepThree").show();

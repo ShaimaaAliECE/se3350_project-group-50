@@ -10,6 +10,8 @@ import ReactDOM from 'react-dom';
 
 
 
+
+
 let score = 0;
 function setScore(newScore){
     score = newScore;

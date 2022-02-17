@@ -14,6 +14,7 @@ function LevelOne(){
 
   let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array"]
 
+  
   let tempArray = [];
 
   createTree(tree); // function to build the full tree by dividing the array till array length becomes one
@@ -34,7 +35,6 @@ function LevelOne(){
       }
     }
     
-      
     switch(step){
       case 1:
         ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepOne'));
@@ -75,6 +75,7 @@ function LevelOne(){
         break;        
     }
   }
+    
 
   function createTree(node){
     let nodeValue = node.value;
