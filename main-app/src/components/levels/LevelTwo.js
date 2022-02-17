@@ -4,6 +4,8 @@ import DropBox from "../DropBox";
 import { useState, useEffect } from "react";
 import { mergeSort } from "../../App";
 import $ from "jquery";
+import ReactDOM from 'react-dom';
+
 
 
 let score = 0;
@@ -28,10 +30,10 @@ function LevelTwo(){
     
     return(
         <div>
-        <table><tbody><tr><Numbers style={{marginLeft: "34%"}} array={array}/></tr></tbody></table>
-        <table>
-            <tbody>
-            <tr id="stepOne" style={{marginLeft: "34%"}}>
+        <table><tbody><tr><Numbers array={array}/></tr></tbody></table>
+        <table><tbody>{ReactDOM.render(
+            
+            <tr>
             <DropBox key={"1"} divideVal={array[0]} id="1"/>
             <DropBox key={"2"} divideVal={array[1]} id="2"/>
             <DropBox key={"3"} divideVal={array[2]} id="3"/>
@@ -45,7 +47,9 @@ function LevelTwo(){
             <DropBox key={"9"} divideVal={array[8]} id="9"/>
             <DropBox key={"10"} divideVal={array[9]} id="10"/>
             </tr>
-            <tr id="stepTwo">
+        , document.getElementById("stepOne"))}
+        {
+        ReactDOM.render(<tr>
             &nbsp;
             &nbsp;
             <DropBox key={"11"} divideVal={array[0]} id="11"/>
@@ -64,8 +68,10 @@ function LevelTwo(){
             &nbsp;
             <DropBox key={"19"} divideVal={array[8]} id="19"/>
             <DropBox key={"20"} divideVal={array[9]} id="20"/> 
-            </tr>
-            <tr id="stepThree">
+            </tr>, document.getElementById("stepTwo"))
+        }
+        {
+            ReactDOM.render(<tr>
             <DropBox key={"21"} divideVal={array[0]} id="21"/>
             <DropBox key={"22"} divideVal={array[1]} id="22"/>  
             &nbsp;
@@ -87,8 +93,10 @@ function LevelTwo(){
             <DropBox key={"29"} divideVal={array[8]} id="29"/>
             &nbsp;
             <DropBox key={"30"} divideVal={array[9]} id="30"/>
-            </tr>
-            <tr id="stepFour">
+            </tr>, document.getElementById("stepThree"))
+        }
+        {
+            ReactDOM.render(            <tr id="stepFour">
             <DropBox key={"31"} divideVal={array[0]} id="31"/>
             &nbsp;
             <DropBox key={"32"} divideVal={array[1]} id="32"/>
@@ -114,8 +122,9 @@ function LevelTwo(){
             <DropBox key={"39"} divideVal={array[8]} id="39"/>
             &nbsp;
             <DropBox key={"40"} divideVal={array[9]} id="40"/>
-            </tr>
-            </tbody>
+            </tr>, document.getElementById("stepFour"))
+        }
+        </tbody>
         </table>
         <button onClick={()=>{document.getElementById("feedback").innerText = ""}}>Clear text</button>
 

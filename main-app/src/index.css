@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+#root{
+  margin-left: 32%;
+  margin-top: 3%;
+}
+
 .number{
   margin-left: 30%;
   min-width: 40px;
@@ -20,7 +25,21 @@ code {
   background-color: aqua;
 }
 
+#stepOne{
+  margin-left: 31%;
+}
 
+#stepTwo{
+  margin-left: 29%;
+}
+
+#stepThree{
+  margin-left: 24%;
+}
+
+#stepFour{
+  margin-left: 15%;
+}
 
 table, tr{
   min-width: max-content;
