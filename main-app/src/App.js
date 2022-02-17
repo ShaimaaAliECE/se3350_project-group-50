@@ -7,6 +7,7 @@ import LevelFive from "./components/levels/LevelFive";
 import {useState, useEffect} from 'react';
 import AdminPage from './components/AdminPage';
 import { useImperativeHandle } from 'react';
+import axios from 'axios';
 
 let draggedItem = null;
 //let currentLevel = "Level1"; will not be used till probably sprint 3
@@ -34,6 +35,7 @@ function HomePage(){
   )
 }
 
+/*
 function UserLogin(){
 
   const [initialState, setInitialState] = useState([])
@@ -75,8 +77,28 @@ return(
 <button onClick= {()=> {ReactDOM.render(<HomePage/>, document.getElementById('root'))}}>Back</button>
 </div>)
 }
+*/
 
+function UserLogin(){
+  function onClick(){
+    axios({
+      method: "POST",
+      url: "/test2",
+      data: {
+        email: `${document.getElementById("email-field").value}`
+      }
+    })
+    ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'));
+  }
 
+return(
+<div>
+<label for="email">Email</label>
+<input type="text" placeholder="Enter Email" name="email" id="email-field" class="login-form-field"/>
+<br/>
+<button onClick= {onClick}/>
+</div>)
+}
 
 function UserLoginMenu(){
   return(

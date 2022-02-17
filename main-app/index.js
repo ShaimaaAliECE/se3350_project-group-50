@@ -1,10 +1,11 @@
 const newConnection = require('./src/SQL/databaseConnection');
 const express = require('express');
-const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 
 const app = express()
 app.use(cookieParser("secret stuff"))
-
+app.use(bodyParser.json());
 app.use(express.urlencoded({
   extended: true
 }))
@@ -16,8 +17,12 @@ app.get('/test', (req, res) => {
     })
 })
 
+app.post('/test2', (req, res) => {
+    console.log(req.body.email)
+})
+
 app.get('/user-login', (req, res) => {
-let email = req.params.email;
+let email = req.body.email;
 let conn = newConnection();
 conn.connect();
     conn.query(`SELECT * FROM Customer WHERE emailAddress = "${email}";`
