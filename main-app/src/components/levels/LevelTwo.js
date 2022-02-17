@@ -75,12 +75,23 @@ function LevelTwo(){
         }
         {
             ReactDOM.render(<tr>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
             <DropBox key={"21"} divideVal={array[0]} id="21"/>
             <DropBox key={"22"} divideVal={array[1]} id="22"/>  
             &nbsp;
             <DropBox key={"23"} divideVal={array[2]} id="23"/> 
             &nbsp;
             &nbsp;
+            &nbsp;
+            &nbsp;
+           
             <DropBox key={"24"} divideVal={array[3]} id="24"/>
             &nbsp;
             <DropBox key={"25"} divideVal={array[4]} id="25"/>
