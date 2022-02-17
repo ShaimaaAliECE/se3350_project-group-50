@@ -6,6 +6,8 @@ import { mergeSort } from "../../App";
 import $ from "jquery";
 
 
+
+
 let score = 0;
 function setScore(newScore){
     score = newScore;
@@ -28,7 +30,7 @@ function LevelTwo(){
     
     return(
         <div>
-        <table><tbody><tr><Numbers style={{marginLeft: "34%"}} array={array}/></tr></tbody></table>
+        <table><tbody><tr style={{marginLeft: "34%"}}><Numbers array={array}/></tr></tbody></table>
         <table>
             <tbody>
             <tr id="stepOne" style={{marginLeft: "34%"}}>
