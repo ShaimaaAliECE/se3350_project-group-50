@@ -114,7 +114,7 @@ function LevelOne(){
     <div>
       <button onClick = {onClick} id='nextBtn'>Next Step</button>
       <p id="feedback">Merge Sort Algorithm</p> 
-      <table><tr><Numbers  array={tree.value}/></tr></table>   
+      <table style={{marginLeft:"32%"}}><tr><Numbers array={tree.value}/></tr></table>   
          
     </div>
   )

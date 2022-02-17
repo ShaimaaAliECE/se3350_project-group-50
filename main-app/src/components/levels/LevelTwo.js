@@ -36,8 +36,8 @@ function LevelTwo(){
     
     return(
         <div>
-        <table><tbody><tr><Numbers array={array}/></tr></tbody></table>
-        <table style={{width:"100%"}}><tbody>{ReactDOM.render(
+        <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
+        <table><tbody>{ReactDOM.render(
             <tr>
             <DropBox key={"1"} divideVal={array[0]} id="1"/>
             <DropBox key={"2"} divideVal={array[1]} id="2"/>
