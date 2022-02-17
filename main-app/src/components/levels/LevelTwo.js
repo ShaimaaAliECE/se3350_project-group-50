@@ -25,11 +25,12 @@ function LevelTwo(){
     
     useEffect(()=>{
        // $("#stepTwo").hide()
-       // $("#stepThree").hide()
+        // $("#stepThree").hide()
         //$("#stepFour").hide()
         // $("#stepFive").hide()
         //$("#stepSix").hide()
-
+        //$("#stepSeven").hide()
+        //$("#stepEight").hide()
     }, []) 
     
     
