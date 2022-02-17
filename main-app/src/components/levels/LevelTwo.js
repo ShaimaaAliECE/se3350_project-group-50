@@ -239,6 +239,22 @@ function LevelTwo(){
             <DropBox key={"70"} divideVal={array[9]} id="70"/>
             </tr>
         , document.getElementById("stepSeven"))}
+        {ReactDOM.render(
+            <tr>
+            <DropBox key={"71"} divideVal={array[0]} id="61"/>
+            <DropBox key={"72"} divideVal={array[1]} id="62"/>
+            <DropBox key={"73"} divideVal={array[2]} id="63"/>
+            <DropBox key={"74"} divideVal={array[3]} id="64"/>
+            <DropBox key={"75"} divideVal={array[4]} id="65"/>
+            &nbsp;
+            &nbsp;    
+            <DropBox key={"76"} divideVal={array[5]} id="66"/>
+            <DropBox key={"77"} divideVal={array[6]} id="67"/>
+            <DropBox key={"78"} divideVal={array[7]} id="68"/>
+            <DropBox key={"79"} divideVal={array[8]} id="69"/>
+            <DropBox key={"80"} divideVal={array[9]} id="70"/>
+            </tr>
+        , document.getElementById("stepSeven"))}
         </tbody>
         </table>
         <button onClick={()=>{document.getElementById("feedback").innerText = ""}}>Clear text</button>
