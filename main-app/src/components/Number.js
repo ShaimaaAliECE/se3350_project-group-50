@@ -5,7 +5,7 @@ function Number(props){
     return(
     <td className="number" draggable onDragStart={() => {setDraggedItem(props.num)}}>
         {
-            
+            props.num
         }
     </td>
     )
