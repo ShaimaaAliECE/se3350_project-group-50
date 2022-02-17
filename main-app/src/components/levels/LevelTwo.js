@@ -24,10 +24,9 @@ function LevelTwo(){
     const[array, setArray] = useState(makeArray(10))
     
     useEffect(()=>{
-        //$("#stepOne").hide()
-       // $("#stepTwo").hide()
-        //$("#stepThree").hide()
-        //$("#stepFour").hide()
+        $("#stepTwo").hide()
+        $("#stepThree").hide()
+        $("#stepFour").hide()
     }, []) 
     
     
@@ -35,7 +34,7 @@ function LevelTwo(){
     return(
         <div>
         <table><tbody><tr><Numbers array={array}/></tr></tbody></table>
-        <table><tbody>{ReactDOM.render(
+        <table style={{width:"100%"}}><tbody>{ReactDOM.render(
             <tr>
             <DropBox key={"1"} divideVal={array[0]} id="1"/>
             <DropBox key={"2"} divideVal={array[1]} id="2"/>
