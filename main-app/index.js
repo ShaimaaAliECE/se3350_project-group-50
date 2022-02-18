@@ -35,7 +35,7 @@ conn.connect();
             }
 
             else if(rows.length == 0){
-                    connection.query(`INSERT INTO Customer (emailAddress, LevelReached)
+                    conn.query(`INSERT INTO Customer (emailAddress, LevelReached)
                                       VALUES ('${email}', 1)`
                     , (err, rows, fields) => {
                     if (err){
@@ -46,7 +46,7 @@ conn.connect();
                         response.send('Successfully inserted email');
                     }
                     });
-                    connection.end();
+                    conn.end();
             }
     }
     )
@@ -79,11 +79,11 @@ app.post("/level-completion", (req, res) => {
                             console.log("Successfully update current level")
                         }
                         })
+                        conn.end();
                     }   
                 }  
         }
     })
-
     console.log(completedLevel)
 })
 
