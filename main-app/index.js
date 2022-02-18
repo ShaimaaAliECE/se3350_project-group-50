@@ -60,22 +60,26 @@ app.post("/level-completion", (req, res) => {
     let completedLevel = req.body.completedLevel
     let email = req.body.email
     conn.connect();
+
         conn.query(`SELECT LevelReached FROM Customer WHERE emailAddress = "${email};`
         ,(err, rows, fields) =>{
             if (err){
                 console.log(err);
             }
             else{
-                conn.query(`UPDATE Customer SET LevelReached = LevelReached + 1;`
-                ,(err, rows, fields) =>{
-                    if (err){
+                if(rows.length == completedLevel){
+                    conn.query(`UPDATE Customer SET LevelReached = LevelReached + 1;`
+                    ,(err, rows, fields) =>{
+                        if (err){
                         console.log(err);
-                    }
+                        }
 
-                    else{
+                        else{
                         console.log("Successfully update current level")
-                    }
-                })
+                        }
+                    })
+                }
+                
             }
         })
 
