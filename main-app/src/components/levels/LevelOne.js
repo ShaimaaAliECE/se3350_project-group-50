@@ -1,17 +1,20 @@
 import Number from "../Number";
-import { mergeSort } from "../../App";
+import { App, mergeSort } from "../../App";
 import Numbers from "../Numbers";
 import makeArray from "../makeRandomArray";
 import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom';
 import {LevelTwo} from "./LevelTwo";
+import axios from "axios";
+
 
 function LevelOne(){
   const[array, setArray] = useState(makeArray(10))
   const[step, setStep] = useState(1) // store which step the player is at
   const[merging, setMerging] = useState(false); // When player reaches merging steps this changes to true
   const[tree, setTree] = useState({value: array, left:null, right:null})
-
+  const currentLevel = 1;
+  
   let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array"]
 
   
@@ -108,25 +111,16 @@ function LevelOne(){
   function nextLevel(){
     //send to Backend code goes here
 
+    axios({
+      method: "POST",
+      url: "/level-completion",
+      data: {
+        completedLevel: `${currentLevel}`
+      }
+    })
+  
     ReactDOM.render(<LevelTwo />, document.getElementById('root'));
 
-
-
-
-    // function levelCompletion(){
-    //   let xRequest = new XMLHttpRequest();
-    //   xRequest.onreadystatechange = displayNextLevel;
-
-    //   xRequest.open('GET', '/level-completion');
-    //   xRequest.send();
-
-    // }
-
-    // function displayNextLevel(){
-    //   if (this.readyState == 4 && this.status == 200){
-    //     ReactDOM.render(<LevelTwo />, document.getElementById('root'));
-    //   }
-    // }
   }
 
   return(
