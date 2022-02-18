@@ -52,7 +52,7 @@ conn.connect();
     )
 })
 
-app.post("/level-completion", (req, res) => {
+app.get("/level-completion", (req, res) => {
 
     console.log(req.body.email)
 
@@ -67,7 +67,7 @@ app.post("/level-completion", (req, res) => {
                 console.log(err);
             }
             else{
-                if(rows.length == completedLevel){
+                if(req.query == completedLevel){
                     conn.query(`UPDATE Customer SET LevelReached = LevelReached + 1;`
                     ,(err, rows, fields) =>{
                         if (err){
