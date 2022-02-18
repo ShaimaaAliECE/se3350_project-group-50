@@ -44,7 +44,7 @@ function UserLogin(){
       method: "POST",
       url: "/test2",
       data: {
-        email: `${document.getElementById("email-field").value}`
+        email: emailEntered
       }
     })
     ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'));
