@@ -242,7 +242,7 @@ function LevelTwo(){
         </tbody>
         </table>
         <p id="feedback"></p>
-        <p id="stepsTutorial">Split the Array as Evenly as Possible</p>
+        <p id="stepsTutorial">Split the Array as Evenly as Possible by dragging the numbers given in the corresponding empty box</p>
         <button id="nextBtn" onClick={()=> {resetSteps(); ReactDOM.render(<LevelThree/>, document.getElementById("root"))}}>Next Level</button>
         </div>
     )
