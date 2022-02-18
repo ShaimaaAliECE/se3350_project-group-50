@@ -16,7 +16,6 @@ function DropBox(props){
     const [number, setNumber] = useState(0);
     const [divideVal, setDivideVal] = useState(props.divideVal);
     const [isDone, setIsDone] = useState(false);
-    const [withSteps, setWithSteps] = useState(props.withSteps)
 
     useEffect(()=>{$(`#${props.id}`).hide()})
 
@@ -57,8 +56,6 @@ function DropBox(props){
             }
             if(getScore() == 70){
                 $("#stepEight").show();
-                setScore(0)
-                $("#nextBtn").show();
                 if(withSteps)
                     document.getElementById("stepsTutorial").innerText = steps[7];   
             }

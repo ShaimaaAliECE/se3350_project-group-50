@@ -2,11 +2,10 @@ import makeArray from "../makeRandomArray";
 import Numbers from "../Numbers";
 import DropBox from "../DropBox";
 import { useState, useEffect } from "react";
-import { mergeSort } from "../../App";
+import { mergeSort, resetSteps} from "../../App";
 import $ from "jquery";
 import ReactDOM from 'react-dom';
 import LevelThree from "./LevelThree";
-
 
 
 let score = 0;
@@ -53,7 +52,7 @@ function LevelTwo(){
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>
-            <DropBox key={"1"} divideVal={array[0]} withSteps={true} id="1"/>
+            <DropBox key={"1"} divideVal={array[0]} id="1"/>
             <DropBox key={"2"} divideVal={array[1]} id="2"/>
             <DropBox key={"3"} divideVal={array[2]} id="3"/>
             <DropBox key={"4"} divideVal={array[3]} id="4"/>
@@ -244,7 +243,7 @@ function LevelTwo(){
         </table>
         <p id="feedback"></p>
         <p id="stepsTutorial">Split the Array as Evenly as Possible</p>
-        <button id="nextBtn" onClick={()=> {ReactDOM.render(<></>, document.getElementById("allSteps")); ReactDOM.render(<LevelThree/>, document.getElementById("root"))}}>Next Level</button>
+        <button id="nextBtn" onClick={()=> {resetSteps(); ReactDOM.render(<LevelThree/>, document.getElementById("root"))}}>Next Level</button>
         </div>
     )
 }

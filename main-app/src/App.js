@@ -149,4 +149,15 @@ function merge(left, right) {
     return [ ...arr, ...left, ...right ]
 }
 
-export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage, UserLoginMenu, UserLogin, mergeSort}
+function resetSteps(){
+  ReactDOM.render(<></>, document.getElementById("stepOne"));
+  ReactDOM.render(<></>, document.getElementById("stepTwo"));
+  ReactDOM.render(<></>, document.getElementById("stepThree"));
+  ReactDOM.render(<></>, document.getElementById("stepFour"));
+  ReactDOM.render(<></>, document.getElementById("stepFive"));
+  ReactDOM.render(<></>, document.getElementById("stepSix"));
+  ReactDOM.render(<></>, document.getElementById("stepSeven"));
+  ReactDOM.render(<></>, document.getElementById("stepEight"));
+}
+
+export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage, UserLoginMenu, UserLogin, mergeSort, resetSteps}

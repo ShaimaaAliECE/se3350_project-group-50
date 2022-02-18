@@ -234,7 +234,6 @@ function LevelThree(){
         </tbody>
         </table>
         <p id="feedback"></p>
-        <p id="stepsTutorial">Split the Array as Evenly as Possible</p>
         <button id="nextBtn" onClick={()=> {ReactDOM.render(<></>, document.getElementById("allSteps")); ReactDOM.render(<LevelFour/>, document.getElementById("root"))}}>Next Level</button>
         </div>
     )
