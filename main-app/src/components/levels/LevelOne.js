@@ -6,14 +6,15 @@ import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom';
 import {LevelTwo} from "./LevelTwo";
 import axios from "axios";
-import {currentLevel} from "../../App";
+
 
 function LevelOne(){
   const[array, setArray] = useState(makeArray(10))
   const[step, setStep] = useState(1) // store which step the player is at
   const[merging, setMerging] = useState(false); // When player reaches merging steps this changes to true
   const[tree, setTree] = useState({value: array, left:null, right:null})
-
+  const currentLevel = "Level 1";
+  
   let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array"]
 
   
