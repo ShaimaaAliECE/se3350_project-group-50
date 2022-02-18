@@ -101,10 +101,10 @@ function LevelThree(){
             </tr>
             </tbody>
         </table>
-        <button onClick= {()=> {ReactDOM.render(<FuilurePageMenu/>, document.getElementById('root'))}}>Die</button>
         
         </div>
     )
 }
+        //<button onClick= {()=> {ReactDOM.render(<FuilurePageMenu/>, document.getElementById('root'))}}>Die</button>
 
 export default LevelThree;
