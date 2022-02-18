@@ -112,7 +112,7 @@ function LevelOne(){
     //send to Backend code goes here
 
     axios({
-      method: "GET",
+      method: "POST",
       url: "/level-completion",
       data: {
         completedLevel: `${currentLevel}`,

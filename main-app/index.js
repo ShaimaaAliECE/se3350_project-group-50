@@ -52,7 +52,7 @@ conn.connect();
     )
 })
 
-app.get("/level-completion", (req, res) => {
+app.post("/level-completion", (req, res) => {
 
     console.log(req.body.email)
 
