@@ -54,7 +54,9 @@ conn.connect();
 
 app.post("/level-completion", (req, res) => {
 
-    console.log(req.body.completedLevel)
+    let completedLevel = req.body.completedLevel
+
+    console.log(completedLevel)
 })
 
 app.listen(80);
