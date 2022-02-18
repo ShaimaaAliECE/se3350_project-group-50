@@ -79,8 +79,8 @@ app.post("/level-completion", (req, res) => {
                             console.log("Successfully update current level")
                         }
                         })
-                        conn.end();
-                    }   
+                    }  
+                    conn.end(); 
                 }  
         }
     })
