@@ -58,6 +58,7 @@ app.post("/level-completion", (req, res) => {
 
     let conn = newConnection();
     let completedLevel = req.body.completedLevel
+    let email = req.body.email
     conn.connect();
         conn.query(`SELECT LevelReached FROM Customer WHERE emailAddress = "${email};`
         ,(err, rows, fields) =>{
