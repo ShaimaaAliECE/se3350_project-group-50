@@ -40,7 +40,7 @@ function LevelTwo(){
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>
-            <DropBox key={"1"} divideVal={array[0]} id="1"/>
+            <DropBox key={"1"} divideVal={array[0]} withSteps={true} id="1"/>
             <DropBox key={"2"} divideVal={array[1]} id="2"/>
             <DropBox key={"3"} divideVal={array[2]} id="3"/>
             <DropBox key={"4"} divideVal={array[3]} id="4"/>
@@ -257,8 +257,9 @@ function LevelTwo(){
         </tbody>
         </table>
         <button onClick={()=>{document.getElementById("feedback").innerText = ""}}>Clear text</button>
-
         <p id="feedback"></p>
+        <p id="stepsTutorial">Split the Array as Evenly as Possible</p>
+        
         </div>
     )
 }
