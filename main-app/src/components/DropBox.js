@@ -26,28 +26,23 @@ function DropBox(props){
             setScore(getScore() + 1)
             if(getScore() == 10){
                 $("#stepTwo").show();
-                if(withSteps)
-                    document.getElementById("stepsTutorial").innerText = steps[1];
+                document.getElementById("stepsTutorial").innerText = steps[1];
             }
             if(getScore() == 20){
                 $("#stepThree").show();
-                if(withSteps)
-                    document.getElementById("stepsTutorial").innerText = steps[2];
+                document.getElementById("stepsTutorial").innerText = steps[2];
             }
             if(getScore() == 30){
                 $("#stepFour").show();
-                if(withSteps)
-                    document.getElementById("stepsTutorial").innerText = steps[3];   
+                document.getElementById("stepsTutorial").innerText = steps[3];   
             } 
             if(getScore() == 40){
                 $("#stepFive").show();
-                if(withSteps)
-                    document.getElementById("stepsTutorial").innerText = steps[4];   
+                document.getElementById("stepsTutorial").innerText = steps[4];   
             }
             if(getScore() == 50){
                 $("#stepSix").show();
-                if(withSteps)
-                    document.getElementById("stepsTutorial").innerText = steps[5];   
+                document.getElementById("stepsTutorial").innerText = steps[5];   
             }
             if(getScore() == 60){
                 $("#stepSeven").show();
@@ -56,20 +51,17 @@ function DropBox(props){
             }
             if(getScore() == 70){
                 $("#stepEight").show();
-                if(withSteps)
-                    document.getElementById("stepsTutorial").innerText = steps[7];   
+                document.getElementById("stepsTutorial").innerText = steps[7];   
             }
             if(getScore() == 80){
                 setScore(0)
                 $("#nextBtn").show();
-                if(withSteps)
-                    document.getElementById("stepsTutorial").innerText = steps[8];   
+                document.getElementById("stepsTutorial").innerText = steps[8];   
             }
            
             //Audio feedback for correct goes here
             const audio = new Audio(ding)
             audio.play();
-            console.log(audio)
 
             setIsDone(true);
         } else if(!isDone){
