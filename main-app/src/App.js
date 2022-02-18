@@ -10,6 +10,7 @@ import { useImperativeHandle } from 'react';
 import axios from 'axios';
 
 let draggedItem = null;
+let emailEntered = null;
 //let currentLevel = "Level1"; will not be used till probably sprint 3
 
 function App() {
@@ -36,6 +37,9 @@ function HomePage(){
 
 function UserLogin(){
   function onClick(){
+    emailEntered = `${document.getElementById("email-field").value}`
+    console.log(emailEntered)
+
     axios({
       method: "POST",
       url: "/test2",
@@ -149,4 +153,4 @@ function merge(left, right) {
     return [ ...arr, ...left, ...right ]
 }
 
-export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage, UserLoginMenu, UserLogin, mergeSort}
+export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage, UserLoginMenu, UserLogin, mergeSort, emailEntered}

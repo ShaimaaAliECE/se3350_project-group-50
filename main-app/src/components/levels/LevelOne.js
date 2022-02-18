@@ -1,5 +1,5 @@
 import Number from "../Number";
-import { App, mergeSort } from "../../App";
+import { App, mergeSort, emailEntered } from "../../App";
 import Numbers from "../Numbers";
 import makeArray from "../makeRandomArray";
 import { useState, useEffect } from "react";
@@ -115,7 +115,8 @@ function LevelOne(){
       method: "POST",
       url: "/level-completion",
       data: {
-        completedLevel: `${currentLevel}`
+        completedLevel: `${currentLevel}`,
+        email: `${emailEntered}`
       }
     })
   
