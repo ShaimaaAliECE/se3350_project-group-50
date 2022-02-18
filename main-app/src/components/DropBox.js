@@ -46,8 +46,7 @@ function DropBox(props){
             }
             if(getScore() == 60){
                 $("#stepSeven").show();
-                if(withSteps)
-                    document.getElementById("stepsTutorial").innerText = steps[6];   
+                document.getElementById("stepsTutorial").innerText = steps[6];   
             }
             if(getScore() == 70){
                 $("#stepEight").show();
