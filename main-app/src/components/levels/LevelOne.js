@@ -107,7 +107,26 @@ function LevelOne(){
 
   function nextLevel(){
     //send to Backend code goes here
+
     ReactDOM.render(<LevelTwo />, document.getElementById('root'));
+
+
+
+
+    // function levelCompletion(){
+    //   let xRequest = new XMLHttpRequest();
+    //   xRequest.onreadystatechange = displayNextLevel;
+
+    //   xRequest.open('GET', '/level-completion');
+    //   xRequest.send();
+
+    // }
+
+    // function displayNextLevel(){
+    //   if (this.readyState == 4 && this.status == 200){
+    //     ReactDOM.render(<LevelTwo />, document.getElementById('root'));
+    //   }
+    // }
   }
 
   return(
