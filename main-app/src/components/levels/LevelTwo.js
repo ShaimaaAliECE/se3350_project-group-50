@@ -24,9 +24,9 @@ function LevelTwo(){
     let tempArray4 = []
 
     useEffect(()=>{
-      //  $("#stepTwo").hide()
-        //$("#stepThree").hide()
-       // $("#stepFour").hide()
+        $("#stepTwo").hide()
+        $("#stepThree").hide()
+        $("#stepFour").hide()
         $("#stepFive").hide()
         $("#stepSix").hide()
         $("#stepSeven").hide()
