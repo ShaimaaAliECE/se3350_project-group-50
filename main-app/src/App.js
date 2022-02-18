@@ -51,7 +51,7 @@ return(
 <label for="email">Email</label>
 <input type="text" placeholder="Enter Email" name="email" id="email-field" class="login-form-field"/>
 <br/>
-<button onClick= {onClick}/>
+<button onClick={onClick}>Login</button>
 </div>)
 }
 

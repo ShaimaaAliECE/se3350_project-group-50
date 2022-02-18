@@ -107,14 +107,33 @@ function LevelOne(){
 
   function nextLevel(){
     //send to Backend code goes here
+
     ReactDOM.render(<LevelTwo />, document.getElementById('root'));
+
+
+
+
+    // function levelCompletion(){
+    //   let xRequest = new XMLHttpRequest();
+    //   xRequest.onreadystatechange = displayNextLevel;
+
+    //   xRequest.open('GET', '/level-completion');
+    //   xRequest.send();
+
+    // }
+
+    // function displayNextLevel(){
+    //   if (this.readyState == 4 && this.status == 200){
+    //     ReactDOM.render(<LevelTwo />, document.getElementById('root'));
+    //   }
+    // }
   }
 
   return(
     <div>
       <button onClick = {onClick} id='nextBtn'>Next Step</button>
       <p id="feedback">Merge Sort Algorithm</p> 
-      <table><tr><Numbers  array={tree.value}/></tr></table>   
+      <table style={{marginLeft:"32%"}}><tr><Numbers array={tree.value}/></tr></table>   
          
     </div>
   )
