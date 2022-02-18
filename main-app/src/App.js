@@ -48,7 +48,8 @@ function UserLogin(){
 
 return(
 <div>
-<label for="email">Email</label>
+<h1>User Login</h1>
+<label for="email">Email: </label>
 <input type="text" placeholder="Enter Email" name="email" id="email-field" class="login-form-field"/>
 <br/>
 <button onClick={onClick}>Login</button>
@@ -69,14 +70,13 @@ function AdminLoginMenu(){
       ReactDOM.render(<AdminPage/>, document.getElementById('root'))
     }else {
       document.getElementById("incorrect").innerText = "Incorrect User Name or Password"
-      
     }
     
   }
 
   return(
     <div>
-      Admin Login Page<br/>
+      <h1>Admin Login Page</h1>
       <form id="login-form" onSubmit={(event)=>{event.preventDefault(); onClick();}}>
         Enter UserName: <input name='userName' type={"text"}></input><br/>
         Enter Password: <input name='password' type={"text"}></input>
@@ -92,11 +92,9 @@ function ChooseAlgoMenu(){
   return(
 
     <div>
-    <button onClick= {()=> {ReactDOM.render(<UserLogin/>, document.getElementById('root'))}}>Back</button>
-    <table style={{textAlign: 'center' , lineHeight: 2.5, fontSize: 30, }}>
-      Choose Algorithm<br />
+      <button onClick= {()=> {ReactDOM.render(<UserLogin/>, document.getElementById('root'))}}>Back</button>
+      <h1>Choose Algorithm</h1>
       <button onClick= {()=> {ReactDOM.render(<MergeSortMenu/>, document.getElementById('root'))}}>Merge Sort</button>
-      </table>
     </div>
   )
 }
@@ -104,7 +102,7 @@ function ChooseAlgoMenu(){
 function MergeSortMenu(){
   return(
     <div>
-      Choose Level<br />
+      <h1>Choose Level</h1>
       <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
       <br />
       <button onClick= {()=> {ReactDOM.render(<LevelTwo/>, document.getElementById('root'))}}>Level Two</button>

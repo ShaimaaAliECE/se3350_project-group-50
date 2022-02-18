@@ -2,6 +2,7 @@ import { draggedItem } from "../App";
 import { useEffect, useState } from "react";
 import { setScore, getScore } from "./levels/LevelTwo";
 import $ from "jquery";
+import ReactDOM from 'react-dom';
 import sike from '../Sike.mp3'
 import ding from '../Ding.mp3'
 
@@ -40,27 +41,30 @@ function DropBox(props){
                     document.getElementById("stepsTutorial").innerText = steps[3];   
             } 
             if(getScore() == 40){
-                $("#stepFour").show();
+                $("#stepFive").show();
                 if(withSteps)
                     document.getElementById("stepsTutorial").innerText = steps[4];   
             }
             if(getScore() == 50){
-                $("#stepFour").show();
+                $("#stepSix").show();
                 if(withSteps)
                     document.getElementById("stepsTutorial").innerText = steps[5];   
             }
             if(getScore() == 60){
-                $("#stepFour").show();
+                $("#stepSeven").show();
                 if(withSteps)
                     document.getElementById("stepsTutorial").innerText = steps[6];   
             }
             if(getScore() == 70){
-                $("#stepFour").show();
+                $("#stepEight").show();
+                setScore(0)
+                $("#nextBtn").show();
                 if(withSteps)
                     document.getElementById("stepsTutorial").innerText = steps[7];   
             }
             if(getScore() == 80){
-                $("#stepFour").show();
+                setScore(0)
+                $("#nextBtn").show();
                 if(withSteps)
                     document.getElementById("stepsTutorial").innerText = steps[8];   
             }
