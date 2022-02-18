@@ -1,10 +1,12 @@
 import Number from "../Number";
-import { mergeSort } from "../../App";
+import { App, mergeSort } from "../../App";
 import Numbers from "../Numbers";
 import makeArray from "../makeRandomArray";
 import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom';
 import {LevelTwo} from "./LevelTwo";
+import axios from "axios";
+import {currentLevel} from "../../App";
 
 function LevelOne(){
   const[array, setArray] = useState(makeArray(10))
@@ -108,6 +110,14 @@ function LevelOne(){
   function nextLevel(){
     //send to Backend code goes here
 
+    axios({
+      method: "POST",
+      url: "/level-completion",
+      data: {
+        completedLevel: `${currentLevel}`
+      }
+    })
+  
     ReactDOM.render(<LevelTwo />, document.getElementById('root'));
 
 

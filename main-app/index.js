@@ -52,4 +52,9 @@ conn.connect();
     )
 })
 
+app.post("/level-completion", (req, res) => {
+
+    console.log(req.body.completedLevel)
+})
+
 app.listen(80);

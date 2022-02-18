@@ -10,7 +10,7 @@ import { useImperativeHandle } from 'react';
 import axios from 'axios';
 
 let draggedItem = null;
-//let currentLevel = "Level1"; will not be used till probably sprint 3
+let currentLevel = "Level1"; //will not be used till probably sprint 3
 
 function App() {
   return(
@@ -151,4 +151,4 @@ function merge(left, right) {
     return [ ...arr, ...left, ...right ]
 }
 
-export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage, UserLoginMenu, UserLogin, mergeSort}
+export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage, UserLoginMenu, UserLogin, mergeSort, currentLevel}
