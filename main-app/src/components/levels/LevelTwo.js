@@ -34,7 +34,33 @@ function LevelTwo(){
         $("#stepSeven").hide()
         $("#stepEight").hide()
         $("#nextBtn").hide()
+
+       
     }, []) 
+
+  const [seconds, setSeconds] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  //const isActive = useState(true);
+
+  useEffect(()=> {
+      let interval = null;
+    if (true) {
+      interval = setInterval(() => {
+        setSeconds(seconds + 1);
+        if (seconds >= 59){
+          setMinutes(minutes + 1);
+          setSeconds(0);
+        }
+      }, 1000);
+    } 
+    return clearInterval(interval);
+  }, [seconds, minutes])
+    
+ 
+
+ 
+
+
     
 
     function nextLevel(){
@@ -68,6 +94,7 @@ function LevelTwo(){
 
     return(
         <div>
+        <p>Time: {minutes}m {seconds}s </p>
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>
