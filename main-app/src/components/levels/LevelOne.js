@@ -137,9 +137,9 @@ function LevelOne(){
     let interval = null;
     if (isActive) {
       interval = setInterval(() => {
-        setSeconds(seconds => seconds + 1);
+        setSeconds( seconds + 1);
         if (seconds >= 59){
-          setMinutes(minutes => minutes + 1);
+          setMinutes(minutes + 1);
           setSeconds(0);
         }
       }, 1000);
