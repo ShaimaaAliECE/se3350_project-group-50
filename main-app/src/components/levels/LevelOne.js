@@ -133,15 +133,6 @@ function LevelOne(){
   const [minutes, setMinutes] = useState(0);
   const [isActive, setIsActive] = useState(true);
 
-  function toggle() {
-    setIsActive(!isActive);
-  }
-
-  function reset() {
-    setSeconds(0);
-    setIsActive(false);
-  }
-
   useEffect(() => {
     let interval = null;
     if (isActive) {
@@ -168,10 +159,7 @@ function LevelOne(){
       <p>Time: {minutes}m {seconds}s </p>
       <p id="feedback">Merge Sort Algorithm</p> 
       <table style={{marginLeft:"32%"}}><tr><Numbers array={tree.value}/></tr></table>
-      
-      
-
-         
+          
     </div>
   )
 }
