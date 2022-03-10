@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import { MergeSortMenu, ChooseAlgoMenu, HomePage } from '../App';
 
-function FuilurePageMenu(){
+function FailurePageMenu(){
     return(
       <div>
         You Lost<br />
@@ -16,4 +16,4 @@ function FuilurePageMenu(){
     )
 }
 
-export default FuilurePageMenu;
+export default FailurePageMenu;
