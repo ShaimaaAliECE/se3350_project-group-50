@@ -12,6 +12,7 @@ import axios from 'axios';
 let draggedItem = null;
 let emailEntered = null;
 //let currentLevel = "Level1"; will not be used till probably sprint 3
+let userLevel = 0;
 let lives = 3;
 
 function deductLives(){
@@ -58,7 +59,7 @@ function UserLogin(){
         email: emailEntered
       }
     }).then(res => {
-      console.log(res.data);
+      userLevel = res.data;
     });
     ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'));
   }
@@ -115,7 +116,7 @@ function ChooseAlgoMenu(){
     </div>
   )
 }
-
+/**
 function MergeSortMenu(){
   return(
     <div>
@@ -134,7 +135,98 @@ function MergeSortMenu(){
     </div>
   )
 }
+*/
 
+function MergeSortMenu(){
+  switch(userLevel) {
+    case 1:
+      return(
+        <div>
+          <h1>Choose Level</h1>
+          <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
+          <br />
+          <button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}>Back</button>
+        </div>
+      )
+      break;
+    case 2:
+      return(
+        <div>
+          <h1>Choose Level</h1>
+          <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
+          <br />
+          <button onClick= {()=> {ReactDOM.render(<LevelTwo/>, document.getElementById('root'))}}>Level Two</button>
+          <br/>
+          <button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}>Back</button>
+        </div>
+      )
+      break;
+    case 3:
+      return(
+        <div>
+          <h1>Choose Level</h1>
+          <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
+          <br />
+          <button onClick= {()=> {ReactDOM.render(<LevelTwo/>, document.getElementById('root'))}}>Level Two</button>
+          <br />
+          <button onClick= {()=> {ReactDOM.render(<LevelThree/>, document.getElementById('root'))}}>Level Three</button>
+          <br/>
+          <button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}>Back</button>
+        </div>
+      )
+      break;
+    case 4:
+      return(
+        <div>
+          <h1>Choose Level</h1>
+          <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
+          <br />
+          <button onClick= {()=> {ReactDOM.render(<LevelTwo/>, document.getElementById('root'))}}>Level Two</button>
+          <br />
+          <button onClick= {()=> {ReactDOM.render(<LevelThree/>, document.getElementById('root'))}}>Level Three</button>
+          <br />
+          <button onClick= {()=> {ReactDOM.render(<LevelFour/>, document.getElementById('root'))}}>Level Four</button>
+          <br/>
+          <button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}>Back</button>
+        </div>
+      )
+      break;
+    case 5:
+      return(
+        <div>
+          <h1>Choose Level</h1>
+          <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
+          <br />
+          <button onClick= {()=> {ReactDOM.render(<LevelTwo/>, document.getElementById('root'))}}>Level Two</button>
+          <br />
+          <button onClick= {()=> {ReactDOM.render(<LevelThree/>, document.getElementById('root'))}}>Level Three</button>
+          <br />
+          <button onClick= {()=> {ReactDOM.render(<LevelFour/>, document.getElementById('root'))}}>Level Four</button>
+          <br />
+          <button onClick= {()=> {ReactDOM.render(<LevelFive/>, document.getElementById('root'))}}>Level Five</button>
+          <br/>
+          <button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}>Back</button>
+        </div>
+      )
+      break;
+  }
+  return(
+    <div>
+      <h1>Choose Level</h1>
+      <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
+      <br />
+      <button onClick= {()=> {ReactDOM.render(<LevelTwo/>, document.getElementById('root'))}}>Level Two</button>
+      <br />
+      <button onClick= {()=> {ReactDOM.render(<LevelThree/>, document.getElementById('root'))}}>Level Three</button>
+      <br />
+      <button onClick= {()=> {ReactDOM.render(<LevelFour/>, document.getElementById('root'))}}>Level Four</button>
+      <br />
+      <button onClick= {()=> {ReactDOM.render(<LevelFive/>, document.getElementById('root'))}}>Level Five</button>
+      <br/>
+      <button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}>Back</button>
+    </div>
+  )
+}
 
 function mergeSort(array) {
   const half = array.length / 2
