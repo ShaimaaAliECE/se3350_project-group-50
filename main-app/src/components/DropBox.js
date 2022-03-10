@@ -72,8 +72,9 @@ function DropBox(props){
             const audio = new Audio(sike)
             audio.play();
 
-            document.getElementById("feedback").innerText = "Wrong"
-            console.log("unmatching")
+            document.getElementById("feedback").innerText = "Wrong" //Display "Wrong" text
+            
+            
         } else 
             document.getElementById("feedback").innerText = dumb[Math.floor(Math.random()*dumb.length)]
 
