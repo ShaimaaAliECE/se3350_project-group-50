@@ -1,7 +1,8 @@
 import makeArray from "../makeRandomArray";
 import Numbers from "../Numbers";
 import DropBox from "../DropBox";
-
+import { MergeSortMenu } from "../../App";
+import ReactDOM from 'react-dom';
 function LevelFive(){
     let array = makeArray(50, 1, 100);
     let temp = [];
@@ -10,6 +11,7 @@ function LevelFive(){
     }
     return(
         <div>
+        <button onClick= {()=> {ReactDOM.render(<MergeSortMenu/>, document.getElementById('root'))}}>Back</button>
         <table><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table>
             <tbody>

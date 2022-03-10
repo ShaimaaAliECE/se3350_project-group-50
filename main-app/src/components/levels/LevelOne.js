@@ -6,9 +6,12 @@ import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom';
 import {LevelTwo} from "./LevelTwo";
 import axios from "axios";
+import { MergeSortMenu } from "../../App";
+
 
 
 function LevelOne(){
+  
   const[array, setArray] = useState(makeArray(10))
   const[step, setStep] = useState(1) // store which step the player is at
   const[merging, setMerging] = useState(false); // When player reaches merging steps this changes to true
@@ -126,6 +129,7 @@ function LevelOne(){
 
   return(
     <div>
+    <button onClick= {()=> {ReactDOM.render(<MergeSortMenu/>, document.getElementById('root'))}}>Back</button>
       <button onClick = {onClick} id='nextBtn'>Next Step</button>
       <p id="feedback">Merge Sort Algorithm</p> 
       <table style={{marginLeft:"32%"}}><tr><Numbers array={tree.value}/></tr></table>   

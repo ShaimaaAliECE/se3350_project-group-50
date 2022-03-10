@@ -6,7 +6,7 @@ import { mergeSort, resetSteps} from "../../App";
 import $ from "jquery";
 import ReactDOM from 'react-dom';
 import LevelThree from "./LevelThree";
-
+import { MergeSortMenu } from "../../App";
 
 let score = 0;
 function setScore(newScore){
@@ -49,6 +49,7 @@ function LevelTwo(){
 
     return(
         <div>
+        <button onClick= {()=> {ReactDOM.render(<MergeSortMenu/>, document.getElementById('root'))}}>Back</button>
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>
