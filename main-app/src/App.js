@@ -21,6 +21,9 @@ function deductLives(){
 function resetLives(){
   lives = 3; 
 }
+function getLives(){
+  return lives;
+}
 
 function App() {
   return(
