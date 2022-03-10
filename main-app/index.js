@@ -78,15 +78,16 @@ app.post("/level-completion", (req, res) => {
                         }
     
                         else{
-                            console.log("Successfully update current level")
+                            console.log("Successfully update current level " + r.LevelReached)
                         }
                         })
                     }  
+                    console.log(r.LevelReached)
                     conn.end(); 
                 }  
         }
     })
-    console.log(completedLevel)
+    //console.log(completedLevel)
 })
 
 app.listen(80);
