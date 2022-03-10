@@ -116,26 +116,6 @@ function ChooseAlgoMenu(){
     </div>
   )
 }
-/**
-function MergeSortMenu(){
-  return(
-    <div>
-      <h1>Choose Level</h1>
-      <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
-      <br />
-      <button onClick= {()=> {ReactDOM.render(<LevelTwo/>, document.getElementById('root'))}}>Level Two</button>
-      <br />
-      <button onClick= {()=> {ReactDOM.render(<LevelThree/>, document.getElementById('root'))}}>Level Three</button>
-      <br />
-      <button onClick= {()=> {ReactDOM.render(<LevelFour/>, document.getElementById('root'))}}>Level Four</button>
-      <br />
-      <button onClick= {()=> {ReactDOM.render(<LevelFive/>, document.getElementById('root'))}}>Level Five</button>
-      <br/>
-      <button onClick= {()=> {ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'))}}>Back</button>
-    </div>
-  )
-}
-*/
 
 function MergeSortMenu(){
   switch(userLevel) {
