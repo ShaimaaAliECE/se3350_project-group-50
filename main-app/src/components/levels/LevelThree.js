@@ -7,7 +7,10 @@ import { useState, useEffect } from "react";
 import { mergeSort } from "../../App";
 import $ from "jquery";
 import LevelFour from "./LevelFour";
+<<<<<<< HEAD
 import { MergeSortMenu } from "../../App";
+=======
+>>>>>>> d4d99ee01b473c873de2126b261eea0453198144
 
 function LevelThree(){
     const[array, setArray] = useState(makeArray(10))
@@ -42,7 +45,6 @@ function LevelThree(){
 
     return(
         <div>
-        <button onClick= {()=> {ReactDOM.render(<MergeSortMenu/>, document.getElementById('root'))}}>Back</button>
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>

@@ -18,6 +18,7 @@ function LevelOne(){
   const[tree, setTree] = useState({value: array, left:null, right:null})
   const currentLevel = 1;
   
+  
   let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array"]
 
   
@@ -127,16 +128,43 @@ function LevelOne(){
 
   }
 
+  //Display timer
+  const [seconds, setSeconds] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const isActive = useState(true);
+
+  useEffect(() => {
+    let interval = null;
+    if (isActive) {
+      interval = setInterval(() => {
+        setSeconds(seconds => seconds + 1);
+        if (seconds >= 59){
+          setMinutes(minutes => minutes + 1);
+          setSeconds(0);
+        }
+      }, 1000);
+    } else if (!isActive && seconds !== 0) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isActive, seconds,]);
+  
+
+
+
   return(
     <div>
-    <button onClick= {()=> {ReactDOM.render(<MergeSortMenu/>, document.getElementById('root'))}}>Back</button>
+      
       <button onClick = {onClick} id='nextBtn'>Next Step</button>
+      <p>Time: {minutes}m {seconds}s </p>
       <p id="feedback">Merge Sort Algorithm</p> 
-      <table style={{marginLeft:"32%"}}><tr><Numbers array={tree.value}/></tr></table>   
-         
+      <table style={{marginLeft:"32%"}}><tr><Numbers array={tree.value}/></tr></table>
+          
     </div>
   )
 }
+
+
 
 //React component
 function NumbersRow(props){

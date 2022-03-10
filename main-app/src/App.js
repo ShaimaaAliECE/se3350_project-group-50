@@ -12,6 +12,19 @@ import axios from 'axios';
 let draggedItem = null;
 let emailEntered = null;
 //let currentLevel = "Level1"; will not be used till probably sprint 3
+let lives = 3;
+
+function deductLives(){
+  lives--;
+  return lives;
+}
+function resetLives(){
+  lives = 3;
+}
+function getLives(){
+  return lives;
+}
+
 
 function App() {
   return(
@@ -38,15 +51,15 @@ function HomePage(){
 function UserLogin(){
   function onClick(){
     emailEntered = `${document.getElementById("email-field").value}`
-    console.log(emailEntered)
-
     axios({
       method: "POST",
-      url: "/test2",
+      url: "/user-login",
       data: {
         email: emailEntered
       }
-    })
+    }).then(res => {
+      console.log(res.data);
+    });
     ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'));
   }
 
@@ -164,4 +177,4 @@ function resetSteps(){
   ReactDOM.render(<></>, document.getElementById("stepEight"));
 }
 
-export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage, UserLoginMenu, UserLogin, mergeSort, resetSteps, emailEntered}
+export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage, UserLoginMenu, UserLogin, mergeSort, resetSteps, emailEntered, getLives, deductLives, resetLives}

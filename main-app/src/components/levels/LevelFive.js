@@ -1,6 +1,7 @@
 import makeArray from "../makeRandomArray";
 import Numbers from "../Numbers";
 import DropBox from "../DropBox";
+<<<<<<< HEAD
 import FuilurePageMenu from "../FailurePageMenu";
 import ReactDOM from 'react-dom';
 import { useState, useEffect } from "react";
@@ -8,6 +9,8 @@ import { mergeSort } from "../../App";
 import $ from "jquery";
 import LevelFour from "./LevelFour";
 import { MergeSortMenu } from "../../App";
+=======
+>>>>>>> d4d99ee01b473c873de2126b261eea0453198144
 
 function LevelFive(){
     const[array, setArray] = useState(makeArray(10))
@@ -42,9 +45,15 @@ function LevelFive(){
 
     return(
         <div>
+<<<<<<< HEAD
         <button onClick= {()=> {ReactDOM.render(<MergeSortMenu/>, document.getElementById('root'))}}>Back</button>
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
+=======
+        <table><tbody><tr><Numbers array={array}/></tr></tbody></table>
+        <table>
+            <tbody>
+>>>>>>> d4d99ee01b473c873de2126b261eea0453198144
             <tr>
             <DropBox key={"1"} divideVal={array[0]} withSteps={true} id="1"/>
             <DropBox key={"2"} divideVal={array[1]} id="2"/>

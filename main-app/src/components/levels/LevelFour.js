@@ -1,6 +1,7 @@
 import makeArray from "../makeRandomArray";
 import Numbers from "../Numbers";
 import DropBox from "../DropBox";
+<<<<<<< HEAD
 import FuilurePageMenu from "../FailurePageMenu";
 import ReactDOM from 'react-dom';
 import { useState, useEffect } from "react";
@@ -29,6 +30,14 @@ function LeverFour(){
     
     function setTempArray(changeToArray){
         tempArray = mergeSort(changeToArray);
+=======
+
+function LevelFour(){
+    let array = makeArray(20, 1, 50);
+    let temp = [];
+    for(let i = 0; i<array.length; i++){
+        temp.push(Number(array[i]))
+>>>>>>> d4d99ee01b473c873de2126b261eea0453198144
     }
     function setTempArray2(changeToArray){
         tempArray2 = mergeSort(changeToArray);
@@ -42,11 +51,19 @@ function LeverFour(){
 
     return(
         <div>
+<<<<<<< HEAD
         <button onClick= {()=> {ReactDOM.render(<MergeSortMenu/>, document.getElementById('root'))}}>Back</button>
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>
             <DropBox key={"1"} divideVal={array[0]} withSteps={true} id="1"/>
+=======
+        <table><tbody><tr><Numbers array={array}/></tr></tbody></table>
+        <table>
+            <tbody>
+            <tr id="stepOne" style={{marginLeft: "34%"}}>
+            <DropBox key={"1"} divideVal={array[0]} id="1"/>
+>>>>>>> d4d99ee01b473c873de2126b261eea0453198144
             <DropBox key={"2"} divideVal={array[1]} id="2"/>
             <DropBox key={"3"} divideVal={array[2]} id="3"/>
             <DropBox key={"4"} divideVal={array[3]} id="4"/>
