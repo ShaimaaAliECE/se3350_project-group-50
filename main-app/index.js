@@ -18,10 +18,11 @@ app.get('/test', (req, res) => {
 })
 
 app.post('/test2', (req, res) => {
-    console.log(req.body.email)
+    console.log(req.body.email);
+    res.send(req.body.email);
 })
 
-app.get('/user-login', (req, res) => {
+app.post('/user-login', (req, res) => {
 let email = req.body.email;
 let conn = newConnection();
 conn.connect();
@@ -29,9 +30,10 @@ conn.connect();
     ,(err, rows, fields) =>{
         if(err)
             console.log(err)
-        else
+        else{
             if(rows.length == 1){
-                console.log("EMAIL EXISTS")
+                //res.send(rows[0].LevelReached);
+                res.send("hi");
             }
 
             else if(rows.length == 0){
@@ -43,11 +45,12 @@ conn.connect();
                     }
                     
                     else{
-                        response.send('Successfully inserted email');
+                        res.send("1");
                     }
                     });
                     conn.end();
             }
+        }
     }
     )
 })

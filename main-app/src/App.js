@@ -38,15 +38,15 @@ function HomePage(){
 function UserLogin(){
   function onClick(){
     emailEntered = `${document.getElementById("email-field").value}`
-    console.log(emailEntered)
-
     axios({
       method: "POST",
-      url: "/test2",
+      url: "/user-login",
       data: {
         email: emailEntered
       }
-    })
+    }).then(res => {
+      console.log(res.data);
+    });
     ReactDOM.render(<ChooseAlgoMenu/>, document.getElementById('root'));
   }
 
