@@ -32,7 +32,7 @@ conn.connect();
             console.log(err)
         else{
             if(rows.length == 1){
-                res.send(rows[0].LevelReached);
+                res.send(`${rows[0].LevelReached}`);
             }
 
             else if(rows.length == 0){
