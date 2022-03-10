@@ -147,7 +147,7 @@ function LevelOne(){
       clearInterval(interval);
     }
     return () => clearInterval(interval);
-  }, [isActive, seconds,]);
+  }, [isActive, seconds]);
   
 
 
