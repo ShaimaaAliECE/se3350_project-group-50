@@ -131,11 +131,7 @@ function LevelOne(){
   //Display timer
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
-  const [isActive, setIsActive] = useState(true);
-
-  function toggle() {
-    setIsActive(!isActive);
-  }
+  const isActive = useState(true);
 
   useEffect(() => {
     let interval = null;
