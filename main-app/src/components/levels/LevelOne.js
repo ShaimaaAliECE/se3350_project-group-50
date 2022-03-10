@@ -133,10 +133,6 @@ function LevelOne(){
   const [minutes, setMinutes] = useState(0);
   const [isActive, setIsActive] = useState(true);
 
-  function toggle() {
-    setIsActive(!isActive);
-  }
-
   useEffect(() => {
     let interval = null;
     if (isActive) {
