@@ -32,7 +32,7 @@ conn.connect();
             console.log(err)
         else{
             if(rows.length == 1){
-                res.send(rows[0].LevelReached);
+                res.send(`${rows[0].LevelReached}`);
             }
 
             else if(rows.length == 0){
@@ -78,15 +78,16 @@ app.post("/level-completion", (req, res) => {
                         }
     
                         else{
-                            console.log("Successfully update current level")
+                            console.log("Successfully update current level " + r.LevelReached)
                         }
                         })
                     }  
+                    console.log(r.LevelReached)
                     conn.end(); 
                 }  
         }
     })
-    console.log(completedLevel)
+    //console.log(completedLevel)
 })
 
 app.listen(80);
