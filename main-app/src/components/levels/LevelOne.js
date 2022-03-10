@@ -118,8 +118,8 @@ function LevelOne(){
       method: "POST",
       url: "/level-completion",
       data: {
-        completedLevel: `${currentLevel}`,
-        email: `${emailEntered}`
+        completedLevel: currentLevel,
+        email: emailEntered
       }
     })
   
