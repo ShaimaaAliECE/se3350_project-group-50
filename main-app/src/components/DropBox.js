@@ -5,7 +5,7 @@ import $ from "jquery";
 import ReactDOM from 'react-dom';
 import sike from '../Sike.mp3'
 import ding from '../Ding.mp3'
-
+import { resetLives, deductLives } from "../App";
 
 const dumb = ["Are you dumb?", "Wow, you really did something here.", "The light is on but nobody's home.", "Has an IQ of 2 and it takes 3 to grunt", "Did you get a nobel prize yet?", "The wheel is spinning but the hamster's dead", "Bruh", "You are just bring silly now.", "Stop monkeying around to see if it works."]
 
@@ -74,7 +74,8 @@ function DropBox(props){
 
             document.getElementById("feedback").innerText = "Wrong" //Display "Wrong" text
             
-            
+            deductLives();
+            if(){}
         } else 
             document.getElementById("feedback").innerText = dumb[Math.floor(Math.random()*dumb.length)]
 
