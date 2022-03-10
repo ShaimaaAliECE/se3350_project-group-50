@@ -74,7 +74,7 @@ function DropBox(props){
 
             document.getElementById("feedback").innerText = "Wrong" //Display "Wrong" text
             
-            if(deductLives() == ){}
+            //if(deductLives() == ){}
         } else 
             document.getElementById("feedback").innerText = dumb[Math.floor(Math.random()*dumb.length)]
 

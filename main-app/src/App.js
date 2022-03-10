@@ -16,6 +16,7 @@ let lives = 3;
 
 function deductLives(){
   lives--;
+  return lives;
 }
 function resetLives(){
   lives = 3; 
