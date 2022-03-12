@@ -7,13 +7,16 @@ import { useState, useEffect } from "react";
 import { mergeSort } from "../../App";
 import $ from "jquery";
 import LevelFour from "./LevelFour";
-import { MergeSortMenu } from "../../App";
+import { MergeSortMenu, emailEntered } from "../../App";
+import axios from "axios";
+
 function LevelThree(){
     const[array, setArray] = useState(makeArray(10))
     let tempArray = [];
     let tempArray2 = [];
     let tempArray3 = [];
-    let tempArray4 = []
+    let tempArray4 = [];
+    const currentLevel = 3;
 
     useEffect(()=>{
         $("#stepTwo").hide()
@@ -25,6 +28,22 @@ function LevelThree(){
         $("#stepEight").hide()
         $("#nextBtn").hide()
     }, []) 
+
+    function nextLevel(){
+        //send to Backend code goes here
+    
+        axios({
+          method: "POST",
+          url: "/level-completion",
+          data: {
+            completedLevel: currentLevel,
+            email: emailEntered
+          }
+        })
+      
+        ReactDOM.render(<LevelFour/>, document.getElementById("root"))
+    
+      }
     
     function setTempArray(changeToArray){
         tempArray = mergeSort(changeToArray);
@@ -234,7 +253,7 @@ function LevelThree(){
         </tbody>
         </table>
         <p id="feedback"></p>
-        <button id="nextBtn" onClick={()=> {ReactDOM.render(<></>, document.getElementById("allSteps")); ReactDOM.render(<LevelFour/>, document.getElementById("root"))}}>Next Level</button>
+        <button id="nextBtn" onClick={()=> {ReactDOM.render(<></>, document.getElementById("allSteps")); nextLevel()}}>Next Level</button>
         </div>
     )
 }
