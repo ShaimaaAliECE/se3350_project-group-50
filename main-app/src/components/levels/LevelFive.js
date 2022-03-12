@@ -233,7 +233,7 @@ function LevelFive(){
         </tbody>
         </table>
         <p id="feedback"></p>
-        <button id="nextBtn" onClick={()=> {ReactDOM.render(<></>, document.getElementById("allSteps")); ReactDOM.render(<LevelFour/>, document.getElementById("root"))}}>Next Level</button>
+        <button id="nextBtn" onClick={()=> {ReactDOM.render(<></>, document.getElementById("allSteps")); ReactDOM.render(<div/>, document.getElementById("root"))}}>Next Level</button>
         </div>
     )
 }
