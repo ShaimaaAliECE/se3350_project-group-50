@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import { useState, useEffect } from "react";
 import { mergeSort } from "../../App";
 import $ from "jquery";
-import LevelFour from "./LevelFour";
 import { MergeSortMenu } from "../../App";
 function LevelFive(){
     const[array, setArray] = useState(makeArray(10))
