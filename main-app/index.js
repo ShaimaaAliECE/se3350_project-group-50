@@ -10,18 +10,6 @@ app.use(express.urlencoded({
   extended: true
 }))
 
-app.get('/test', (req, res) => {
-    res.json({
-        "email1": "test@hotmail.com",
-        "email2": "test2@hotmail.com"
-    })
-})
-
-app.post('/test2', (req, res) => {
-    console.log(req.body.email);
-    res.send(req.body.email);
-})
-
 app.post('/user-login', (req, res) => {
 let email = req.body.email;
 let conn = newConnection();

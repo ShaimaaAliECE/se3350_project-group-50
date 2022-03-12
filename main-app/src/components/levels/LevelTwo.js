@@ -2,10 +2,11 @@ import makeArray from "../makeRandomArray";
 import Numbers from "../Numbers";
 import DropBox from "../DropBox";
 import { useState, useEffect } from "react";
-import { mergeSort, resetSteps} from "../../App";
+import { mergeSort, resetSteps, emailEntered} from "../../App";
 import $ from "jquery";
 import ReactDOM from 'react-dom';
 import LevelThree from "./LevelThree";
+import axios from "axios";
 
 
 let score = 0;
@@ -22,6 +23,7 @@ function LevelTwo(){
     let tempArray2 = [];
     let tempArray3 = [];
     let tempArray4 = []
+    const currentLevel = 2;
 
     useEffect(()=>{
         $("#stepTwo").hide()
@@ -33,7 +35,25 @@ function LevelTwo(){
         $("#stepEight").hide()
         $("#nextBtn").hide()
     }, []) 
+
+  
+
+    function nextLevel(){
+        //send to Backend code goes here
     
+        axios({
+          method: "POST",
+          url: "/level-completion",
+          data: {
+            completedLevel: currentLevel,
+            email: emailEntered
+          }
+        })
+      
+        ReactDOM.render(<LevelThree />, document.getElementById('root'));
+    
+      }
+
     function setTempArray(changeToArray){
         tempArray = mergeSort(changeToArray);
     }
@@ -49,6 +69,7 @@ function LevelTwo(){
 
     return(
         <div>
+        
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>
@@ -243,7 +264,7 @@ function LevelTwo(){
         </table>
         <p id="feedback"></p>
         <p id="stepsTutorial">Split the Array as Evenly as Possible by dragging the numbers given in the corresponding empty box</p>
-        <button id="nextBtn" onClick={()=> {resetSteps(); ReactDOM.render(<LevelThree/>, document.getElementById("root"))}}>Next Level</button>
+        <button id="nextBtn" onClick={()=> {resetSteps(); nextLevel()}}>Next Level</button>
         </div>
     )
 }
