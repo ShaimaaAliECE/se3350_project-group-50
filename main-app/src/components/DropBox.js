@@ -67,9 +67,9 @@ function DropBox(props){
                 document.getElementById('stepsTutorial').innerText = dumb[7]; 
             }
            
-            //Audio feedback for correct goes here
-            const audio = new Audio(ding)
-            audio.play();
+            // //Audio feedback for correct goes here
+            // const audio = new Audio(ding)
+            // audio.play();
 
             setIsDone(true);
         } else if(!isDone){
@@ -77,9 +77,9 @@ function DropBox(props){
             $(`#${props.id}`).show()
             $(`#${props.id}`).fadeOut(400)
 
-            //Audio feedback for wrong goes here goes here 
-            const audio = new Audio(sike)
-            audio.play();
+            // //Audio feedback for wrong goes here goes here 
+            // const audio = new Audio(sike)
+            // audio.play();
 
             document.getElementById("feedback").innerText = "Wrong"
             
