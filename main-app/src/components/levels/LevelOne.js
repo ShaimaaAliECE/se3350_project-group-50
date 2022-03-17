@@ -84,7 +84,19 @@ function LevelOne(){
   }
     
 
- 
+  function createTree(node){
+    let nodeValue = node.value;
+    if(nodeValue.length > 1){   //if the length of the array in the current node is more than 1 then split the array into left and right nodes and recurse  
+      node.left = {value: [...nodeValue].splice(0, nodeValue.length/2), left: null, right: null}
+      node.right = {value: [...nodeValue].splice(nodeValue.length/2, nodeValue.length), left: null, right: null}
+      createTree(node.left);
+      createTree(node.right)
+    } else{    // else only copy the node value to the left node (so that the last dividing step still show the arrays that had 1 element from the previous step)
+      node.left = {value: node.value, left: null, right: null}
+      node.right = {value: [], left: null, right: null}
+    }
+    
+  }
 
   //function to get the nodes in a specific level of the tree
   function print(node, level){
