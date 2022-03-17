@@ -17,7 +17,7 @@ function LevelOne(){
   const[merging, setMerging] = useState(false); // When player reaches merging steps this changes to true
   const[tree, setTree] = useState({value: array, left:null, right:null})
   const currentLevel = 1;
-  
+  const [timerStart, setTimerStart] = useState(false);
   
   let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array"]
 
@@ -129,40 +129,38 @@ function LevelOne(){
   }
 
   //Display timer
-  const [seconds, setSeconds] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const isActive = useState(true);
-
-  useEffect(() => {
-    let interval = null;
-    if (isActive) {
-      interval = setInterval(() => {
-        setSeconds( seconds + 1);
-        if (seconds >= 59){
-          setMinutes(minutes + 1);
-          setSeconds(0);
+  if(timerStart == false){
+    setInterval(countTimer, 1000)
+    setTimerStart(true);
+  }
+  let totalSeconds = 0;
+  function countTimer() {
+      ++totalSeconds;
+      let hour = Math.floor(totalSeconds /3600);
+      let minute = Math.floor((totalSeconds - hour*3600)/60);
+      let seconds = totalSeconds - (hour*3600 + minute*60);
+          if(hour < 10)
+             hour = "0"+hour;
+           if(minute < 10)
+             minute = "0"+minute;
+           if(seconds < 10)
+             seconds = "0"+seconds;
+           document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
         }
-      }, 1000);
-    } else if (!isActive && seconds !== 0) {
-      clearInterval(interval);
-    }
-    return () => clearInterval(interval);
-  }, [isActive, seconds]);
   
-
-
 
   return(
     <div>
       
       <button onClick = {onClick} id='nextBtn'>Next Step</button>
-      <p>Time: {minutes}m {seconds}s </p>
+      <p id="timer"></p>
       <p id="feedback">Merge Sort Algorithm</p> 
       <table style={{marginLeft:"32%"}}><tr><Numbers array={tree.value}/></tr></table>
           
     </div>
   )
 }
+
 
 
 
