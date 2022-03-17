@@ -8,6 +8,7 @@ import { mergeSort } from "../../App";
 import $ from "jquery";
 import { MergeSortMenu } from "../../App";
 import LevelFive from "./LevelFive";
+import axios from "axios";
 
 function LevelFour(){
     const[array, setArray] = useState(makeArray(20))
@@ -88,8 +89,6 @@ function LevelFour(){
         , document.getElementById("stepOne"))}
         {
         ReactDOM.render(<tr>
-            &nbsp;
-            &nbsp;
             <DropBox key={"21"} divideVal={array[0]} id="21"/>
             <DropBox key={"22"} divideVal={array[1]} id="22"/>
             <DropBox key={"23"} divideVal={array[2]} id="23"/>
@@ -159,7 +158,6 @@ function LevelFour(){
         }
         {
             ReactDOM.render(<tr>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <DropBox key={"61"} divideVal={array[0]} id="61"/>
             <DropBox key={"62"} divideVal={array[1]} id="62"/>
             &nbsp;
@@ -214,7 +212,6 @@ function LevelFour(){
         }
         {
             ReactDOM.render(<tr>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <DropBox key={"81"} divideVal={array[0]} id="81"/>
             &nbsp;
             &nbsp;
@@ -281,7 +278,6 @@ function LevelFour(){
         {setTempArray4([array[15], array[16]])}
         {
             ReactDOM.render(<tr>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <DropBox key={"101"} divideVal={tempArray[0]} id="101"/>
             <DropBox key={"102"} divideVal={tempArray[1]} id="102"/>  
             &nbsp;
