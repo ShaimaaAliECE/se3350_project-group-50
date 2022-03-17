@@ -119,7 +119,6 @@ function LevelFour(){
         }
         {
             ReactDOM.render(<tr>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <DropBox key={"41"} divideVal={array[0]} id="41"/>
             <DropBox key={"42"} divideVal={array[1]} id="42"/>
             <DropBox key={"43"} divideVal={array[2]} id="43"/>  
