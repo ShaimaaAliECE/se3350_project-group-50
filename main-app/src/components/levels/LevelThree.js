@@ -64,7 +64,7 @@ function LevelThree(){
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>
-            <DropBox key={"1"} divideVal={array[0]} withSteps={true} id="1"/>
+            <DropBox key={"1"} divideVal={array[0]} id="1"/>
             <DropBox key={"2"} divideVal={array[1]} id="2"/>
             <DropBox key={"3"} divideVal={array[2]} id="3"/>
             <DropBox key={"4"} divideVal={array[3]} id="4"/>
@@ -258,6 +258,5 @@ function LevelThree(){
         </div>
     )
 }
-        //<button onClick= {()=> {ReactDOM.render(<FuilurePageMenu/>, document.getElementById('root'))}}>Die</button>
 
 export default LevelThree;
