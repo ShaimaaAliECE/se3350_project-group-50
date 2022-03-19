@@ -3,6 +3,8 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
+console.log("Server Started");
+
 const app = express()
 app.use(cookieParser("secret stuff"))
 app.use(bodyParser.json());

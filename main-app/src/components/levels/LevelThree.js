@@ -60,6 +60,7 @@ function LevelThree(){
 
     return(
         <div>
+        <span id="lives">Lives: 3</span>
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>
