@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 import {LevelTwo} from "./LevelTwo";
 import axios from "axios";
 import { MergeSortMenu } from "../../App";
-
+let Timer = require('../Timer');
 
 
 function LevelOne(){
@@ -130,30 +130,18 @@ function LevelOne(){
 
   //Display timer
   if(timerStart == false){
-    setInterval(countTimer, 1000)
+    Timer.resetTimer();
+    Timer.startTimer();
+    
     setTimerStart(true);
   }
-  let totalSeconds = 0;
-  function countTimer() {
-      ++totalSeconds;
-      let hour = Math.floor(totalSeconds /3600);
-      let minute = Math.floor((totalSeconds - hour*3600)/60);
-      let seconds = totalSeconds - (hour*3600 + minute*60);
-          if(hour < 10)
-             hour = "0"+hour;
-           if(minute < 10)
-             minute = "0"+minute;
-           if(seconds < 10)
-             seconds = "0"+seconds;
-           document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
-        }
   
 
   return(
     <div>
       
       <button onClick = {onClick} id='nextBtn'>Next Step</button>
-      <p id="timer"></p>
+      <p id="timer" style={{float:"left", padding:"50px"}}></p>
       <p id="feedback">Merge Sort Algorithm</p> 
       <table style={{marginLeft:"32%"}}><tr><Numbers array={tree.value}/></tr></table>
           

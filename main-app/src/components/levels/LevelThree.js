@@ -29,6 +29,17 @@ function LevelThree(){
         $("#nextBtn").hide()
     }, []) 
 
+    //Display timer
+    const [timerStart, setTimerStart] = useState(false);
+    let Timer = require('../Timer');
+
+    if(timerStart == false){
+        Timer.resetTimer();
+        Timer.startTimer();
+    
+        setTimerStart(true);
+    }
+
     function nextLevel(){
         //send to Backend code goes here
     
@@ -60,7 +71,10 @@ function LevelThree(){
 
     return(
         <div>
-        <span id="lives">Lives: 3</span>
+        <div>
+            <p id="timer" style={{float:"left", padding:"50px"}}></p>
+            <p id="lives" style={{float:"right", padding:"50px"}}>Lives: 3</p>
+        </div>
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>

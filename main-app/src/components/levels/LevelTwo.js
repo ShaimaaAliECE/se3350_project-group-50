@@ -7,6 +7,7 @@ import $ from "jquery";
 import ReactDOM from 'react-dom';
 import LevelThree from "./LevelThree";
 import axios from "axios";
+let Timer = require('../Timer');
 
 
 let score = 0;
@@ -39,27 +40,12 @@ function LevelTwo(){
 
     //Display timer
     if(timerStart == false){
-        setInterval(countTimer, 1000)
+        Timer.resetTimer();
+        Timer.startTimer();
+    
         setTimerStart(true);
     }
-    let totalSeconds = 0;
-    function countTimer() {
-        ++totalSeconds;
-        let hour = Math.floor(totalSeconds /3600);
-        let minute = Math.floor((totalSeconds - hour*3600)/60);
-        let seconds = totalSeconds - (hour*3600 + minute*60);
-            if(hour < 10)
-                hour = "0"+hour;
-            if(minute < 10)
-                minute = "0"+minute;
-            if(seconds < 10)
-                seconds = "0"+seconds;
-            document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
-        }
 
-
-
-  
 
     function nextLevel(){
         //send to Backend code goes here
