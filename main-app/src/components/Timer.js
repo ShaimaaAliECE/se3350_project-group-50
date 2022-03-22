@@ -1,16 +1,20 @@
 let myInterval;
 module.exports = {
     startTimer : function() {
-        myInterval = setInterval(countTimer, 1000);
+      myInterval = setInterval(countTimer, 1000);
     },
 
     resetTimer : function(){
-        clearInterval(myInterval);
-        totalSeconds = 0;
+      clearInterval(myInterval);
+      totalSeconds = 0;
     },
 
     stopTimer : function(){
-        clearInterval(myInterval);
+      clearInterval(myInterval);
+    },
+
+    getTime : function(){
+      return totalSeconds;
     }
 }
     
