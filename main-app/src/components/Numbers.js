@@ -6,7 +6,7 @@ function Numbers(props){
     <>
         {
             props.array.map((a) => ( 
-                <Number key = {a} num={a} /> 
+                <Number key = {a} num={a} id={props.id} /> 
             ))
         }
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
