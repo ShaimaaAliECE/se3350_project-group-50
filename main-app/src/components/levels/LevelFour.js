@@ -29,8 +29,8 @@ function LevelFour(){
         $("#stepSix").hide()
         $("#stepSeven").hide()
         $("#stepEight").hide()
-        $("stepNine").hide()
-        $("stepTen").hide()
+        $("#stepNine").hide()
+        $("#stepTen").hide()
         $("#nextBtn").hide()
     }, []) 
     
