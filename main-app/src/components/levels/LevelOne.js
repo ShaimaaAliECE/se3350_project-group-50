@@ -186,15 +186,16 @@ function LevelOne(){
 }
 
 
-
+let rowNum = 0;
 
 //React component
 function NumbersRow(props){
   let i = 0;
+  rowNum++;
   return(
     <table style={props.style}><tr>
       {props.array.map(a => (
-        <Numbers array={a} id={i++}/>
+        <Numbers array={a} rowID={rowNum} arrayID={++i}/>
       ))}
       </tr></table>
   )
