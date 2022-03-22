@@ -29,6 +29,17 @@ function LevelThree(){
         $("#nextBtn").hide()
     }, []) 
 
+    //Display timer
+    const [timerStart, setTimerStart] = useState(false);
+    let Timer = require('../Timer');
+
+    if(timerStart == false){
+        Timer.resetTimer();
+        Timer.startTimer();
+    
+        setTimerStart(true);
+    }
+
     function nextLevel(){
         //send to Backend code goes here
     
@@ -60,10 +71,14 @@ function LevelThree(){
 
     return(
         <div>
+        <div>
+            <p id="timer" style={{float:"left", padding:"50px"}}></p>
+            <p id="lives" style={{float:"right", padding:"50px"}}>Lives: 3</p>
+        </div>
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>
-            <DropBox key={"1"} divideVal={array[0]} withSteps={true} id="1"/>
+            <DropBox key={"1"} divideVal={array[0]} id="1"/>
             <DropBox key={"2"} divideVal={array[1]} id="2"/>
             <DropBox key={"3"} divideVal={array[2]} id="3"/>
             <DropBox key={"4"} divideVal={array[3]} id="4"/>
@@ -257,6 +272,5 @@ function LevelThree(){
         </div>
     )
 }
-        //<button onClick= {()=> {ReactDOM.render(<FuilurePageMenu/>, document.getElementById('root'))}}>Die</button>
 
 export default LevelThree;

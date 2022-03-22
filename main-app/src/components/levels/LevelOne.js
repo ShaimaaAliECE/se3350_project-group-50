@@ -1,5 +1,5 @@
 import Number from "../Number";
-import { App, mergeSort, emailEntered } from "../../App";
+import { App, emailEntered } from "../../App";
 import Numbers from "../Numbers";
 import makeArray from "../makeRandomArray";
 import { useState, useEffect } from "react";
@@ -7,7 +7,38 @@ import ReactDOM from 'react-dom';
 import {LevelTwo} from "./LevelTwo";
 import axios from "axios";
 import { MergeSortMenu } from "../../App";
+let Timer = require('../Timer');
 
+
+function mergeSort(array) {
+  const half = array.length / 2
+  
+  // Base case or terminating case
+  if(array.length < 2){
+    return array 
+  }
+  
+  const left = array.splice(0, half)
+  return merge(mergeSort(left),mergeSort(array))
+}
+
+//function for merging on left and right
+function merge(left, right) {
+  let arr = []
+  // Break out of loop if any one of the array gets empty
+  while (left.length && right.length) {
+      // Pick the smaller among the smallest element of left and right sub arrays 
+      if (left[0] < right[0]) {
+          arr.push(left.shift())  
+      } else {
+          arr.push(right.shift()) 
+      }
+  }
+  
+  // Concatenating the leftover elements
+  // (in case we didn't go through the entire left or right array)
+  return [ ...arr, ...left, ...right ]
+}
 
 
 function LevelOne(){
@@ -130,30 +161,18 @@ function LevelOne(){
 
   //Display timer
   if(timerStart == false){
-    setInterval(countTimer, 1000)
+    Timer.resetTimer();
+    Timer.startTimer();
+    
     setTimerStart(true);
   }
-  let totalSeconds = 0;
-  function countTimer() {
-      ++totalSeconds;
-      let hour = Math.floor(totalSeconds /3600);
-      let minute = Math.floor((totalSeconds - hour*3600)/60);
-      let seconds = totalSeconds - (hour*3600 + minute*60);
-          if(hour < 10)
-             hour = "0"+hour;
-           if(minute < 10)
-             minute = "0"+minute;
-           if(seconds < 10)
-             seconds = "0"+seconds;
-           document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
-        }
   
 
   return(
     <div>
       
       <button onClick = {onClick} id='nextBtn'>Next Step</button>
-      <p id="timer"></p>
+      <p id="timer" style={{float:"left", padding:"50px"}}></p>
       <p id="feedback">Merge Sort Algorithm</p> 
       <table style={{marginLeft:"32%"}}><tr><Numbers array={tree.value}/></tr></table>
           

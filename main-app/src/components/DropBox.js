@@ -1,4 +1,4 @@
-import { draggedItem, deductLives, resetLives, getLives, resetSteps } from "../App";
+import { draggedItem, deductLives, resetLives, getLives, resetSteps, setDraggedItem } from "../App";
 import { useEffect, useState } from "react";
 import { setScore, getScore } from "./levels/LevelTwo";
 import $ from "jquery";
@@ -9,8 +9,8 @@ import FailurePageMenu from "./FailurePageMenu";
 
 
 const steps = ["Split the Array as Evenly as Possible by dragging the numbers given in the corresponding empty box", "Split Both the Left and Right Subarrays as evenly as possible","Split All Subarrays again","Split Subarrays that have more than one element", "Merge both Arrays Back Together in the Correct Order", "Merge those Subarrays back together in the Correct Order Again", "Merge the Subarrays Again","Finally, Merge the Remaining Subarrays Back Into the Original Array, Now its Sorted"]
-
-const dumb = [" You can do this by picking the first row of boxes", " Split the first row of boxes of as evenly as possible", " Split the arrays even further", " Select the other ones and split them", " Split them as evenly as possible", " go to the other selected arrays and split them even further", " Go back to the array and split it", " Once all have been split, merge them back together", " make sure everythimg is in the correct order"]
+const dumb = ["Don't worry it does work"]
+//const dumb = [" You can do this by picking the first row of boxes", " Split the first row of boxes of as evenly as possible", " Split the arrays even further", " Select the other ones and split them", " Split them as evenly as possible", " go to the other selected arrays and split them even further", " Go back to the array and split it", " Once all have been split, merge them back together", " make sure everythimg is in the correct order"]
 
 //component to drop numbers in 
 function DropBox(props){
@@ -96,7 +96,7 @@ function DropBox(props){
     }
 
     return(
-    <td className="dropBox" onDragOver={(e)=> e.preventDefault()} onDragEnd={(e)=> e.preventDefault()} onDrop={() => {dropNumber()}}>
+    <td draggable onDragStart={() => {if(number != 0)setDraggedItem(number)}} className="dropBox" onDragOver={(e)=> e.preventDefault()} onDragEnd={(e)=> e.preventDefault()} onDrop={() => {dropNumber()}}>
         {(number == 0)?null:number}
         <div id={props.id} style={{color:"red"}}>X</div>
     </td>
