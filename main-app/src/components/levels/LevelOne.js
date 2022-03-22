@@ -50,7 +50,7 @@ function LevelOne(){
   const currentLevel = 1;
   const [timerStart, setTimerStart] = useState(false);
   
-  let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array"]
+  let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array", "An array of length 1 cannot be split, ready for merge"]
 
   
   let tempArray = [];
@@ -100,10 +100,14 @@ function LevelOne(){
         break;
       case 4:
         ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepFour'));
+        document.getElementById("feedback").innerText = feedback[8];
+        break;
+      case 5:
         document.getElementById("feedback").innerText = feedback[3];
         setMerging(true) //start merging process
-        setStep(step-1);
+        setStep(step-2);
         break;
+        
       case 0: // case 0 is the last step in the level 
         ReactDOM.render(<></>, document.getElementById('stepOne'));
         document.getElementById("feedback").innerText = feedback[7];
