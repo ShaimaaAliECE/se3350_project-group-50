@@ -11,7 +11,7 @@ import LevelFive from "./LevelFive";
 import axios from "axios";
 
 function LevelFour(){
-    const[array, setArray] = useState(makeArray(20))
+    const[array, setArray] = useState(makeArray(20, 1, 50))
     let tempArray = [];
     let tempArray2 = [];
     let tempArray3 = [];
