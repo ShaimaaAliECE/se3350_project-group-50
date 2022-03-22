@@ -55,7 +55,8 @@ function LevelTwo(){
           url: "/level-completion",
           data: {
             completedLevel: currentLevel,
-            email: emailEntered
+            email: emailEntered,
+            completedTime: Timer.getTime()
           }
         })
       
