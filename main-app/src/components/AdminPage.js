@@ -1,4 +1,4 @@
-const Stack = createStackNavigator();
+/*const Stack = createStackNavigator();
 const Tab = createMaterialTopTabNavigator();
 export default function AdminPage(props){
 const { navigation } = props;
@@ -28,9 +28,10 @@ var barColors = ["red", "green","blue","orange","brown"];
         options: {...}
       });
   );
+    
 
   
 }
-
+*/
 
 
