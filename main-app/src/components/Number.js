@@ -3,7 +3,7 @@ import {draggedItem, setDraggedItem} from '../App.js'
 //function for dragable numbers
 function Number(props){
     return(
-    <td className="number" draggable onDragStart={() => {setDraggedItem(props.num)}}>
+    <td className="number" id={`${props.rowID}-${props.id}`} draggable onDragStart={() => {setDraggedItem(props.num)}}>
         {
             props.num
            

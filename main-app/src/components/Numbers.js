@@ -1,12 +1,14 @@
 import Number from "./Number";
 
+let i =0; 
 
 function Numbers(props){
+    i = 0
     return(
     <>
         {
             props.array.map((a) => ( 
-                <Number key = {a} num={a} id={props.id} /> 
+                <Number key = {a} num={a} rowID = {props.rowID} id={++i} /> 
             ))
         }
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
