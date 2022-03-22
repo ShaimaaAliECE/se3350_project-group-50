@@ -185,10 +185,11 @@ function LevelOne(){
 
 //React component
 function NumbersRow(props){
+  let i = 0;
   return(
     <table style={props.style}><tr>
       {props.array.map(a => (
-        <Numbers array={a}/>
+        <Numbers array={a} id={i++}/>
       ))}
       </tr></table>
   )
