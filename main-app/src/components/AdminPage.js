@@ -14,6 +14,17 @@ const pathway_id=navigation.getParam('pathway_id');
       </Tab.Navigator>
     </NavigationContainer>
     </>
+    new Chart("myChart", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+          }]
+        },
+        options: {...}
+      });
   );
 
   
