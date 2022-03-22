@@ -1018,8 +1018,38 @@ function LevelFive(){
             <DropBox key={"198"} divideVal={tempArray[17]} id="198"/>
             <DropBox key={"199"} divideVal={tempArray[18]} id="199"/>
             <DropBox key={"200"} divideVal={tempArray[19]} id="200"/>
+            <DropBox key={"181"} divideVal={tempArray[0]} id="181"/>
+            <DropBox key={"182"} divideVal={tempArray[1]} id="182"/>
+            <DropBox key={"183"} divideVal={tempArray[2]} id="183"/>
+            <DropBox key={"184"} divideVal={tempArray[3]} id="184"/>
+            <DropBox key={"185"} divideVal={tempArray[4]} id="185"/> 
+            <DropBox key={"186"} divideVal={tempArray[5]} id="186"/>
+            <DropBox key={"187"} divideVal={tempArray[6]} id="187"/>
+            <DropBox key={"188"} divideVal={tempArray[7]} id="188"/>
+            <DropBox key={"189"} divideVal={tempArray[8]} id="189"/>
+            <DropBox key={"190"} divideVal={tempArray[9]} id="190"/>
+            <DropBox key={"191"} divideVal={tempArray[10]} id="191"/>
+            <DropBox key={"192"} divideVal={tempArray[11]} id="192"/>
+            <DropBox key={"193"} divideVal={tempArray[12]} id="193"/>
+            <DropBox key={"194"} divideVal={tempArray[13]} id="194"/>
+            <DropBox key={"195"} divideVal={tempArray[14]} id="195"/>
+            <DropBox key={"196"} divideVal={tempArray[15]} id="196"/>
+            <DropBox key={"197"} divideVal={tempArray[16]} id="197"/>
+            <DropBox key={"198"} divideVal={tempArray[17]} id="198"/>
+            <DropBox key={"199"} divideVal={tempArray[18]} id="199"/>
+            <DropBox key={"200"} divideVal={tempArray[19]} id="200"/>
+            <DropBox key={"181"} divideVal={tempArray[0]} id="181"/>
+            <DropBox key={"182"} divideVal={tempArray[1]} id="182"/>
+            <DropBox key={"183"} divideVal={tempArray[2]} id="183"/>
+            <DropBox key={"184"} divideVal={tempArray[3]} id="184"/>
+            <DropBox key={"185"} divideVal={tempArray[4]} id="185"/> 
+            <DropBox key={"186"} divideVal={tempArray[5]} id="186"/>
+            <DropBox key={"187"} divideVal={tempArray[6]} id="187"/>
+            <DropBox key={"188"} divideVal={tempArray[7]} id="188"/>
+            <DropBox key={"189"} divideVal={tempArray[8]} id="189"/>
+            <DropBox key={"190"} divideVal={tempArray[9]} id="190"/>
             </tr>
-        , document.getElementById("stepTen"))}
+        , document.getElementById("stepEleven"))}
         </tbody>
         </table>
         <p id="feedback"></p>
