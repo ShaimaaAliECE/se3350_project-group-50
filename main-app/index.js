@@ -51,14 +51,23 @@ app.post("/level-completion", (req, res) => {
     let conn = newConnection();
     let completedLevel = req.body.completedLevel
     let email = req.body.email
+    let completedTime = req.body.completedTime
+    console.log("THIS IS" + completedTime)
+
     conn.connect();
-        conn.query(`SELECT LevelReached FROM Customer WHERE emailAddress = "${email}";`
+        conn.query(`SELECT * FROM Customer WHERE emailAddress = "${email}";`
         ,(err, rows, fields) =>{
             if (err){
                 console.log(err);
             }
             else{
                 for (r of rows) {
+
+                    let temp = ["LevelOneTime", "LevelTwoTime", "LevelThreeTime", "LevelFourTime", "LevelFiveTime"];
+                    let tempValue = [r.LevelOneTime, r.LevelTwoTime, r.LevelThreeTime, r.LevelFourTime, r.LevelFiveTime]
+                    let levelTimeCompleted = temp[completedLevel - 1]
+                    //console.log("IT IS" + temp[completedLevel - 1])
+
                     if(completedLevel == r.LevelReached){
                         conn.query(`UPDATE Customer SET LevelReached = LevelReached + 1
                                     WHERE emailAddress = "${email}";`
@@ -71,8 +80,37 @@ app.post("/level-completion", (req, res) => {
                             console.log("Successfully update current level " + r.LevelReached)
                         }
                         })
-                    }  
+                    }
+
+                    if(tempValue[completedLevel - 1] === null || completedTime < tempValue[completedLevel - 1]){
+                        conn.query(`UPDATE Customer SET ${levelTimeCompleted} = ${completedTime}
+                                    WHERE emailAddress = "${email}"`
+                        ,(err, rows, fields) =>{
+                        if (err){
+                            console.log(err);
+                        }
+    
+                        else{
+                            console.log("Successfully update time completion " + tempValue[completedLevel - 1])
+                        }
+                        })
+                    }
+                    
+                    // switch(completedLevel){
+                    //     case 1:
+                    //         if(r.LevelOneTime === undefined || completedTime > r.LevelOneTime){
+                    //             conn.query(`UPDATE Customer SET LevelOneTime = ${completedTime}
+                    //                         WHERE emailAddress = "${email}" `)
+                    //         }
+                    // }
+
+                    // if(r.LevelThreeTime === undefined || completedTime > r.LevelThreeTime){
+                    //     conn.query(`UPDATE Customer SET LevelThree
+                    //                 `)
+                    // }
                     console.log(r.LevelReached)
+                    console.log("COMPLETED TIME: " + completedTime)
+
                     conn.end(); 
                 }  
         }
