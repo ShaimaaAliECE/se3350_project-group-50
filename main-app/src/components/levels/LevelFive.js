@@ -10,6 +10,8 @@ import { MergeSortMenu } from "../../App";
 import axios from "axios";
 
 function LevelFive(){
+    const currentLevel = 5;
+    
     const[array, setArray] = useState(makeArray(50, 1, 100))
     let tempArray = [];
     let tempArray2 = [];
