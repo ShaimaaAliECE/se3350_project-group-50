@@ -644,130 +644,130 @@ function LevelFive(){
             <DropBox key={"302"} divideVal={array[1]} id="302"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"303"} divideVal={tempArray2[0]} id="303"/>
+            <DropBox key={"303"} divideVal={tempArray2[2]} id="303"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"304"} divideVal={tempArray3[0]} id="304"/>
-            &nbsp;
-            &nbsp; 
-            <DropBox key={"305"} divideVal={tempArray4[0]} id="305"/> 
-            &nbsp;
-            &nbsp;
-            <DropBox key={"306"} divideVal={tempArray5[0]} id="306"/>
-            <DropBox key={"307"} divideVal={tempArray5[1]} id="307"/>
-            &nbsp;
-            &nbsp;
-            <DropBox key={"308"} divideVal={tempArray6[0]} id="308"/>
-            &nbsp;
-            &nbsp;
-            <DropBox key={"309"} divideVal={tempArray7[0]} id="309"/>
-            &nbsp;
-            &nbsp;
-            <DropBox key={"310"} divideVal={tempArray8[0]} id="310"/>
-            &nbsp;
-            &nbsp;
-            <DropBox key={"311"} divideVal={array[0]} id="311"/>
-            <DropBox key={"312"} divideVal={array[1]} id="312"/>
-            &nbsp;
-            &nbsp;
-            <DropBox key={"313"} divideVal={tempArray2[0]} id="313"/>
-            &nbsp;
-            &nbsp;
-            <DropBox key={"314"} divideVal={tempArray3[0]} id="314"/>
+            <DropBox key={"304"} divideVal={tempArray3[3]} id="304"/>
             &nbsp;
             &nbsp; 
-            <DropBox key={"315"} divideVal={tempArray4[0]} id="315"/> 
+            <DropBox key={"305"} divideVal={tempArray4[4]} id="305"/> 
             &nbsp;
             &nbsp;
-            <DropBox key={"316"} divideVal={tempArray5[0]} id="316"/>
-            <DropBox key={"317"} divideVal={tempArray5[1]} id="317"/>
+            <DropBox key={"306"} divideVal={tempArray5[5]} id="306"/>
+            <DropBox key={"307"} divideVal={tempArray5[6]} id="307"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"318"} divideVal={tempArray6[0]} id="318"/>
+            <DropBox key={"308"} divideVal={tempArray6[7]} id="308"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"319"} divideVal={tempArray7[0]} id="319"/>
+            <DropBox key={"309"} divideVal={tempArray7[8]} id="309"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"320"} divideVal={tempArray8[0]} id="320"/>
+            <DropBox key={"310"} divideVal={tempArray8[9]} id="310"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"321"} divideVal={array[0]} id="321"/>
-            <DropBox key={"322"} divideVal={array[1]} id="322"/>
+            <DropBox key={"311"} divideVal={array[10]} id="311"/>
+            <DropBox key={"312"} divideVal={array[11]} id="312"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"323"} divideVal={tempArray2[0]} id="323"/>
+            <DropBox key={"313"} divideVal={tempArray2[12]} id="313"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"324"} divideVal={tempArray3[0]} id="324"/>
-            &nbsp;
-            &nbsp; 
-            <DropBox key={"325"} divideVal={tempArray4[0]} id="325"/> 
-            &nbsp;
-            &nbsp;
-            <DropBox key={"326"} divideVal={tempArray5[0]} id="326"/>
-            <DropBox key={"327"} divideVal={tempArray5[1]} id="327"/>
-            &nbsp;
-            &nbsp;
-            <DropBox key={"328"} divideVal={tempArray6[0]} id="328"/>
-            &nbsp;
-            &nbsp;
-            <DropBox key={"329"} divideVal={tempArray7[0]} id="329"/>
-            &nbsp;
-            &nbsp;
-            <DropBox key={"330"} divideVal={tempArray8[0]} id="330"/>
-            &nbsp;
-            &nbsp;
-            <DropBox key={"331"} divideVal={array[0]} id="331"/>
-            <DropBox key={"332"} divideVal={array[1]} id="332"/>
-            &nbsp;
-            &nbsp;
-            <DropBox key={"333"} divideVal={tempArray2[0]} id="333"/>
-            &nbsp;
-            &nbsp;
-            <DropBox key={"334"} divideVal={tempArray3[0]} id="334"/>
+            <DropBox key={"314"} divideVal={tempArray3[13]} id="314"/>
             &nbsp;
             &nbsp; 
-            <DropBox key={"335"} divideVal={tempArray4[0]} id="335"/> 
+            <DropBox key={"315"} divideVal={tempArray4[14]} id="315"/> 
             &nbsp;
             &nbsp;
-            <DropBox key={"336"} divideVal={tempArray5[0]} id="336"/>
-            <DropBox key={"337"} divideVal={tempArray5[1]} id="337"/>
+            <DropBox key={"316"} divideVal={tempArray5[15]} id="316"/>
+            <DropBox key={"317"} divideVal={tempArray5[16]} id="317"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"338"} divideVal={tempArray6[0]} id="338"/>
+            <DropBox key={"318"} divideVal={tempArray6[17]} id="318"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"339"} divideVal={tempArray7[0]} id="339"/>
+            <DropBox key={"319"} divideVal={tempArray7[18]} id="319"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"340"} divideVal={tempArray8[0]} id="340"/>
+            <DropBox key={"320"} divideVal={tempArray8[19]} id="320"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"341"} divideVal={array[0]} id="341"/>
-            <DropBox key={"342"} divideVal={array[1]} id="342"/>
+            <DropBox key={"321"} divideVal={array[20]} id="321"/>
+            <DropBox key={"322"} divideVal={array[21]} id="322"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"343"} divideVal={tempArray2[0]} id="343"/>
+            <DropBox key={"323"} divideVal={tempArray2[22]} id="323"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"344"} divideVal={tempArray3[0]} id="344"/>
+            <DropBox key={"324"} divideVal={tempArray3[23]} id="324"/>
             &nbsp;
             &nbsp; 
-            <DropBox key={"345"} divideVal={tempArray4[0]} id="345"/> 
+            <DropBox key={"325"} divideVal={tempArray4[24]} id="325"/> 
             &nbsp;
             &nbsp;
-            <DropBox key={"346"} divideVal={tempArray5[0]} id="346"/>
-            <DropBox key={"347"} divideVal={tempArray5[1]} id="347"/>
+            <DropBox key={"326"} divideVal={tempArray5[25]} id="326"/>
+            <DropBox key={"327"} divideVal={tempArray5[26]} id="327"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"348"} divideVal={tempArray6[0]} id="348"/>
+            <DropBox key={"328"} divideVal={tempArray6[27]} id="328"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"349"} divideVal={tempArray7[0]} id="349"/>
+            <DropBox key={"329"} divideVal={tempArray7[28]} id="329"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"350"} divideVal={tempArray8[0]} id="350"/>
+            <DropBox key={"330"} divideVal={tempArray8[29]} id="330"/>
+            &nbsp;
+            &nbsp;
+            <DropBox key={"331"} divideVal={array[30]} id="331"/>
+            <DropBox key={"332"} divideVal={array[31]} id="332"/>
+            &nbsp;
+            &nbsp;
+            <DropBox key={"333"} divideVal={tempArray2[32]} id="333"/>
+            &nbsp;
+            &nbsp;
+            <DropBox key={"334"} divideVal={tempArray3[33]} id="334"/>
+            &nbsp;
+            &nbsp; 
+            <DropBox key={"335"} divideVal={tempArray4[34]} id="335"/> 
+            &nbsp;
+            &nbsp;
+            <DropBox key={"336"} divideVal={tempArray5[35]} id="336"/>
+            <DropBox key={"337"} divideVal={tempArray5[36]} id="337"/>
+            &nbsp;
+            &nbsp;
+            <DropBox key={"338"} divideVal={tempArray6[37]} id="338"/>
+            &nbsp;
+            &nbsp;
+            <DropBox key={"339"} divideVal={tempArray7[38]} id="339"/>
+            &nbsp;
+            &nbsp;
+            <DropBox key={"340"} divideVal={tempArray8[39]} id="340"/>
+            &nbsp;
+            &nbsp;
+            <DropBox key={"341"} divideVal={array[40]} id="341"/>
+            <DropBox key={"342"} divideVal={array[41]} id="342"/>
+            &nbsp;
+            &nbsp;
+            <DropBox key={"343"} divideVal={tempArray2[42]} id="343"/>
+            &nbsp;
+            &nbsp;
+            <DropBox key={"344"} divideVal={tempArray3[43]} id="344"/>
+            &nbsp;
+            &nbsp; 
+            <DropBox key={"345"} divideVal={tempArray4[44]} id="345"/> 
+            &nbsp;
+            &nbsp;
+            <DropBox key={"346"} divideVal={tempArray5[45]} id="346"/>
+            <DropBox key={"347"} divideVal={tempArray5[46]} id="347"/>
+            &nbsp;
+            &nbsp;
+            <DropBox key={"348"} divideVal={tempArray6[47]} id="348"/>
+            &nbsp;
+            &nbsp;
+            <DropBox key={"349"} divideVal={tempArray7[48]} id="349"/>
+            &nbsp;
+            &nbsp;
+            <DropBox key={"350"} divideVal={tempArray8[49]} id="350"/>
             </tr>, document.getElementById("stepSeven"))
         }
         {setTempArray([array[0], array[1], array[2], array[3], array[4]])}
@@ -785,85 +785,85 @@ function LevelFive(){
             <DropBox key={"355"} divideVal={array[4]} id="355"/>
             &nbsp;
             &nbsp;    
-            <DropBox key={"356"} divideVal={tempArray2[0]} id="356"/>
-            <DropBox key={"357"} divideVal={tempArray2[1]} id="357"/>
-            <DropBox key={"358"} divideVal={tempArray2[2]} id="358"/>
+            <DropBox key={"356"} divideVal={tempArray2[5]} id="356"/>
+            <DropBox key={"357"} divideVal={tempArray2[6]} id="357"/>
+            <DropBox key={"358"} divideVal={tempArray2[7]} id="358"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"359"} divideVal={tempArray2[3]} id="359"/>
-            <DropBox key={"360"} divideVal={tempArray2[4]} id="360"/>
+            <DropBox key={"359"} divideVal={tempArray2[8]} id="359"/>
+            <DropBox key={"360"} divideVal={tempArray2[9]} id="360"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"361"} divideVal={tempArray3[0]} id="361"/>
-            <DropBox key={"362"} divideVal={tempArray3[1]} id="362"/>
-            <DropBox key={"363"} divideVal={tempArray3[2]} id="363"/>
+            <DropBox key={"361"} divideVal={tempArray3[10]} id="361"/>
+            <DropBox key={"362"} divideVal={tempArray3[11]} id="362"/>
+            <DropBox key={"363"} divideVal={tempArray3[12]} id="363"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"364"} divideVal={tempArray3[3]} id="364"/>
-            <DropBox key={"365"} divideVal={tempArray3[4]} id="365"/>
+            <DropBox key={"364"} divideVal={tempArray3[13]} id="364"/>
+            <DropBox key={"365"} divideVal={tempArray3[14]} id="365"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"366"} divideVal={tempArray4[0]} id="366"/>
-            <DropBox key={"367"} divideVal={tempArray4[1]} id="367"/>
-            <DropBox key={"368"} divideVal={tempArray4[2]} id="368"/>
+            <DropBox key={"366"} divideVal={tempArray4[15]} id="366"/>
+            <DropBox key={"367"} divideVal={tempArray4[16]} id="367"/>
+            <DropBox key={"368"} divideVal={tempArray4[17]} id="368"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"369"} divideVal={tempArray4[3]} id="369"/>
-            <DropBox key={"370"} divideVal={tempArray4[4]} id="370"/>
+            <DropBox key={"369"} divideVal={tempArray4[18]} id="369"/>
+            <DropBox key={"370"} divideVal={tempArray4[19]} id="370"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"371"} divideVal={array[0]} id="371"/>
-            <DropBox key={"372"} divideVal={array[1]} id="372"/>
-            <DropBox key={"373"} divideVal={array[2]} id="373"/>
+            <DropBox key={"371"} divideVal={array[20]} id="371"/>
+            <DropBox key={"372"} divideVal={array[21]} id="372"/>
+            <DropBox key={"373"} divideVal={array[22]} id="373"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"374"} divideVal={array[3]} id="374"/>
-            <DropBox key={"375"} divideVal={array[4]} id="375"/>
+            <DropBox key={"374"} divideVal={array[23]} id="374"/>
+            <DropBox key={"375"} divideVal={array[24]} id="375"/>
             &nbsp;
             &nbsp;    
-            <DropBox key={"376"} divideVal={tempArray2[0]} id="376"/>
-            <DropBox key={"377"} divideVal={tempArray2[1]} id="377"/>
-            <DropBox key={"378"} divideVal={tempArray2[2]} id="378"/>
+            <DropBox key={"376"} divideVal={tempArray2[25]} id="376"/>
+            <DropBox key={"377"} divideVal={tempArray2[26]} id="377"/>
+            <DropBox key={"378"} divideVal={tempArray2[27]} id="378"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"379"} divideVal={tempArray2[3]} id="379"/>
-            <DropBox key={"380"} divideVal={tempArray2[4]} id="380"/>
+            <DropBox key={"379"} divideVal={tempArray2[28]} id="379"/>
+            <DropBox key={"380"} divideVal={tempArray2[29]} id="380"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"381"} divideVal={tempArray3[0]} id="381"/>
-            <DropBox key={"382"} divideVal={tempArray3[1]} id="382"/>
-            <DropBox key={"383"} divideVal={tempArray3[2]} id="383"/>
+            <DropBox key={"381"} divideVal={tempArray3[30]} id="381"/>
+            <DropBox key={"382"} divideVal={tempArray3[31]} id="382"/>
+            <DropBox key={"383"} divideVal={tempArray3[32]} id="383"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"384"} divideVal={tempArray3[3]} id="384"/>
-            <DropBox key={"385"} divideVal={tempArray3[4]} id="385"/>
+            <DropBox key={"384"} divideVal={tempArray3[33]} id="384"/>
+            <DropBox key={"385"} divideVal={tempArray3[34]} id="385"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"386"} divideVal={tempArray4[0]} id="386"/>
-            <DropBox key={"387"} divideVal={tempArray4[1]} id="387"/>
-            <DropBox key={"388"} divideVal={tempArray4[2]} id="388"/>
+            <DropBox key={"386"} divideVal={tempArray4[35]} id="386"/>
+            <DropBox key={"387"} divideVal={tempArray4[36]} id="387"/>
+            <DropBox key={"388"} divideVal={tempArray4[37]} id="388"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"389"} divideVal={tempArray4[3]} id="389"/>
-            <DropBox key={"390"} divideVal={tempArray4[4]} id="390"/>
+            <DropBox key={"389"} divideVal={tempArray4[38]} id="389"/>
+            <DropBox key={"390"} divideVal={tempArray4[39]} id="390"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"391"} divideVal={tempArray3[0]} id="391"/>
-            <DropBox key={"392"} divideVal={tempArray3[1]} id="392"/>
-            <DropBox key={"393"} divideVal={tempArray3[2]} id="393"/>
+            <DropBox key={"391"} divideVal={tempArray3[40]} id="391"/>
+            <DropBox key={"392"} divideVal={tempArray3[41]} id="392"/>
+            <DropBox key={"393"} divideVal={tempArray3[42]} id="393"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"394"} divideVal={tempArray3[3]} id="394"/>
-            <DropBox key={"395"} divideVal={tempArray3[4]} id="395"/>
+            <DropBox key={"394"} divideVal={tempArray3[43]} id="394"/>
+            <DropBox key={"395"} divideVal={tempArray3[44]} id="395"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"396"} divideVal={tempArray4[0]} id="396"/>
-            <DropBox key={"397"} divideVal={tempArray4[1]} id="397"/>
-            <DropBox key={"398"} divideVal={tempArray4[2]} id="398"/>
+            <DropBox key={"396"} divideVal={tempArray4[45]} id="396"/>
+            <DropBox key={"397"} divideVal={tempArray4[46]} id="397"/>
+            <DropBox key={"398"} divideVal={tempArray4[47]} id="398"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"399"} divideVal={tempArray4[3]} id="399"/>
-            <DropBox key={"400"} divideVal={tempArray4[4]} id="400"/>
+            <DropBox key={"399"} divideVal={tempArray4[48]} id="399"/>
+            <DropBox key={"400"} divideVal={tempArray4[49]} id="400"/>
             </tr>
         , document.getElementById("stepEight"))}
         {setTempArray([array[0], array[1], array[2], array[3], array[4], array[5], array[6], array[7], array[8], array[9]])}
@@ -884,60 +884,60 @@ function LevelFive(){
             <DropBox key={"410"} divideVal={array[9]} id="410"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"411"} divideVal={tempArray2[0]} id="411"/>
-            <DropBox key={"412"} divideVal={tempArray2[1]} id="412"/>
-            <DropBox key={"413"} divideVal={tempArray2[2]} id="413"/>
-            <DropBox key={"414"} divideVal={tempArray2[3]} id="414"/>
-            <DropBox key={"415"} divideVal={tempArray2[4]} id="415"/>
+            <DropBox key={"411"} divideVal={tempArray2[10]} id="411"/>
+            <DropBox key={"412"} divideVal={tempArray2[11]} id="412"/>
+            <DropBox key={"413"} divideVal={tempArray2[12]} id="413"/>
+            <DropBox key={"414"} divideVal={tempArray2[13]} id="414"/>
+            <DropBox key={"415"} divideVal={tempArray2[14]} id="415"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"416"} divideVal={tempArray2[5]} id="416"/>
-            <DropBox key={"417"} divideVal={tempArray2[6]} id="417"/>
-            <DropBox key={"418"} divideVal={tempArray2[7]} id="418"/>
-            <DropBox key={"419"} divideVal={tempArray2[8]} id="419"/>
-            <DropBox key={"420"} divideVal={tempArray2[9]} id="420"/>
+            <DropBox key={"416"} divideVal={tempArray2[15]} id="416"/>
+            <DropBox key={"417"} divideVal={tempArray2[16]} id="417"/>
+            <DropBox key={"418"} divideVal={tempArray2[17]} id="418"/>
+            <DropBox key={"419"} divideVal={tempArray2[18]} id="419"/>
+            <DropBox key={"420"} divideVal={tempArray2[19]} id="420"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"421"} divideVal={array[0]} id="421"/>
-            <DropBox key={"422"} divideVal={array[1]} id="422"/>
-            <DropBox key={"423"} divideVal={array[2]} id="423"/>
-            <DropBox key={"424"} divideVal={array[3]} id="424"/>
-            <DropBox key={"425"} divideVal={array[4]} id="425"/>
+            <DropBox key={"421"} divideVal={array[20]} id="421"/>
+            <DropBox key={"422"} divideVal={array[21]} id="422"/>
+            <DropBox key={"423"} divideVal={array[22]} id="423"/>
+            <DropBox key={"424"} divideVal={array[23]} id="424"/>
+            <DropBox key={"425"} divideVal={array[24]} id="425"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"426"} divideVal={array[5]} id="426"/>
-            <DropBox key={"427"} divideVal={array[6]} id="427"/>
-            <DropBox key={"428"} divideVal={array[7]} id="428"/>
-            <DropBox key={"429"} divideVal={array[8]} id="429"/>
-            <DropBox key={"430"} divideVal={array[9]} id="430"/>
+            <DropBox key={"426"} divideVal={array[25]} id="426"/>
+            <DropBox key={"427"} divideVal={array[26]} id="427"/>
+            <DropBox key={"428"} divideVal={array[27]} id="428"/>
+            <DropBox key={"429"} divideVal={array[28]} id="429"/>
+            <DropBox key={"430"} divideVal={array[29]} id="430"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"431"} divideVal={tempArray2[0]} id="431"/>
-            <DropBox key={"432"} divideVal={tempArray2[1]} id="432"/>
-            <DropBox key={"433"} divideVal={tempArray2[2]} id="433"/>
-            <DropBox key={"434"} divideVal={tempArray2[3]} id="434"/>
-            <DropBox key={"435"} divideVal={tempArray2[4]} id="435"/>
+            <DropBox key={"431"} divideVal={tempArray2[30]} id="431"/>
+            <DropBox key={"432"} divideVal={tempArray2[31]} id="432"/>
+            <DropBox key={"433"} divideVal={tempArray2[32]} id="433"/>
+            <DropBox key={"434"} divideVal={tempArray2[33]} id="434"/>
+            <DropBox key={"435"} divideVal={tempArray2[34]} id="435"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"436"} divideVal={tempArray2[5]} id="436"/>
-            <DropBox key={"437"} divideVal={tempArray2[6]} id="437"/>
-            <DropBox key={"438"} divideVal={tempArray2[7]} id="438"/>
-            <DropBox key={"439"} divideVal={tempArray2[8]} id="439"/>
-            <DropBox key={"440"} divideVal={tempArray2[9]} id="440"/>
+            <DropBox key={"436"} divideVal={tempArray2[35]} id="436"/>
+            <DropBox key={"437"} divideVal={tempArray2[36]} id="437"/>
+            <DropBox key={"438"} divideVal={tempArray2[37]} id="438"/>
+            <DropBox key={"439"} divideVal={tempArray2[38]} id="439"/>
+            <DropBox key={"440"} divideVal={tempArray2[39]} id="440"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"441"} divideVal={tempArray2[0]} id="441"/>
-            <DropBox key={"442"} divideVal={tempArray2[1]} id="442"/>
-            <DropBox key={"443"} divideVal={tempArray2[2]} id="443"/>
-            <DropBox key={"444"} divideVal={tempArray2[3]} id="444"/>
-            <DropBox key={"445"} divideVal={tempArray2[4]} id="445"/>
+            <DropBox key={"441"} divideVal={tempArray2[40]} id="441"/>
+            <DropBox key={"442"} divideVal={tempArray2[41]} id="442"/>
+            <DropBox key={"443"} divideVal={tempArray2[42]} id="443"/>
+            <DropBox key={"444"} divideVal={tempArray2[43]} id="444"/>
+            <DropBox key={"445"} divideVal={tempArray2[44]} id="445"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"446"} divideVal={tempArray2[5]} id="446"/>
-            <DropBox key={"447"} divideVal={tempArray2[6]} id="447"/>
-            <DropBox key={"448"} divideVal={tempArray2[7]} id="448"/>
-            <DropBox key={"449"} divideVal={tempArray2[8]} id="449"/>
-            <DropBox key={"450"} divideVal={tempArray2[9]} id="450"/>
+            <DropBox key={"446"} divideVal={tempArray2[45]} id="446"/>
+            <DropBox key={"447"} divideVal={tempArray2[46]} id="447"/>
+            <DropBox key={"448"} divideVal={tempArray2[47]} id="448"/>
+            <DropBox key={"449"} divideVal={tempArray2[48]} id="449"/>
+            <DropBox key={"450"} divideVal={tempArray2[49]} id="450"/>
             </tr>
         , document.getElementById("stepNine"))}
         {setTempArray([...array])}
@@ -953,21 +953,21 @@ function LevelFive(){
             <DropBox key={"458"} divideVal={array[7]} id="188"/>
             <DropBox key={"459"} divideVal={array[8]} id="189"/>
             <DropBox key={"460"} divideVal={array[9]} id="190"/>
-            <DropBox key={"461"} divideVal={array[0]} id="1201"/>
-            <DropBox key={"462"} divideVal={array[1]} id="1202"/>
-            <DropBox key={"463"} divideVal={array[2]} id="1204"/>
-            <DropBox key={"464"} divideVal={array[3]} id="1205"/>
-            <DropBox key={"465"} divideVal={array[4]} id="1206"/> 
-            <DropBox key={"466"} divideVal={array[5]} id="1208"/>
-            <DropBox key={"467"} divideVal={array[6]} id="1209"/>
-            <DropBox key={"468"} divideVal={array[7]} id="188"/>
-            <DropBox key={"469"} divideVal={array[8]} id="189"/>
-            <DropBox key={"470"} divideVal={array[9]} id="190"/>
-            <DropBox key={"471"} divideVal={array[5]} id="1208"/>
-            <DropBox key={"472"} divideVal={array[6]} id="1209"/>
-            <DropBox key={"473"} divideVal={array[7]} id="188"/>
-            <DropBox key={"474"} divideVal={array[8]} id="189"/>
-            <DropBox key={"475"} divideVal={array[9]} id="190"/>
+            <DropBox key={"461"} divideVal={array[10]} id="1201"/>
+            <DropBox key={"462"} divideVal={array[11]} id="1202"/>
+            <DropBox key={"463"} divideVal={array[12]} id="1204"/>
+            <DropBox key={"464"} divideVal={array[13]} id="1205"/>
+            <DropBox key={"465"} divideVal={array[14]} id="1206"/> 
+            <DropBox key={"466"} divideVal={array[15]} id="1208"/>
+            <DropBox key={"467"} divideVal={array[16]} id="1209"/>
+            <DropBox key={"468"} divideVal={array[17]} id="188"/>
+            <DropBox key={"469"} divideVal={array[18]} id="189"/>
+            <DropBox key={"470"} divideVal={array[19]} id="190"/>
+            <DropBox key={"471"} divideVal={array[20]} id="1208"/>
+            <DropBox key={"472"} divideVal={array[21]} id="1209"/>
+            <DropBox key={"473"} divideVal={array[22]} id="188"/>
+            <DropBox key={"474"} divideVal={array[23]} id="189"/>
+            <DropBox key={"475"} divideVal={array[24]} id="190"/>
             &nbsp;
             &nbsp;
             <DropBox key={"476"} divideVal={array[10]} id="1214"/>
