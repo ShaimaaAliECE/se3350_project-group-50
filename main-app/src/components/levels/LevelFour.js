@@ -20,7 +20,7 @@ function LevelFour(){
     let tempArray6 = [];
     let tempArray7 = [];
     let tempArray8 = [];
-    const currentLevel = 3;
+    const currentLevel = 4;
 
     useEffect(()=>{
         $("#stepTwo").hide()
