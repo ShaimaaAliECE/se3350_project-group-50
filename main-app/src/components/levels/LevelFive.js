@@ -71,40 +71,40 @@ function LevelFive(){
     function setTempArray8(changeToArray){
         tempArray8=mergeSort(changeToArray)
     }
-    function setTempArray8(changeToArray){
+    function setTempArray9(changeToArray){
         tempArray9=mergeSort(changeToArray)
     }
-    function setTempArray8(changeToArray){
+    function setTempArray10(changeToArray){
         tempArray10=mergeSort(changeToArray)
     }
-    function setTempArray8(changeToArray){
+    function setTempArray11(changeToArray){
         tempArray11=mergeSort(changeToArray)
     }
-    function setTempArray8(changeToArray){
+    function setTempArray12(changeToArray){
         tempArray12=mergeSort(changeToArray)
     }
-    function setTempArray8(changeToArray){
+    function setTempArray13(changeToArray){
         tempArray13=mergeSort(changeToArray)
     }
-    function setTempArray8(changeToArray){
+    function setTempArray14(changeToArray){
         tempArray14=mergeSort(changeToArray)
     }
-    function setTempArray8(changeToArray){
+    function setTempArray15(changeToArray){
         tempArray15=mergeSort(changeToArray)
     }
-    function setTempArray8(changeToArray){
+    function setTempArray16(changeToArray){
         tempArray16=mergeSort(changeToArray)
     }
-    function setTempArray8(changeToArray){
+    function setTempArray17(changeToArray){
         tempArray17=mergeSort(changeToArray)
     }
-    function setTempArray8(changeToArray){
+    function setTempArray18(changeToArray){
         tempArray18=mergeSort(changeToArray)
     }
-    function setTempArray8(changeToArray){
+    function setTempArray19(changeToArray){
         tempArray19=mergeSort(changeToArray)
     }
-    function setTempArray8(changeToArray){
+    function setTempArray20(changeToArray){
         tempArray20=mergeSort(changeToArray)
     }
     return(
