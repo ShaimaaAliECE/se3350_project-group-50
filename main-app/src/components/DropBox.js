@@ -20,60 +20,75 @@ function DropBox(props){
 
     useEffect(()=>{$(`#${props.id}`).hide()})
 
+    const scoreMultiplier = (props.scoreMultiplier == null)?1:props.scoreMultiplier;
+
     function dropNumber(){
         if(draggedItem === divideVal && !isDone){
             setNumber(draggedItem);
             document.getElementById("feedback").innerText = "Correct";
             setScore(getScore() + 1)
-            if(getScore() == 10){
+            console.log(getScore())
+            if(getScore() == 10*scoreMultiplier){
                 $("#stepTwo").show();
                 document.getElementById("stepsTutorial").innerText = steps[1];
-                document.getElementById('stepsTutorial').innerText += dumb[0];
             }
-            if(getScore() == 20){
+            if(getScore() == 20*scoreMultiplier){
                 $("#stepThree").show();
                 document.getElementById("stepsTutorial").innerText = steps[2];
-                document.getElementById('stepsTutorial').innerText = dumb[1];
             }
-            if(getScore() == 30){
+            if(getScore() == 30*scoreMultiplier){
                 $("#stepFour").show();
                 document.getElementById("stepsTutorial").innerText = steps[3];  
-                document.getElementById('stepsTutorial').innerText = dumb[2]; 
             } 
-            if(getScore() == 40){
+            if(getScore() == 40*scoreMultiplier){
                 $("#stepFive").show();
                 document.getElementById("stepsTutorial").innerText = steps[4];
-                document.getElementById('stepsTutorial').innerText = dumb[3];   
             }
-            if(getScore() == 50){
+            if(getScore() == 50*scoreMultiplier){
                 $("#stepSix").show();
                 document.getElementById("stepsTutorial").innerText = steps[5];   
-                document.getElementById('stepsTutorial').innerText = dumb[4];
             }
-            if(getScore() == 60){
+            if(getScore() == 60*scoreMultiplier){
                 $("#stepSeven").show();
                 document.getElementById("stepsTutorial").innerText = steps[6];   
-                document.getElementById('stepsTutorial').innerText = dumb[5];
             }
-            if(getScore() == 70){
+            if(getScore() == 70*scoreMultiplier){
                 $("#stepEight").show();
                 document.getElementById("stepsTutorial").innerText = steps[7];   
-                document.getElementById('stepsTutorial').innerText = dumb[6];
             }
-            if(getScore() == 80){
+            if(getScore() == 80*scoreMultiplier){
+                if(scoreMultiplier == 1){
+                    setScore(0)
+                    $("#nextBtn").show();
+                    document.getElementById("stepsTutorial").innerText = steps[8];  
+                }else{
+                    $("#stepNine").show();
+                }     
+            }
+            if(getScore() == 90*scoreMultiplier){
+                $("#stepTen").show();
+            }
+            if(getScore() == 100*scoreMultiplier){
+                if(scoreMultiplier == 2){
+                    setScore(0)
+                    $("#nextBtn").show();
+                }else{
+                    $("#stepEleven").show();
+                }     
+            }
+            if(getScore() == 120*scoreMultiplier){
+                $("#stepTwelve").show();
+            }
+            if(getScore() == 130*scoreMultiplier){
                 setScore(0)
                 $("#nextBtn").show();
-                document.getElementById("stepsTutorial").innerText = steps[8];  
-                document.getElementById('stepsTutorial').innerText = dumb[7]; 
             }
-           
             // //Audio feedback for correct goes here
             // const audio = new Audio(ding)
             // audio.play();
 
             setIsDone(true);
         } else if(!isDone){
-            //life deduction code goes here
             $(`#${props.id}`).show()
             $(`#${props.id}`).fadeOut(400)
 
