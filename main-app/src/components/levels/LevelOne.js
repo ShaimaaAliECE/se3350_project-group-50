@@ -144,25 +144,32 @@ function LevelOne(){
               break;
               case 4:
               document.getElementById("feedback").innerText = feedback[8];
-              document.getElementById("8-9-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("8-5-1").style.backgroundColor = "aqua";
+              document.getElementById("7-9-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("7-5-1").style.backgroundColor = "aqua";
               setInnerStep(innerStep + 1);
               break;
               case 5:
               document.getElementById("feedback").innerText = feedback[8];
-              document.getElementById("9-11-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("9-9-1").style.backgroundColor = "aqua";
+              document.getElementById("8-11-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("8-9-1").style.backgroundColor = "aqua";
               setInnerStep(innerStep + 1);
               break;
-              /*
+              case 6:
+              document.getElementById("feedback").innerText = feedback[8];
+              document.getElementById("9-13-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("9-11-1").style.backgroundColor = "aqua";
               setInnerStep(1);
-              setStep(step - 2);
+              break;
+              case 7:
+              setInnerStep(1);
+              setStep(5);
               setPaused(false);
-              break; */
+              break; 
           }
         }
         break;
       case 5:
+        ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepFour'));
         if(!paused){
           document.getElementById("feedback").innerText = feedback[3];
           setMerging(true);
