@@ -150,6 +150,7 @@ function LevelOne(){
             case 1:
               document.getElementById("feedback").innerText = feedback[8];
               document.getElementById("5-1-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("4-1-1").style.backgroundColor = "CornflowerBlue";
               setInnerStep(innerStep + 1);
               break;
             case 2:
