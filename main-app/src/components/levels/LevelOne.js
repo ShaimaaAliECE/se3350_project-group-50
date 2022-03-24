@@ -49,6 +49,8 @@ function LevelOne(){
   const[tree, setTree] = useState({value: array, left:null, right:null})
   const currentLevel = 1;
   const [timerStart, setTimerStart] = useState(false);
+  const[paused, setPaused] = useState(false);
+  const[innerStep, setInnerStep] = useState(1);
   
   let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array", "An array of length 1 cannot be split, ready for merge"]
 
@@ -58,9 +60,9 @@ function LevelOne(){
   createTree(tree); // function to build the full tree by dividing the array till array length becomes one
   
   const onClick = () => {
-    if(!merging)
+    if(!merging && !paused)
       setStep(step+1)
-    else
+    else if(merging && !paused)
       setStep(step-1) // if in merging steps then go backwards(decrement step)
 
     if(step != 0){
@@ -93,9 +95,28 @@ function LevelOne(){
       case 3:
         ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepThree'));
         document.getElementById("feedback").innerText = feedback[2];
-        if(merging){
+        if(merging && !paused){
           ReactDOM.render(<></>, document.getElementById('stepFour'));
           document.getElementById("feedback").innerText = feedback[6];
+          setPaused(true);
+        }
+        else if(merging && paused){
+          switch(innerStep){
+            case 1:
+              document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
+              document.getElementById("5-7-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("5-8-1").style.backgroundColor = "CornflowerBlue";
+              setInnerStep(innerStep + 1);
+              break;
+            case 2:
+              document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
+              document.getElementById("5-15-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("5-16-1").style.backgroundColor = "CornflowerBlue";
+              setInnerStep(1);
+              setStep(step - 2);
+              setPaused(false);
+              break;
+          }
         }
         break;
       case 4:
@@ -103,11 +124,32 @@ function LevelOne(){
         document.getElementById("feedback").innerText = feedback[8];
         break;
       case 5:
-        document.getElementById("feedback").innerText = feedback[3];
-        setMerging(true) //start merging process
-        setStep(step-2);
+        if(!paused){
+          document.getElementById("feedback").innerText = feedback[3];
+          setMerging(true);
+          setPaused(true);
+          setStep(5);
+        }
+        else if(paused){
+          switch(innerStep){
+            case 1:
+              document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
+              document.getElementById("5-7-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("5-8-1").style.backgroundColor = "CornflowerBlue";
+              setInnerStep(innerStep + 1);
+              break;
+            case 2:
+              document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
+              document.getElementById("5-15-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("5-16-1").style.backgroundColor = "CornflowerBlue";
+              setInnerStep(1);
+              setStep(step - 2);
+              setPaused(false);
+              break;
+          }
+        }
         break;
-        
+
       case 0: // case 0 is the last step in the level 
         ReactDOM.render(<></>, document.getElementById('stepOne'));
         document.getElementById("feedback").innerText = feedback[7];
