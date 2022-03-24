@@ -33,7 +33,7 @@ function runEvent(e){
 function startTimeOutTimer(){
   if(!timer_on){
     timer_on = true
-    timeout = setTimeout(timeOut, 5000)
+    timeout = setTimeout(timeOut, 20000)
   }
 }
 
