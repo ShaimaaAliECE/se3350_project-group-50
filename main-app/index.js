@@ -52,7 +52,7 @@ app.post("/level-completion", (req, res) => {
     let completedLevel = req.body.completedLevel
     let email = req.body.email
     let completedTime = req.body.completedTime
-    console.log("THIS IS" + completedTime)
+    console.log("THIS IS " + completedLevel)
 
     conn.connect();
         conn.query(`SELECT * FROM Customer WHERE emailAddress = "${email}";`
