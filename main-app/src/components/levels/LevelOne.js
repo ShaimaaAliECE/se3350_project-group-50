@@ -140,14 +140,57 @@ function LevelOne(){
               break;
           }
         }
+        setPaused(true);
         break;
       case 4:
         ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepFour'));
-        document.getElementById("feedback").innerText = feedback[8];
+        document.getElementById("feedback").innerText = feedback[3];
+        if(paused){
+          switch(innerStep){
+            case 1:
+              document.getElementById("feedback").innerText = feedback[8];
+              document.getElementById("5-1-1").style.backgroundColor = "CornflowerBlue";
+              setInnerStep(innerStep + 1);
+              break;
+            case 2:
+              document.getElementById("feedback").innerText = feedback[8];
+              document.getElementById("5-3-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("5-1-1").style.backgroundColor = "aqua";
+              setInnerStep(innerStep + 1);
+              break;
+            case 3:
+              document.getElementById("feedback").innerText = feedback[8];
+              document.getElementById("6-5-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("6-3-1").style.backgroundColor = "aqua";
+              setInnerStep(innerStep + 1);
+              break;
+              case 4:
+              document.getElementById("feedback").innerText = feedback[8];
+              document.getElementById("7-9-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("7-5-1").style.backgroundColor = "aqua";
+              setInnerStep(innerStep + 1);
+              break;
+              case 5:
+              document.getElementById("feedback").innerText = feedback[8];
+              document.getElementById("8-11-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("8-9-1").style.backgroundColor = "aqua";
+              setInnerStep(innerStep + 1);
+              break;
+              case 6:
+              document.getElementById("feedback").innerText = feedback[8];
+              document.getElementById("9-13-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("9-11-1").style.backgroundColor = "aqua";
+              setInnerStep(1);
+              setStep(5);
+              setPaused(false);
+              break;             
+          }
+        }
         break;
       case 5:
         if(!paused){
-          document.getElementById("feedback").innerText = feedback[3];
+          document.getElementById("feedback").innerText = `Now compare the values that are not an array of length 1`;
+          document.getElementById("10-13-1").style.backgroundColor = "aqua";
           setMerging(true);
           setPaused(true);
           setStep(5);
@@ -156,16 +199,16 @@ function LevelOne(){
           switch(innerStep){
             case 1:
               document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
-              document.getElementById("5-7-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("5-8-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("10-7-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("10-8-1").style.backgroundColor = "CornflowerBlue";
               setInnerStep(innerStep + 1);
               break;
             case 2:
               document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
-              document.getElementById("5-7-1").style.backgroundColor = "aqua";
-              document.getElementById("5-8-1").style.backgroundColor = "aqua";
-              document.getElementById("5-15-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("5-16-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("10-7-1").style.backgroundColor = "aqua";
+              document.getElementById("10-8-1").style.backgroundColor = "aqua";
+              document.getElementById("10-15-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("10-16-1").style.backgroundColor = "CornflowerBlue";
               setInnerStep(1);
               setStep(step - 2);
               setPaused(false);
