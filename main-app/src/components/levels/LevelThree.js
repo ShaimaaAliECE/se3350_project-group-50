@@ -16,7 +16,6 @@ function LevelThree(){
     let tempArray2 = [];
     let tempArray3 = [];
     let tempArray4 = [];
-    const currentLevel = 3;
     changeLevel(3)
 
     useEffect(()=>{
@@ -48,7 +47,7 @@ function LevelThree(){
           method: "POST",
           url: "/level-completion",
           data: {
-            completedLevel: currentLevel,
+            completedLevel: getLevel(),
             email: emailEntered,
             completedTime: Timer.getTime()
           }

@@ -1,5 +1,5 @@
 import Number from "../Number";
-import { App, changeLevel, emailEntered } from "../../App";
+import { App, changeLevel, emailEntered, getLevel } from "../../App";
 import Numbers from "../Numbers";
 import makeArray from "../makeRandomArray";
 import { useState, useEffect } from "react";
@@ -47,7 +47,6 @@ function LevelOne(){
   const[step, setStep] = useState(1) // store which step the player is at
   const[merging, setMerging] = useState(false); // When player reaches merging steps this changes to true
   const[tree, setTree] = useState({value: array, left:null, right:null})
-  const currentLevel = 1;
   const [timerStart, setTimerStart] = useState(false);
 
   changeLevel(1)
@@ -156,7 +155,7 @@ function LevelOne(){
       method: "POST",
       url: "/level-completion",
       data: {
-        completedLevel: currentLevel,
+        completedLevel: getLevel(),
         email: emailEntered,
         completedTime: Timer.getTime()
       }
