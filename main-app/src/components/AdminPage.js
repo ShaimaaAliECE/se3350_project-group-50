@@ -1,3 +1,4 @@
+/*
 const Stack = createStackNavigator();
 const Tab = createMaterialTopTabNavigator();
 export default function AdminPage(props){
@@ -25,7 +26,7 @@ const pathway_id=navigation.getParam('pathway_id');
         options: {...}
       });
   );
-    
+  */
 
   
 }
