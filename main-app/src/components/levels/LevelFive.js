@@ -49,6 +49,18 @@ function LevelFive(){
         $("#stepTwelve").hide()
         $("#nextBtn").hide()
     }, []) 
+
+
+    //Display timer
+    const [timerStart, setTimerStart] = useState(false);
+    let Timer = require('../Timer');
+
+    if(timerStart == false){
+        Timer.resetTimer();
+        Timer.startTimer();
+    
+        setTimerStart(true);
+    }
     
     function setTempArray(changeToArray){
         array = mergeSort(changeToArray);
@@ -1200,6 +1212,7 @@ function LevelFive(){
         <p id="feedback"></p>
         </div>
         //<button id="nextBtn" onClick={()=> {ReactDOM.render(<></>, document.getElementById("allSteps")); ReactDOM.render(<LevelFive/>, document.getElementById("root"))}}>Next Level</button>
+        
     )
 }
 

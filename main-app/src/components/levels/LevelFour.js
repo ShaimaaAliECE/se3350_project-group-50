@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import { useState, useEffect } from "react";
 import { mergeSort, resetSteps } from "../../App";
 import $ from "jquery";
-import { MergeSortMenu, emailEntered, changeLevel } from "../../App";
+import { MergeSortMenu, emailEntered, changeLevel, getLevel } from "../../App";
 import LevelFive from "./LevelFive";
 import axios from "axios";
 
@@ -20,7 +20,6 @@ function LevelFour(){
     let tempArray6 = [];
     let tempArray7 = [];
     let tempArray8 = [];
-    const currentLevel = 4;
     changeLevel(4)
 
     useEffect(()=>{
@@ -54,7 +53,7 @@ function LevelFour(){
           method: "POST",
           url: "/level-completion",
           data: {
-            completedLevel: currentLevel,
+            completedLevel: getLevel(),
             email: emailEntered,
             completedTime: Timer.getTime()
           }

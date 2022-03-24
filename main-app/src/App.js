@@ -11,7 +11,7 @@ import axios from 'axios';
 
 let draggedItem = null;
 let emailEntered = null;
-//let currentLevel = "Level1"; will not be used till probably sprint 3
+
 let userLevel = 0;
 let lives = 3;
 let currentLevel = 1;
