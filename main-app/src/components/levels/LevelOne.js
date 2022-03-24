@@ -1,5 +1,5 @@
 import Number from "../Number";
-import { App, emailEntered } from "../../App";
+import { App, changeLevel, emailEntered } from "../../App";
 import Numbers from "../Numbers";
 import makeArray from "../makeRandomArray";
 import { useState, useEffect } from "react";
@@ -49,6 +49,8 @@ function LevelOne(){
   const[tree, setTree] = useState({value: array, left:null, right:null})
   const currentLevel = 1;
   const [timerStart, setTimerStart] = useState(false);
+
+  changeLevel(1)
   
   let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array", "An array of length 1 cannot be split, ready for merge"]
 
