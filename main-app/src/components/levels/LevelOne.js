@@ -96,7 +96,7 @@ function LevelOne(){
         else if(merging && paused){
           switch(innerStep){
             case 1:
-              document.getElementById("feedback").innerText = `ah shit here we go again`;
+              document.getElementById("feedback").innerText = `Compare the two lists. Take whichever value is smallest from the front of each list and merge it up. Keep going until both are empty.`;
               document.getElementById("2-1-1").style.backgroundColor = "CornflowerBlue";
               document.getElementById("2-1-2").style.backgroundColor = "CornflowerBlue";
               document.getElementById("2-2-1").style.backgroundColor = "CornflowerBlue";
@@ -105,7 +105,7 @@ function LevelOne(){
               setInnerStep(innerStep + 1);
               break;
             case 2:
-              document.getElementById("feedback").innerText = `noob`;
+              document.getElementById("feedback").innerText = `Compare the two lists. Take whichever value is smallest from the front of each list and merge it up. Keep going until both are empty.`;
               document.getElementById("2-1-1").style.backgroundColor = "aqua";
               document.getElementById("2-1-2").style.backgroundColor = "aqua";
               document.getElementById("2-2-1").style.backgroundColor = "aqua";
@@ -135,13 +135,13 @@ function LevelOne(){
         else if(merging && paused){
           switch(innerStep){
             case 1:
-              document.getElementById("feedback").innerText = `ah shit here we go again`;
+              document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
               document.getElementById("3-1-1").style.backgroundColor = "CornflowerBlue";
               document.getElementById("3-2-1").style.backgroundColor = "CornflowerBlue";
               setInnerStep(innerStep + 1);
               break;
             case 2:
-              document.getElementById("feedback").innerText = `noob`;
+              document.getElementById("feedback").innerText = `Compare the two lists. Take whichever value is smallest from the front of each list and merge it up. Keep going until both are empty.`;
               document.getElementById("3-1-1").style.backgroundColor = "aqua";
               document.getElementById("3-2-1").style.backgroundColor = "aqua";
               document.getElementById("3-3-1").style.backgroundColor = "CornflowerBlue";
@@ -150,7 +150,7 @@ function LevelOne(){
               setInnerStep(innerStep + 1);
               break;
             case 3:
-              document.getElementById("feedback").innerText = `nooweqwewb`;
+              document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
               document.getElementById("3-3-1").style.backgroundColor = "aqua";
               document.getElementById("3-4-1").style.backgroundColor = "aqua";
               document.getElementById("3-4-2").style.backgroundColor = "aqua";
@@ -159,7 +159,7 @@ function LevelOne(){
               setInnerStep(innerStep + 1);
               break;
             case 4:
-              document.getElementById("feedback").innerText = `nooweqwewb`;
+              document.getElementById("feedback").innerText = `Compare the two lists. Take whichever value is smallest from the front of each list and merge it up. Keep going until both are empty.`;
               document.getElementById("3-5-1").style.backgroundColor = "aqua";
               document.getElementById("3-6-1").style.backgroundColor = "aqua";
               document.getElementById("3-7-1").style.backgroundColor = "CornflowerBlue";
