@@ -77,7 +77,7 @@ function LevelOne(){
     
     switch(step){
       case 1:
-        ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepOne'));
+        ReactDOM.render(<NumbersRow array={tempArray} rowNum={1}/>, document.getElementById('stepOne'));
         document.getElementById("feedback").innerText = feedback[0];
         rowNum=2;
         if(merging){
@@ -342,7 +342,7 @@ function LevelOne(){
 }
 
 
-let rowNum = 0;
+//let rowNum = 0;
 
 //React component
 function NumbersRow(props){
@@ -351,7 +351,7 @@ function NumbersRow(props){
   return(
     <table style={props.style}><tr>
       {props.array.map(a => (
-        <Numbers array={a} rowID={rowNum} arrayID={++i}/>
+        <Numbers array={a} rowID={props.rowNum} arrayID={++i}/>
       ))}
       </tr></table>
   )
