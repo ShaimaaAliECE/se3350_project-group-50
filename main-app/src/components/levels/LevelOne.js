@@ -79,9 +79,40 @@ function LevelOne(){
       case 1:
         ReactDOM.render(<NumbersRow array={tempArray} rowNum={1}/>, document.getElementById('stepOne'));
         document.getElementById("feedback").innerText = feedback[0];
-        if(merging){
+        if(merging && !paused){
           ReactDOM.render(<></>, document.getElementById('stepTwo'));
           document.getElementById("feedback").innerText = feedback[4];
+          setPaused(true);
+          setStep(1);
+        }
+        else if(merging && paused){
+          switch(innerStep){
+            case 1:
+              document.getElementById("feedback").innerText = Compare the two lists. Take whichever value is smallest from the front of each list and merge it up. Keep going until both are empty.;
+              document.getElementById("1-1-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-1-2").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-1-3").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-1-4").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-1-5").style.backgroundColor = "CornflowerBlue";
+              setInnerStep(innerStep + 1);
+              break;
+            case 2:
+              document.getElementById("feedback").innerText = Compare the two lists. Take whichever value is smallest from the front of each list and merge it up. Keep going until both are empty.;
+              document.getElementById("1-1-1").style.backgroundColor = "aqua";
+              document.getElementById("1-1-2").style.backgroundColor = "aqua";
+              document.getElementById("1-1-3").style.backgroundColor = "aqua";
+              document.getElementById("1-1-4").style.backgroundColor = "aqua";
+              document.getElementById("1-1-5").style.backgroundColor = "aqua";
+              document.getElementById("1-2-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-2-2").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-2-3").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-2-4").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-2-5").style.backgroundColor = "CornflowerBlue";
+              setInnerStep(1);
+              setStep(0);
+              setPaused(false);
+              break;
+          }
         }
         break;
       case 2:
