@@ -16,6 +16,38 @@ let userLevel = 0;
 let lives = 3;
 let currentLevel = 1;
 
+let timeout
+let timer_on = false
+
+document.addEventListener('mousemove', runEvent)
+document.addEventListener('keypress', runEvent)
+document.addEventListener('mousedown', runEvent)
+
+function runEvent(e){
+  //e.preventDefault();
+  console.log('EVENT TYPE: ' + e.type);
+  stopTimeOutTimer();
+  startTimeOutTimer();
+}
+
+function startTimeOutTimer(){
+  if(!timer_on){
+    timer_on = true
+    timeout = setTimeout(timeOut, 5000)
+  }
+}
+
+function stopTimeOutTimer(){
+  clearTimeout(timeout);
+  timer_on = false;
+}
+
+function timeOut(){
+  alert("Your Session has Expired!");
+  ReactDOM.render(<HomePage/>, document.getElementById('root'))
+
+}
+
 function deductLives(){
   lives--;
   return lives;
