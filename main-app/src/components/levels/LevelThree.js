@@ -4,10 +4,10 @@ import DropBox from "../DropBox";
 import FuilurePageMenu from "../FailurePageMenu";
 import ReactDOM from 'react-dom';
 import { useState, useEffect } from "react";
-import { mergeSort } from "../../App";
+import { mergeSort, resetSteps } from "../../App";
 import $ from "jquery";
 import LevelFour from "./LevelFour";
-import { MergeSortMenu, emailEntered } from "../../App";
+import { MergeSortMenu, emailEntered, changeLevel, getLevel } from "../../App";
 import axios from "axios";
 
 function LevelThree(){
@@ -16,7 +16,7 @@ function LevelThree(){
     let tempArray2 = [];
     let tempArray3 = [];
     let tempArray4 = [];
-    const currentLevel = 3;
+    changeLevel(3)
 
     useEffect(()=>{
         $("#stepTwo").hide()
@@ -47,8 +47,9 @@ function LevelThree(){
           method: "POST",
           url: "/level-completion",
           data: {
-            completedLevel: currentLevel,
-            email: emailEntered
+            completedLevel: getLevel(),
+            email: emailEntered,
+            completedTime: Timer.getTime()
           }
         })
       
@@ -268,7 +269,7 @@ function LevelThree(){
         </tbody>
         </table>
         <p id="feedback"></p>
-        <button id="nextBtn" onClick={()=> {ReactDOM.render(<></>, document.getElementById("allSteps")); nextLevel()}}>Next Level</button>
+        <button id="nextBtn" onClick={()=> {resetSteps(); nextLevel()}}>Next Level</button>
         </div>
     )
 }

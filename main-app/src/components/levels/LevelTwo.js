@@ -2,7 +2,7 @@ import makeArray from "../makeRandomArray";
 import Numbers from "../Numbers";
 import DropBox from "../DropBox";
 import { useState, useEffect } from "react";
-import { mergeSort, resetSteps, emailEntered} from "../../App";
+import { mergeSort, resetSteps, emailEntered, changeLevel, getLevel} from "../../App";
 import $ from "jquery";
 import ReactDOM from 'react-dom';
 import LevelThree from "./LevelThree";
@@ -24,8 +24,8 @@ function LevelTwo(){
     let tempArray2 = [];
     let tempArray3 = [];
     let tempArray4 = []
-    const currentLevel = 2;
     const [timerStart, setTimerStart] = useState(false);
+    changeLevel(2)
 
     useEffect(()=>{
         $("#stepTwo").hide()
@@ -54,8 +54,9 @@ function LevelTwo(){
           method: "POST",
           url: "/level-completion",
           data: {
-            completedLevel: currentLevel,
-            email: emailEntered
+            completedLevel: getLevel(),
+            email: emailEntered,
+            completedTime: Timer.getTime()
           }
         })
       
