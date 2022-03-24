@@ -86,8 +86,8 @@ function setDraggedItem(item){
 
 function HomePage(){
   return(
-    <div style={{textAlign: 'center' , lineHeight: 2.5, fontSize: 50, }}>
-      ALGORITHM QUIZ<br />
+    <div class = "center" style={{textAlign: 'center' , lineHeight: 2.5, fontSize: 50}}>
+      ALGORITHM QUIZ<br/>
       <button onClick= {()=> {ReactDOM.render(<UserLogin/>, document.getElementById('root'))}}>User Login</button>
       <button onClick= {()=> {ReactDOM.render(<AdminLoginMenu/>, document.getElementById('root'))}}>Admin Login</button>
     </div>
@@ -110,7 +110,7 @@ function UserLogin(){
   }
 
 return(
-<div>
+<div class = "center">
 <h1>User Login</h1>
 <label for="email">Email: </label>
 <input type="text" placeholder="Enter Email" name="email" id="email-field" class="login-form-field"/>
@@ -154,7 +154,7 @@ function AdminLoginMenu(){
 function ChooseAlgoMenu(){
   return(
 
-    <div>
+    <div class = "center">
       <button onClick= {()=> {ReactDOM.render(<UserLogin/>, document.getElementById('root'))}}>Back</button>
       <h1>Choose Algorithm</h1>
       <button onClick= {()=> {ReactDOM.render(<MergeSortMenu/>, document.getElementById('root'))}}>Merge Sort</button>
@@ -166,7 +166,7 @@ function MergeSortMenu(){
   switch(userLevel) {
     case 1:
       return(
-        <div>
+        <div class = "center">
           <h1>Choose Level</h1>
           <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
           <br />
@@ -175,7 +175,7 @@ function MergeSortMenu(){
       )
     case 2:
       return(
-        <div>
+        <div class = "center">
           <h1>Choose Level</h1>
           <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
           <br />
@@ -186,7 +186,7 @@ function MergeSortMenu(){
       )
     case 3:
       return(
-        <div>
+        <div class = "center">
           <h1>Choose Level</h1>
           <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
           <br />
@@ -199,7 +199,7 @@ function MergeSortMenu(){
       )
     case 4:
       return(
-        <div>
+        <div class = "center">
           <h1>Choose Level</h1>
           <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
           <br />
@@ -214,7 +214,7 @@ function MergeSortMenu(){
       )
     case 5:
       return(
-        <div>
+        <div class = "center">
           <h1>Choose Level</h1>
           <button onClick= {()=> {ReactDOM.render(<LevelOne/>, document.getElementById('root'))}}>Level One</button>
           <br />
