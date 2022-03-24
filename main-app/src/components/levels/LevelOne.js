@@ -79,6 +79,7 @@ function LevelOne(){
       case 1:
         ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepOne'));
         document.getElementById("feedback").innerText = feedback[0];
+        rowNum=2;
         if(merging){
           ReactDOM.render(<></>, document.getElementById('stepTwo'));
           document.getElementById("feedback").innerText = feedback[4];
@@ -197,13 +198,17 @@ function LevelOne(){
             case 2:
               document.getElementById("feedback").innerText = feedback[8];
               document.getElementById("5-3-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("4-2-1").style.backgroundColor = "CornflowerBlue";
               document.getElementById("5-1-1").style.backgroundColor = "aqua";
+              document.getElementById("4-1-1").style.backgroundColor = "aqua";
               setInnerStep(innerStep + 1);
               break;
             case 3:
               document.getElementById("feedback").innerText = feedback[8];
               document.getElementById("6-5-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("4-3-1").style.backgroundColor = "CornflowerBlue";
               document.getElementById("6-3-1").style.backgroundColor = "aqua";
+              document.getElementById("4-2-1").style.backgroundColor = "aqua";
               setInnerStep(innerStep + 1);
               break;
               case 4:
