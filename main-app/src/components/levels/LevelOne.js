@@ -50,6 +50,7 @@ function LevelOne(){
   const [timerStart, setTimerStart] = useState(false);
   const[paused, setPaused] = useState(false);
   const[innerStep, setInnerStep] = useState(1);
+  changeLevel(1)
   
   let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array", "An array of length 1 cannot be split, ready for merge"]
 
