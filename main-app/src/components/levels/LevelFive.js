@@ -4,9 +4,9 @@ import DropBox from "../DropBox";
 import FuilurePageMenu from "../FailurePageMenu";
 import ReactDOM from 'react-dom';
 import { useState, useEffect } from "react";
-import { mergeSort } from "../../App";
+import { mergeSort, resetSteps } from "../../App";
 import $ from "jquery";
-import { MergeSortMenu, changeLevel } from "../../App";
+import { MergeSortMenu, HomePage, emailEntered, changeLevel, getLevel  } from "../../App";
 import axios from "axios";
 
 function LevelFive(){
@@ -60,6 +60,23 @@ function LevelFive(){
         Timer.startTimer();
     
         setTimerStart(true);
+    }
+
+    function nextLevel(){
+        //send to Backend code goes here
+    
+        axios({
+          method: "POST",
+          url: "/level-completion",
+          data: {
+            completedLevel: getLevel(),
+            email: emailEntered,
+            completedTime: Timer.getTime()
+          }
+        })
+    
+        ReactDOM.render(<HomePage/>, document.getElementById("root"))
+    
     }
     
     function setTempArray(changeToArray){
@@ -1218,8 +1235,9 @@ function LevelFive(){
         </tbody>
         </table>
         <p id="feedback"></p>
+        <button id="nextBtn" onClick={()=> {resetSteps(); nextLevel()}}>Next Level</button>
         </div>
-        //<button id="nextBtn" onClick={()=> {ReactDOM.render(<></>, document.getElementById("allSteps")); ReactDOM.render(<LevelFive/>, document.getElementById("root"))}}>Next Level</button>
+        
         
     )
 }
