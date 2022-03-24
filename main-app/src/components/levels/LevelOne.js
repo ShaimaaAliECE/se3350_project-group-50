@@ -91,7 +91,7 @@ function LevelOne(){
           ReactDOM.render(<></>, document.getElementById('stepThree'));
           document.getElementById("feedback").innerText = feedback[5];
         }
-          break;
+        break;
       case 3:
         ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepThree'));
         document.getElementById("feedback").innerText = feedback[2];
