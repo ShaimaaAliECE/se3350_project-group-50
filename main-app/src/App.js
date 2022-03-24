@@ -44,6 +44,7 @@ function stopTimeOutTimer(){
 
 function timeOut(){
   alert("Your Session has Expired!");
+  resetSteps();
   ReactDOM.render(<HomePage/>, document.getElementById('root'))
 
 }
