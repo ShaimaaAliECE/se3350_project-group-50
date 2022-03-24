@@ -11,7 +11,7 @@ import axios from "axios";
 
 function LevelFive(){
     const currentLevel = 5;
-    changeLevel(5)
+    changeLevel(5);
     
     const[array, setArray] = useState(makeArray(50, 1, 100))
     let tempArray = [];
@@ -63,7 +63,7 @@ function LevelFive(){
     }
     
     function setTempArray(changeToArray){
-        array = mergeSort(changeToArray);
+        tempArray = mergeSort(changeToArray);
     }
     function setTempArray2(changeToArray){
         tempArray2 = mergeSort(changeToArray);
@@ -122,11 +122,15 @@ function LevelFive(){
     function setTempArray20(changeToArray){
         tempArray20=mergeSort(changeToArray)
     }
+    /*for(let i=0; i<array.length; i++){
+        <DropBox key={"i+1"} divideVal={array[i]} id="i+1"/>
+    }*/
     return(
         <div>
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>
+            <script></script>
             <DropBox key={"1"} divideVal={array[0]} id="1"/>
             <DropBox key={"2"} divideVal={array[1]} id="2"/>
             <DropBox key={"3"} divideVal={array[2]} id="3"/>
