@@ -79,6 +79,7 @@ function LevelOne(){
       case 1:
         ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepOne'));
         document.getElementById("feedback").innerText = feedback[0];
+        rowNum=2;
         if(merging){
           ReactDOM.render(<></>, document.getElementById('stepTwo'));
           document.getElementById("feedback").innerText = feedback[4];
