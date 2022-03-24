@@ -115,7 +115,8 @@ return(
 <label for="email">Email: </label>
 <input type="text" placeholder="Enter Email" name="email" id="email-field" class="login-form-field"/>
 <br/>
-<button onClick={onClick}>Login</button>
+<button onClick={onClick}>Login</button><br/>
+<button onClick= {()=> {ReactDOM.render(<HomePage/>, document.getElementById('root'))}}>Back</button>
 </div>)
 }
 
