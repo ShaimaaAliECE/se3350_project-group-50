@@ -123,6 +123,7 @@ function LevelOne(){
       case 4:
         ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepFour'));
         document.getElementById("feedback").innerText = feedback[8];
+        document.getElementById("5-1-1").style.backgroundColor = "CornflowerBlue";
         break;
       case 5:
         if(!paused){
