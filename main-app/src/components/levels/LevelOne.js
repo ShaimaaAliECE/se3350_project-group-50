@@ -1,5 +1,5 @@
 import Number from "../Number";
-import { App, emailEntered } from "../../App";
+import { App, changeLevel, emailEntered } from "../../App";
 import Numbers from "../Numbers";
 import makeArray from "../makeRandomArray";
 import { useState, useEffect } from "react";

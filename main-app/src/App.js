@@ -13,7 +13,8 @@ let draggedItem = null;
 let emailEntered = null;
 //let currentLevel = "Level1"; will not be used till probably sprint 3
 let userLevel = 0;
-let lives = 10000;
+let lives = 3;
+let currentLevel = 1;
 
 function deductLives(){
   lives--;
@@ -26,6 +27,15 @@ function getLives(){
   return lives;
 }
 
+function changeLevel(level){
+  currentLevel = level;
+  console.log(currentLevel);
+  return currentLevel;
+}
+
+function getLevel(){
+  return currentLevel;
+}
 
 function App() {
   return(
@@ -232,4 +242,4 @@ function resetSteps(){
   ReactDOM.render(<></>, document.getElementById("stepTwelve"));
 }
 
-export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage, UserLoginMenu, UserLogin, mergeSort, resetSteps, emailEntered, getLives, deductLives, resetLives}
+export {App, draggedItem, setDraggedItem, MergeSortMenu, ChooseAlgoMenu, HomePage, UserLoginMenu, UserLogin, mergeSort, resetSteps, emailEntered, getLives, deductLives, resetLives, changeLevel, getLevel}

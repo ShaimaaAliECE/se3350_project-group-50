@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { mergeSort, resetSteps } from "../../App";
 import $ from "jquery";
 import LevelFour from "./LevelFour";
-import { MergeSortMenu, emailEntered } from "../../App";
+import { MergeSortMenu, emailEntered, changeLevel, getLevel } from "../../App";
 import axios from "axios";
 
 function LevelThree(){
@@ -17,6 +17,7 @@ function LevelThree(){
     let tempArray3 = [];
     let tempArray4 = [];
     const currentLevel = 3;
+    changeLevel(3)
 
     useEffect(()=>{
         $("#stepTwo").hide()

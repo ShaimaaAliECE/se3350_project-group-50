@@ -6,10 +6,13 @@ import ReactDOM from 'react-dom';
 import { useState, useEffect } from "react";
 import { mergeSort } from "../../App";
 import $ from "jquery";
-import { MergeSortMenu } from "../../App";
+import { MergeSortMenu, changeLevel } from "../../App";
 import axios from "axios";
 
 function LevelFive(){
+    const currentLevel = 5;
+    changeLevel(5)
+    
     const[array, setArray] = useState(makeArray(50, 1, 100))
     let tempArray = [];
     let tempArray2 = [];
@@ -46,6 +49,18 @@ function LevelFive(){
         $("#stepTwelve").hide()
         $("#nextBtn").hide()
     }, []) 
+
+
+    //Display timer
+    const [timerStart, setTimerStart] = useState(false);
+    let Timer = require('../Timer');
+
+    if(timerStart == false){
+        Timer.resetTimer();
+        Timer.startTimer();
+    
+        setTimerStart(true);
+    }
     
     function setTempArray(changeToArray){
         array = mergeSort(changeToArray);
@@ -398,7 +413,7 @@ function LevelFive(){
             <DropBox key={"202"} divideVal={array[1]} id="202"/>
             &nbsp;
             &nbsp;
-            <DropBox key={"203"} divideVal={array[2]} id="202"/>
+            <DropBox key={"203"} divideVal={array[2]} id="203"/>
             &nbsp;
             &nbsp;
             <DropBox key={"204"} divideVal={array[3]} id="204"/>
@@ -1197,6 +1212,7 @@ function LevelFive(){
         <p id="feedback"></p>
         </div>
         //<button id="nextBtn" onClick={()=> {ReactDOM.render(<></>, document.getElementById("allSteps")); ReactDOM.render(<LevelFive/>, document.getElementById("root"))}}>Next Level</button>
+        
     )
 }
 
