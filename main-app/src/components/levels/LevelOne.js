@@ -110,10 +110,11 @@ function LevelOne(){
               break;
             case 2:
               document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
+              document.getElementById("5-7-1").style.backgroundColor = "aqua";
+              document.getElementById("5-8-1").style.backgroundColor = "aqua";
               document.getElementById("5-15-1").style.backgroundColor = "CornflowerBlue";
               document.getElementById("5-16-1").style.backgroundColor = "CornflowerBlue";
               setInnerStep(1);
-              setStep(step - 2);
               setPaused(false);
               break;
           }
@@ -140,6 +141,8 @@ function LevelOne(){
               break;
             case 2:
               document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
+              document.getElementById("5-7-1").style.backgroundColor = "aqua";
+              document.getElementById("5-8-1").style.backgroundColor = "aqua";
               document.getElementById("5-15-1").style.backgroundColor = "CornflowerBlue";
               document.getElementById("5-16-1").style.backgroundColor = "CornflowerBlue";
               setInnerStep(1);
