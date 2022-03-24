@@ -4,6 +4,7 @@ import Numbers from "../Numbers";
 import makeArray from "../makeRandomArray";
 import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom';
+import $ from "jquery";
 import {LevelTwo} from "./LevelTwo";
 import axios from "axios";
 import { MergeSortMenu } from "../../App";
@@ -52,6 +53,17 @@ function LevelOne(){
   const[innerStep, setInnerStep] = useState(1);
   changeLevel(1)
   
+  useEffect(()=>{
+    $("#stepTwo").show()
+    $("#stepThree").show()
+    $("#stepFour").show()
+    $("#stepFive").show()
+    $("#stepSix").show()
+    $("#stepSeven").show()
+    $("#stepEight").show()
+    $("#nextBtn").show()
+  }, []) 
+
   let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array", "An array of length 1 cannot be split, ready for merge"]
 
   
