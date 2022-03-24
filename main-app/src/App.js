@@ -138,7 +138,7 @@ function AdminLoginMenu(){
   }
 
   return(
-    <div>
+    <div class = "center">
       <h1>Admin Login Page</h1>
       <form id="login-form" onSubmit={(event)=>{event.preventDefault(); onClick();}}>
         Enter UserName: <input name='userName' type={"text"}></input><br/>
