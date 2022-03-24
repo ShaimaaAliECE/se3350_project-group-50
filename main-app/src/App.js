@@ -8,6 +8,7 @@ import {useState, useEffect} from 'react';
 import AdminPage from './components/AdminPage';
 import { useImperativeHandle } from 'react';
 import axios from 'axios';
+import { stopTimer } from './components/Timer';
 
 let draggedItem = null;
 let emailEntered = null;
@@ -45,6 +46,7 @@ function stopTimeOutTimer(){
 function timeOut(){
   alert("Your Session has Expired!");
   resetSteps();
+  stopTimer();
   ReactDOM.render(<HomePage/>, document.getElementById('root'))
 
 }
