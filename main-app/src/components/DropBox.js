@@ -1,4 +1,4 @@
-import { draggedItem, deductLives, resetLives, getLives, resetSteps, setDraggedItem } from "../App";
+import { draggedItem, deductLives, resetLives, getLives, resetSteps, setDraggedItem, changeLevel, getLevel } from "../App";
 import { useEffect, useState } from "react";
 import { setScore, getScore } from "./levels/LevelTwo";
 import $ from "jquery";

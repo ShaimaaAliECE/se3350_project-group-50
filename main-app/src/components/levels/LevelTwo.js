@@ -2,7 +2,7 @@ import makeArray from "../makeRandomArray";
 import Numbers from "../Numbers";
 import DropBox from "../DropBox";
 import { useState, useEffect } from "react";
-import { mergeSort, resetSteps, emailEntered} from "../../App";
+import { mergeSort, resetSteps, emailEntered, changeLevel} from "../../App";
 import $ from "jquery";
 import ReactDOM from 'react-dom';
 import LevelThree from "./LevelThree";
@@ -26,6 +26,7 @@ function LevelTwo(){
     let tempArray4 = []
     const currentLevel = 2;
     const [timerStart, setTimerStart] = useState(false);
+    changeLevel(2)
 
     useEffect(()=>{
         $("#stepTwo").hide()

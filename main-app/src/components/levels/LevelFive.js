@@ -6,11 +6,12 @@ import ReactDOM from 'react-dom';
 import { useState, useEffect } from "react";
 import { mergeSort } from "../../App";
 import $ from "jquery";
-import { MergeSortMenu } from "../../App";
+import { MergeSortMenu, changeLevel } from "../../App";
 import axios from "axios";
 
 function LevelFive(){
     const currentLevel = 5;
+    changeLevel(5)
     
     const[array, setArray] = useState(makeArray(50, 1, 100))
     let tempArray = [];

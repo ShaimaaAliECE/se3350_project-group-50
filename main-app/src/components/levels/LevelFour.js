@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import { useState, useEffect } from "react";
 import { mergeSort, resetSteps } from "../../App";
 import $ from "jquery";
-import { MergeSortMenu, emailEntered } from "../../App";
+import { MergeSortMenu, emailEntered, changeLevel } from "../../App";
 import LevelFive from "./LevelFive";
 import axios from "axios";
 
@@ -21,6 +21,7 @@ function LevelFour(){
     let tempArray7 = [];
     let tempArray8 = [];
     const currentLevel = 4;
+    changeLevel(4)
 
     useEffect(()=>{
         $("#stepTwo").hide()
