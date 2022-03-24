@@ -119,11 +119,48 @@ function LevelOne(){
               break;
           }
         }
+        setPaused(true);
         break;
       case 4:
         ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepFour'));
-        document.getElementById("feedback").innerText = feedback[8];
-        document.getElementById("5-1-1").style.backgroundColor = "CornflowerBlue";
+        if(paused){
+          switch(innerStep){
+            case 1:
+              document.getElementById("feedback").innerText = feedback[8];
+              document.getElementById("5-1-1").style.backgroundColor = "CornflowerBlue";
+              setInnerStep(innerStep + 1);
+              break;
+            case 2:
+              document.getElementById("feedback").innerText = feedback[8];
+              document.getElementById("5-3-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("5-1-1").style.backgroundColor = "aqua";
+              setInnerStep(innerStep + 1);
+              break;
+            case 3:
+              document.getElementById("feedback").innerText = feedback[8];
+              document.getElementById("6-5-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("6-3-1").style.backgroundColor = "aqua";
+              setInnerStep(innerStep + 1);
+              break;
+              case 4:
+              document.getElementById("feedback").innerText = feedback[8];
+              document.getElementById("8-9-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("8-5-1").style.backgroundColor = "aqua";
+              setInnerStep(innerStep + 1);
+              break;
+              case 5:
+              document.getElementById("feedback").innerText = feedback[8];
+              document.getElementById("9-11-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("9-9-1").style.backgroundColor = "aqua";
+              setInnerStep(innerStep + 1);
+              break;
+              /*
+              setInnerStep(1);
+              setStep(step - 2);
+              setPaused(false);
+              break; */
+          }
+        }
         break;
       case 5:
         if(!paused){
