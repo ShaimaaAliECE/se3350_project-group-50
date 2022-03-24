@@ -99,22 +99,43 @@ function LevelOne(){
           ReactDOM.render(<></>, document.getElementById('stepFour'));
           document.getElementById("feedback").innerText = feedback[6];
           setPaused(true);
+          setStep(3);
         }
         else if(merging && paused){
           switch(innerStep){
             case 1:
-              document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
-              document.getElementById("5-7-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("5-8-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("feedback").innerText = `ah shit here we go again`;
+              document.getElementById("6-1-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("6-2-1").style.backgroundColor = "CornflowerBlue";
               setInnerStep(innerStep + 1);
               break;
             case 2:
-              document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
-              document.getElementById("5-7-1").style.backgroundColor = "aqua";
-              document.getElementById("5-8-1").style.backgroundColor = "aqua";
-              document.getElementById("5-15-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("5-16-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("feedback").innerText = `noob`;
+              document.getElementById("7-1-1").style.backgroundColor = "aqua";
+              document.getElementById("7-2-1").style.backgroundColor = "aqua";
+              document.getElementById("7-3-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("7-4-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("7-4-2").style.backgroundColor = "CornflowerBlue";
+              setInnerStep(innerStep + 1);
+              break;
+            case 3:
+              document.getElementById("feedback").innerText = `nooweqwewb`;
+              document.getElementById("8-3-1").style.backgroundColor = "aqua";
+              document.getElementById("8-4-1").style.backgroundColor = "aqua";
+              document.getElementById("8-4-2").style.backgroundColor = "aqua";
+              document.getElementById("8-5-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("8-6-1").style.backgroundColor = "CornflowerBlue";
+              setInnerStep(innerStep + 1);
+              break;
+            case 4:
+              document.getElementById("feedback").innerText = `nooweqwewb`;
+              document.getElementById("9-5-1").style.backgroundColor = "aqua";
+              document.getElementById("9-6-1").style.backgroundColor = "aqua";
+              document.getElementById("9-7-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("9-8-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("9-8-2").style.backgroundColor = "CornflowerBlue";
               setInnerStep(1);
+              setStep(2);
               setPaused(false);
               break;
           }
