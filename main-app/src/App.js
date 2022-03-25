@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import {LevelTwo} from "./components/levels/LevelTwo";
+import {LevelTwo, setScore} from "./components/levels/LevelTwo";
 import LevelOne from "./components/levels/LevelOne";
 import LevelThree from "./components/levels/LevelThree";
 import LevelFour from "./components/levels/LevelFour";
@@ -9,6 +9,7 @@ import AdminPage from './components/AdminPage';
 import { useImperativeHandle } from 'react';
 import axios from 'axios';
 import { stopTimer } from './components/Timer';
+
 
 let draggedItem = null;
 let emailEntered = null;
@@ -47,6 +48,7 @@ function timeOut(){
   alert("Your Session has Expired!");
   resetSteps();
   stopTimer();
+  setScore(0);
   ReactDOM.render(<HomePage/>, document.getElementById('root'))
 
 }

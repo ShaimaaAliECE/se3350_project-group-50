@@ -31,10 +31,16 @@ function LevelTwo(){
         $("#stepTwo").hide()
         $("#stepThree").hide()
         $("#stepFour").hide()
-        $("#stepFive").hide()
-        $("#stepSix").hide()
-        $("#stepSeven").hide()
-        $("#stepEight").hide()
+        // $("#stepFive").hide()
+        // $("#stepSix").hide()
+        // $("#stepSeven").hide()
+        // $("#stepEight").hide()
+        $(document).ready(function(){
+            for(let i = 41; i <= 100; i++){
+                $(`#box${i}`).hide()
+            }
+        });
+        
         $("#nextBtn").hide()
     }, []) 
 
