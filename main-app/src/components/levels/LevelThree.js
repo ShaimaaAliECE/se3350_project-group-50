@@ -78,7 +78,7 @@ function LevelThree(){
             <p id="timer" style={{float:"left", padding:"50px"}}>00:00:00</p>
             <p id="lives" style={{float:"right", padding:"50px"}}>Lives: 3</p>
         </div>
-        <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
+        <table style={{marginLeft:"35%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>
             <DropBox key={"1"} divideVal={array[0]} id="1"/>
@@ -107,7 +107,9 @@ function LevelThree(){
             <DropBox key={"14"} divideVal={array[3]} id="14"/>
             <DropBox key={"15"} divideVal={array[4]} id="15"/>
             &nbsp;
+            &nbsp;
             &nbsp; 
+            &nbsp;  
             <DropBox key={"16"} divideVal={array[5]} id="16"/>
             <DropBox key={"17"} divideVal={array[6]} id="17"/>
             <DropBox key={"18"} divideVal={array[7]} id="18"/>
@@ -126,6 +128,7 @@ function LevelThree(){
             &nbsp;
             <DropBox key={"23"} divideVal={array[2]} id="23"/> 
             &nbsp;
+            &nbsp; 
             &nbsp;         
             <DropBox key={"24"} divideVal={array[3]} id="24"/>
             &nbsp;
@@ -133,11 +136,14 @@ function LevelThree(){
             <DropBox key={"25"} divideVal={array[4]} id="25"/>
             &nbsp;
             &nbsp;
+            &nbsp;
+            &nbsp;
             <DropBox key={"26"} divideVal={array[5]} id="26"/>
             <DropBox key={"27"} divideVal={array[6]} id="27"/>  
             &nbsp;
             &nbsp;
             <DropBox key={"28"} divideVal={array[7]} id="28"/> 
+            &nbsp;
             &nbsp;
             &nbsp;
             <DropBox key={"29"} divideVal={array[8]} id="29"/>
@@ -155,13 +161,17 @@ function LevelThree(){
             <DropBox key={"32"} divideVal={array[1]} id="32"/>
             &nbsp;
             &nbsp;
+            &nbsp;
             <DropBox key={"33"} divideVal={array[2]} id="33"/> 
+            &nbsp;
             &nbsp;
             &nbsp;
             <DropBox key={"34"} divideVal={array[3]} id="34"/>
             &nbsp;
             &nbsp;
             <DropBox key={"35"} divideVal={array[4]} id="35"/>
+            &nbsp;
+            &nbsp;
             &nbsp;
             &nbsp;
             <DropBox key={"36"} divideVal={array[5]} id="36"/>
@@ -171,6 +181,7 @@ function LevelThree(){
             &nbsp;
             &nbsp;
             <DropBox key={"38"} divideVal={array[7]} id="38"/> 
+            &nbsp;
             &nbsp;
             &nbsp;
             <DropBox key={"39"} divideVal={array[8]} id="39"/>
@@ -190,11 +201,14 @@ function LevelThree(){
             &nbsp;
             <DropBox key={"43"} divideVal={array[2]} id="43"/> 
             &nbsp;
-            &nbsp;          
+            &nbsp;   
+            &nbsp;       
             <DropBox key={"44"} divideVal={array[3]} id="44"/>
             &nbsp;
             &nbsp;
             <DropBox key={"45"} divideVal={array[4]} id="45"/>
+            &nbsp;
+            &nbsp;
             &nbsp;
             &nbsp;
             <DropBox key={"46"} divideVal={tempArray2[0]} id="46"/>
@@ -202,6 +216,7 @@ function LevelThree(){
             &nbsp;
             &nbsp;
             <DropBox key={"48"} divideVal={array[7]} id="48"/> 
+            &nbsp;
             &nbsp;
             &nbsp;
             <DropBox key={"49"} divideVal={array[8]} id="49"/>
@@ -227,6 +242,8 @@ function LevelThree(){
             <DropBox key={"55"} divideVal={tempArray2[1]} id="55"/>
             &nbsp;
             &nbsp; 
+            &nbsp;
+            &nbsp;
             <DropBox key={"56"} divideVal={tempArray3[0]} id="56"/>
             <DropBox key={"57"} divideVal={tempArray3[1]} id="57"/>
             <DropBox key={"58"} divideVal={tempArray3[2]} id="58"/>
