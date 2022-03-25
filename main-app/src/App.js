@@ -88,7 +88,7 @@ function setDraggedItem(item){
 
 function HomePage(){
   return(
-    <div class = "center" style={{textAlign: 'center' , lineHeight: 2.5, fontSize: 50}}>
+    <div class = "center" style={{textAlign: 'center' , lineHeight: 2, fontSize: 50}}>
       ALGORITHM QUIZ<br/>
       <button onClick= {()=> {ReactDOM.render(<UserLogin/>, document.getElementById('root'))}}>User Login</button>
       <button onClick= {()=> {ReactDOM.render(<AdminLoginMenu/>, document.getElementById('root'))}}>Admin Login</button>

@@ -73,7 +73,7 @@ function LevelThree(){
     return(
         <div>
         <div>
-            <p id="timer" style={{float:"left", padding:"50px"}}></p>
+            <p id="timer" style={{float:"left", padding:"50px"}}>00:00:00</p>
             <p id="lives" style={{float:"right", padding:"50px"}}>Lives: 3</p>
         </div>
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
