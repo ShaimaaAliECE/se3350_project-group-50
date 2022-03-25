@@ -11,8 +11,15 @@ import FailurePageMenu from "./FailurePageMenu";
 const steps = ["Split the Array as Evenly as Possible by dragging the numbers given in the corresponding empty box", "Split Both the Left and Right Subarrays as evenly as possible","Split All Subarrays again","Split Subarrays that have more than one element", "Compare the 1st and 2nd array and merge the with smaller number first", "Compare the 1st and 2nd array and merge the with smaller number first", "Compare the 1st and 2nd array and merge the with smaller number first","Finally, Merge The Last 2 Arrays Back Into the Original Array", "Now its Sorted!", "Fill arrays that don't need to be merged", "Compare the 6th and 7th array and merge the with smaller number", "Compare 3rd and 4th array", "Compare 5th and 6th array", "Compare 7th and 8th array", ""]
 //const dumb = [" You can do this by picking the first row of boxes", " Split the first row of boxes of as evenly as possible", " Split the arrays even further", " Select the other ones and split them", " Split them as evenly as possible", " go to the other selected arrays and split them even further", " Go back to the array and split it", " Once all have been split, merge them back together", " make sure everythimg is in the correct order"]
 
+function showBoxes(from, to){
+    for(let i = from; i <= to; i++){
+        $(`#box${i}`).show()
+    }
+}
+
 //component to drop numbers in 
 function DropBox(props){
+
     const [number, setNumber] = useState(0);
     const [divideVal, setDivideVal] = useState(props.divideVal);
     const [isDone, setIsDone] = useState(false);
