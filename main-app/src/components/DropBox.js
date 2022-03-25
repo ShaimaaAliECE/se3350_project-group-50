@@ -8,7 +8,7 @@ import ding from '../Ding.mp3'
 import FailurePageMenu from "./FailurePageMenu";
 
 
-const steps = ["Split the Array as Evenly as Possible by dragging the numbers given in the corresponding empty box", "Split Both the Left and Right Subarrays as evenly as possible","Split All Subarrays again","Split Subarrays that have more than one element", "Merge both Arrays Back Together in the Correct Order", "Merge those Subarrays back together in the Correct Order Again", "Merge the Subarrays Again","Finally, Merge the Remaining Subarrays Back Into the Original Array, Now its Sorted"]
+const steps = ["Split the Array as Evenly as Possible by dragging the numbers given in the corresponding empty box", "Split Both the Left and Right Subarrays as evenly as possible","Split All Subarrays again","Split Subarrays that have more than one element", "Compare the 1st and 2nd array and merge the with smaller number first", "Compare the 1st and 2nd array and merge the with smaller number first", "Compare the 1st and 2nd array and merge the with smaller number first","Finally, Merge The Last 2 Arrays Back Into the Original Array", "Now its Sorted!", "Fill arrays that don't need to be merged", "Compare the 6th and 7th array and merge the with smaller number", "Compare 3rd and 4th array", "Compare 5th and 6th array", "Compare 7th and 8th array", ""]
 //const dumb = [" You can do this by picking the first row of boxes", " Split the first row of boxes of as evenly as possible", " Split the arrays even further", " Select the other ones and split them", " Split them as evenly as possible", " go to the other selected arrays and split them even further", " Go back to the array and split it", " Once all have been split, merge them back together", " make sure everythimg is in the correct order"]
 
 //component to drop numbers in 
@@ -86,6 +86,28 @@ function DropBox(props){
             // const audio = new Audio(ding)
             // audio.play();
 
+            if(getScore() == 42){
+                document.getElementById("stepsTutorial").innerText = steps[9];   
+            }
+            if(getScore() == 45){
+                document.getElementById("stepsTutorial").innerText = steps[10];   
+            }
+            if(getScore() == 47){
+                document.getElementById("stepsTutorial").innerText = steps[9];   
+            }
+            if(getScore() == 53){
+                document.getElementById("stepsTutorial").innerText = steps[11];   
+            }
+            if(getScore() == 55){
+                document.getElementById("stepsTutorial").innerText = steps[12];   
+            }
+            if(getScore() == 58){
+                document.getElementById("stepsTutorial").innerText = steps[13];   
+            }
+            if(getScore() == 65){
+                document.getElementById("stepsTutorial").innerText = steps[11];   
+            }
+
             setIsDone(true);
         } else if(!isDone){
             $(`#${props.id}`).show()
@@ -100,6 +122,7 @@ function DropBox(props){
             if(deductLives() == 0){
                 resetLives();
                 resetSteps();
+                setScore(0);
                 ReactDOM.render(<FailurePageMenu/>, document.getElementById('root'))
             }else{
                 document.getElementById("lives").innerText = ("Lives: " + getLives())

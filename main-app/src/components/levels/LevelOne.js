@@ -4,6 +4,7 @@ import Numbers from "../Numbers";
 import makeArray from "../makeRandomArray";
 import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom';
+import $ from "jquery";
 import {LevelTwo} from "./LevelTwo";
 import axios from "axios";
 import { MergeSortMenu } from "../../App";
@@ -52,6 +53,17 @@ function LevelOne(){
   const[innerStep, setInnerStep] = useState(1);
   changeLevel(1)
   
+  useEffect(()=>{
+    $("#stepTwo").show()
+    $("#stepThree").show()
+    $("#stepFour").show()
+    $("#stepFive").show()
+    $("#stepSix").show()
+    $("#stepSeven").show()
+    $("#stepEight").show()
+    $("#nextBtn").show()
+  }, []) 
+
   let feedback = ["Split the Array as Evenly as Possible", "Select Left/Right Subarray", "Split the Selected Array", "Split the Subarray as Evenly as Possible", "Merge Arrays Back Together", "Select the Other Subarray and Merge", "Merge those Subarrays back together", "Finally, Merge the Remaining Subarrays Back Into the Original Array", "An array of length 1 cannot be split, ready for merge"]
 
   
@@ -79,13 +91,44 @@ function LevelOne(){
       case 1:
         ReactDOM.render(<NumbersRow array={tempArray} rowNum={1}/>, document.getElementById('stepOne'));
         document.getElementById("feedback").innerText = feedback[0];
-        if(merging){
+        if(merging && !paused){
           ReactDOM.render(<></>, document.getElementById('stepTwo'));
           document.getElementById("feedback").innerText = feedback[4];
+          setPaused(true);
+          setStep(1);
+        }
+        else if(merging && paused){
+          switch(innerStep){
+            case 1:
+              document.getElementById("feedback").innerText = `Compare the two lists. Take whichever value is smallest from the front of each list and merge it up. Keep going until both are empty.`;
+              document.getElementById("1-1-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-1-2").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-1-3").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-1-4").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-1-5").style.backgroundColor = "CornflowerBlue";
+              setInnerStep(innerStep + 1);
+              break;
+            case 2:
+              document.getElementById("feedback").innerText = `Compare the two lists. Take whichever value is smallest from the front of each list and merge it up. Keep going until both are empty.`;
+              document.getElementById("1-1-1").style.backgroundColor = "aqua";
+              document.getElementById("1-1-2").style.backgroundColor = "aqua";
+              document.getElementById("1-1-3").style.backgroundColor = "aqua";
+              document.getElementById("1-1-4").style.backgroundColor = "aqua";
+              document.getElementById("1-1-5").style.backgroundColor = "aqua";
+              document.getElementById("1-2-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-2-2").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-2-3").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-2-4").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("1-2-5").style.backgroundColor = "CornflowerBlue";
+              setInnerStep(1);
+              setStep(0);
+              setPaused(false);
+              break;
+          }
         }
         break;
       case 2:
-        ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepTwo'))
+        ReactDOM.render(<NumbersRow array={tempArray} rowNum={2}/>, document.getElementById('stepTwo'))
         document.getElementById("feedback").innerText = feedback[1];
         if(merging && !paused){
           ReactDOM.render(<></>, document.getElementById('stepThree'));
@@ -96,45 +139,35 @@ function LevelOne(){
         else if(merging && paused){
           switch(innerStep){
             case 1:
-              document.getElementById("feedback").innerText = `ah shit here we go again`;
-              document.getElementById("11-1-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("11-2-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("feedback").innerText = `Compare the two lists. Take whichever value is smallest from the front of each list and merge it up. Keep going until both are empty.`;
+              document.getElementById("2-1-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("2-1-2").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("2-2-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("2-2-2").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("2-2-3").style.backgroundColor = "CornflowerBlue";
               setInnerStep(innerStep + 1);
               break;
             case 2:
-              document.getElementById("feedback").innerText = `noob`;
-              document.getElementById("12-1-1").style.backgroundColor = "aqua";
-              document.getElementById("12-2-1").style.backgroundColor = "aqua";
-              document.getElementById("12-3-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("12-4-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("12-4-2").style.backgroundColor = "CornflowerBlue";
-              setInnerStep(innerStep + 1);
-              break;
-            case 3:
-              document.getElementById("feedback").innerText = `nooweqwewb`;
-              document.getElementById("13-3-1").style.backgroundColor = "aqua";
-              document.getElementById("13-4-1").style.backgroundColor = "aqua";
-              document.getElementById("13-4-2").style.backgroundColor = "aqua";
-              document.getElementById("13-5-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("13-6-1").style.backgroundColor = "CornflowerBlue";
-              setInnerStep(innerStep + 1);
-              break;
-            case 4:
-              document.getElementById("feedback").innerText = `nooweqwewb`;
-              document.getElementById("14-5-1").style.backgroundColor = "aqua";
-              document.getElementById("14-6-1").style.backgroundColor = "aqua";
-              document.getElementById("14-7-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("14-8-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("14-8-2").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("feedback").innerText = `Compare the two lists. Take whichever value is smallest from the front of each list and merge it up. Keep going until both are empty.`;
+              document.getElementById("2-1-1").style.backgroundColor = "aqua";
+              document.getElementById("2-1-2").style.backgroundColor = "aqua";
+              document.getElementById("2-2-1").style.backgroundColor = "aqua";
+              document.getElementById("2-2-2").style.backgroundColor = "aqua";
+              document.getElementById("2-2-3").style.backgroundColor = "aqua";
+              document.getElementById("2-3-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("2-3-2").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("2-4-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("2-4-2").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("2-4-3").style.backgroundColor = "CornflowerBlue";
               setInnerStep(1);
-              setStep(2);
+              setStep(1);
               setPaused(false);
               break;
           }
         }
         break;
       case 3:
-        ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepThree'));
+        ReactDOM.render(<NumbersRow array={tempArray} rowNum={3}/>, document.getElementById('stepThree'));
         document.getElementById("feedback").innerText = feedback[2];
         if(merging && !paused){
           ReactDOM.render(<></>, document.getElementById('stepFour'));
@@ -145,87 +178,96 @@ function LevelOne(){
         else if(merging && paused){
           switch(innerStep){
             case 1:
-              document.getElementById("feedback").innerText = `ah shit here we go again`;
-              document.getElementById("11-1-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("11-2-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
+              document.getElementById("3-1-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("3-2-1").style.backgroundColor = "CornflowerBlue";
               setInnerStep(innerStep + 1);
               break;
             case 2:
-              document.getElementById("feedback").innerText = `noob`;
-              document.getElementById("12-1-1").style.backgroundColor = "aqua";
-              document.getElementById("12-2-1").style.backgroundColor = "aqua";
-              document.getElementById("12-3-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("12-4-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("12-4-2").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("feedback").innerText = `Compare the two lists. Take whichever value is smallest from the front of each list and merge it up. Keep going until both are empty.`;
+              document.getElementById("3-1-1").style.backgroundColor = "aqua";
+              document.getElementById("3-2-1").style.backgroundColor = "aqua";
+              document.getElementById("3-3-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("3-4-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("3-4-2").style.backgroundColor = "CornflowerBlue";
               setInnerStep(innerStep + 1);
               break;
             case 3:
-              document.getElementById("feedback").innerText = `nooweqwewb`;
-              document.getElementById("13-3-1").style.backgroundColor = "aqua";
-              document.getElementById("13-4-1").style.backgroundColor = "aqua";
-              document.getElementById("13-4-2").style.backgroundColor = "aqua";
-              document.getElementById("13-5-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("13-6-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
+              document.getElementById("3-3-1").style.backgroundColor = "aqua";
+              document.getElementById("3-4-1").style.backgroundColor = "aqua";
+              document.getElementById("3-4-2").style.backgroundColor = "aqua";
+              document.getElementById("3-5-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("3-6-1").style.backgroundColor = "CornflowerBlue";
               setInnerStep(innerStep + 1);
               break;
             case 4:
-              document.getElementById("feedback").innerText = `nooweqwewb`;
-              document.getElementById("14-5-1").style.backgroundColor = "aqua";
-              document.getElementById("14-6-1").style.backgroundColor = "aqua";
-              document.getElementById("14-7-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("14-8-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("14-8-2").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("feedback").innerText = `Compare the two lists. Take whichever value is smallest from the front of each list and merge it up. Keep going until both are empty.`;
+              document.getElementById("3-5-1").style.backgroundColor = "aqua";
+              document.getElementById("3-6-1").style.backgroundColor = "aqua";
+              document.getElementById("3-7-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("3-8-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("3-8-2").style.backgroundColor = "CornflowerBlue";
               setInnerStep(1);
               setStep(2);
               setPaused(false);
               break;
           }
         }
-        setPaused(true);
         break;
       case 4:
-        ReactDOM.render(<NumbersRow array={tempArray}/>, document.getElementById('stepFour'));
-        document.getElementById("feedback").innerText = feedback[3];
+        if(!paused){
+          ReactDOM.render(<NumbersRow array={tempArray} rowNum={4}/>, document.getElementById('stepFour'));
+          document.getElementById("feedback").innerText = feedback[3];
+          setPaused(true);
+          setStep(4);
+        }
         if(paused){
           switch(innerStep){
             case 1:
               document.getElementById("feedback").innerText = feedback[8];
-              document.getElementById("5-1-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("3-1-1").style.backgroundColor = "CornflowerBlue";
               document.getElementById("4-1-1").style.backgroundColor = "CornflowerBlue";
               setInnerStep(innerStep + 1);
               break;
             case 2:
               document.getElementById("feedback").innerText = feedback[8];
-              document.getElementById("5-3-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("4-2-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("5-1-1").style.backgroundColor = "aqua";
+              document.getElementById("3-2-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("4-3-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("3-1-1").style.backgroundColor = "aqua";
               document.getElementById("4-1-1").style.backgroundColor = "aqua";
               setInnerStep(innerStep + 1);
               break;
             case 3:
               document.getElementById("feedback").innerText = feedback[8];
-              document.getElementById("6-5-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("4-3-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("6-3-1").style.backgroundColor = "aqua";
-              document.getElementById("4-2-1").style.backgroundColor = "aqua";
+              document.getElementById("3-3-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("4-5-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("3-2-1").style.backgroundColor = "aqua";
+              document.getElementById("4-3-1").style.backgroundColor = "aqua";
               setInnerStep(innerStep + 1);
               break;
               case 4:
               document.getElementById("feedback").innerText = feedback[8];
-              document.getElementById("7-9-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("7-5-1").style.backgroundColor = "aqua";
+              document.getElementById("3-5-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("4-9-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("3-3-1").style.backgroundColor = "aqua";
+              document.getElementById("4-5-1").style.backgroundColor = "aqua";
               setInnerStep(innerStep + 1);
               break;
               case 5:
               document.getElementById("feedback").innerText = feedback[8];
-              document.getElementById("8-11-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("8-9-1").style.backgroundColor = "aqua";
+              document.getElementById("3-6-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("4-11-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("3-5-1").style.backgroundColor = "aqua";
+              document.getElementById("4-9-1").style.backgroundColor = "aqua";
               setInnerStep(innerStep + 1);
               break;
               case 6:
               document.getElementById("feedback").innerText = feedback[8];
-              document.getElementById("9-13-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("9-11-1").style.backgroundColor = "aqua";
+              document.getElementById("3-7-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("4-13-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("3-6-1").style.backgroundColor = "aqua";
+              document.getElementById("4-11-1").style.backgroundColor = "aqua";
               setInnerStep(1);
               setStep(5);
               setPaused(false);
@@ -236,7 +278,8 @@ function LevelOne(){
       case 5:
         if(!paused){
           document.getElementById("feedback").innerText = `Now compare the values that are not an array of length 1`;
-          document.getElementById("10-13-1").style.backgroundColor = "aqua";
+          document.getElementById("3-7-1").style.backgroundColor = "aqua";
+          document.getElementById("4-13-1").style.backgroundColor = "aqua";
           setMerging(true);
           setPaused(true);
           setStep(5);
@@ -245,16 +288,16 @@ function LevelOne(){
           switch(innerStep){
             case 1:
               document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
-              document.getElementById("10-7-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("10-8-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("4-7-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("4-8-1").style.backgroundColor = "CornflowerBlue";
               setInnerStep(innerStep + 1);
               break;
             case 2:
               document.getElementById("feedback").innerText = `Comparing the values and merging them back into their array (minimum first)`;
-              document.getElementById("10-7-1").style.backgroundColor = "aqua";
-              document.getElementById("10-8-1").style.backgroundColor = "aqua";
-              document.getElementById("10-15-1").style.backgroundColor = "CornflowerBlue";
-              document.getElementById("10-16-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("4-7-1").style.backgroundColor = "aqua";
+              document.getElementById("4-8-1").style.backgroundColor = "aqua";
+              document.getElementById("4-15-1").style.backgroundColor = "CornflowerBlue";
+              document.getElementById("4-16-1").style.backgroundColor = "CornflowerBlue";
               setInnerStep(1);
               setStep(step - 2);
               setPaused(false);
@@ -332,9 +375,9 @@ function LevelOne(){
     <div>
       
       <button onClick = {onClick} id='nextBtn'>Next Step</button>
-      <p id="timer" style={{float:"left", padding:"50px"}}></p>
-      <p id="feedback">Merge Sort Algorithm</p> 
-      <table style={{marginLeft:"32%"}}><tr><Numbers array={tree.value}/></tr></table>
+      <p class = "timer" id="timer">00:00:00</p>
+      <p id="feedback" style ={{paddingRight: "50px"}}>Merge Sort Algorithm</p> 
+      <table style={{marginLeft:"30%"}}><tr><Numbers array={tree.value}/></tr></table>
           
     </div>
   )

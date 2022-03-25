@@ -80,7 +80,7 @@ function LevelTwo(){
     return(
         <div>
         <div>
-            <p id="timer" style={{float:"left", padding:"50px"}}></p>
+            <p id="timer" style={{float:"left", padding:"50px"}}>00:00:00</p>
             <p id="lives" style={{float:"right", padding:"50px"}}>Lives: 3</p>
         </div>
         <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
@@ -124,7 +124,7 @@ function LevelTwo(){
         }
         {
             ReactDOM.render(<tr>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <DropBox key={"21"} divideVal={array[0]} withSteps={true} id="21"/>
             <DropBox key={"22"} divideVal={array[1]} withSteps={true} id="22"/>  
             &nbsp;
@@ -153,7 +153,7 @@ function LevelTwo(){
         }
         {
             ReactDOM.render(<tr>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <DropBox key={"31"} divideVal={array[0]} withSteps={true} id="31"/>
             &nbsp;
             &nbsp;
@@ -179,6 +179,7 @@ function LevelTwo(){
             &nbsp;
             &nbsp;
             <DropBox key={"39"} divideVal={array[8]} withSteps={true} id="39"/>
+            &nbsp;
             &nbsp;
             <DropBox key={"40"} divideVal={array[9]} withSteps={true} id="40"/>
             </tr>, document.getElementById("stepFour"))
