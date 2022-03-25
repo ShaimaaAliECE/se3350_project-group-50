@@ -150,10 +150,6 @@ function DropBox(props){
     )    
 }
 
-function showBoxes(from, to){
-    for(let i = from; i <= to; i++){
-        $(`#box${i}`).show()
-    }
-}
+
 
 export default DropBox;
