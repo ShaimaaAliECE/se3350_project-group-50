@@ -83,7 +83,7 @@ function LevelTwo(){
             <p id="timer" style={{float:"left", padding:"50px"}}>00:00:00</p>
             <p id="lives" style={{float:"right", padding:"50px"}}>Lives: 3</p>
         </div>
-        <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
+        <table style={{marginLeft:"36%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>
             <DropBox key={"1"} divideVal={array[0]} withSteps={true} id="1"/>
@@ -112,7 +112,9 @@ function LevelTwo(){
             <DropBox key={"14"} divideVal={array[3]} withSteps={true} id="14"/>
             <DropBox key={"15"} divideVal={array[4]} withSteps={true} id="15"/>
             &nbsp;
+            &nbsp;
             &nbsp; 
+            &nbsp;  
             <DropBox key={"16"} divideVal={array[5]} withSteps={true} id="16"/>
             <DropBox key={"17"} divideVal={array[6]} withSteps={true} id="17"/>
             <DropBox key={"18"} divideVal={array[7]} withSteps={true} id="18"/>
@@ -131,6 +133,7 @@ function LevelTwo(){
             &nbsp;
             <DropBox key={"23"} divideVal={array[2]} withSteps={true} id="23"/> 
             &nbsp;
+            &nbsp; 
             &nbsp;         
             <DropBox key={"24"} divideVal={array[3]} withSteps={true} id="24"/>
             &nbsp;
@@ -138,6 +141,8 @@ function LevelTwo(){
             <DropBox key={"25"} divideVal={array[4]} withSteps={true} id="25"/>
             &nbsp;
             &nbsp;
+            &nbsp; 
+            &nbsp; 
             <DropBox key={"26"} divideVal={array[5]} withSteps={true} id="26"/>
             <DropBox key={"27"} divideVal={array[6]} withSteps={true} id="27"/>  
             &nbsp;
@@ -145,6 +150,7 @@ function LevelTwo(){
             <DropBox key={"28"} divideVal={array[7]} withSteps={true} id="28"/> 
             &nbsp;
             &nbsp;
+            &nbsp; 
             <DropBox key={"29"} divideVal={array[8]} withSteps={true} id="29"/>
             &nbsp;
             &nbsp;
@@ -159,16 +165,20 @@ function LevelTwo(){
             &nbsp;
             <DropBox key={"32"} divideVal={array[1]} withSteps={true} id="32"/>
             &nbsp;
+            &nbsp; 
             &nbsp;
             <DropBox key={"33"} divideVal={array[2]} withSteps={true} id="33"/> 
             &nbsp;
             &nbsp;
+            &nbsp; 
             <DropBox key={"34"} divideVal={array[3]} withSteps={true} id="34"/>
             &nbsp;
             &nbsp;
             <DropBox key={"35"} divideVal={array[4]} withSteps={true} id="35"/>
             &nbsp;
             &nbsp;
+            &nbsp; 
+            &nbsp; 
             <DropBox key={"36"} divideVal={array[5]} withSteps={true} id="36"/>
             &nbsp;
             &nbsp;
@@ -178,6 +188,7 @@ function LevelTwo(){
             <DropBox key={"38"} divideVal={array[7]} withSteps={true} id="38"/> 
             &nbsp;
             &nbsp;
+            &nbsp; 
             <DropBox key={"39"} divideVal={array[8]} withSteps={true} id="39"/>
             &nbsp;
             &nbsp;
@@ -195,13 +206,16 @@ function LevelTwo(){
             &nbsp;
             <DropBox key={"43"} divideVal={array[2]} withSteps={true} id="43"/> 
             &nbsp;
-            &nbsp;          
+            &nbsp;
+            &nbsp;           
             <DropBox key={"44"} divideVal={array[3]} withSteps={true} id="44"/>
             &nbsp;
             &nbsp;
             <DropBox key={"45"} divideVal={array[4]} withSteps={true} id="45"/>
             &nbsp;
             &nbsp;
+            &nbsp; 
+            &nbsp; 
             <DropBox key={"46"} divideVal={tempArray2[0]} withSteps={true} id="46"/>
             <DropBox key={"47"} divideVal={tempArray2[1]} withSteps={true} id="47"/>  
             &nbsp;
@@ -209,6 +223,7 @@ function LevelTwo(){
             <DropBox key={"48"} divideVal={array[7]} withSteps={true} id="48"/> 
             &nbsp;
             &nbsp;
+            &nbsp; 
             <DropBox key={"49"} divideVal={array[8]} withSteps={true} id="49"/>
             &nbsp;
             &nbsp;
@@ -231,6 +246,8 @@ function LevelTwo(){
             <DropBox key={"54"} divideVal={tempArray2[0]} withSteps={true} id="54"/>
             <DropBox key={"55"} divideVal={tempArray2[1]} withSteps={true} id="55"/>
             &nbsp;
+            &nbsp; 
+            &nbsp; 
             &nbsp; 
             <DropBox key={"56"} divideVal={tempArray3[0]} withSteps={true} id="56"/>
             <DropBox key={"57"} divideVal={tempArray3[1]} withSteps={true} id="57"/>

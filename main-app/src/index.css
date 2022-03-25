@@ -20,7 +20,7 @@ code {
 }
 
 #stepOne{
-  margin-left: 33.75%;
+  margin-left: 33.9%;
 }
 
 #stepTwo{
@@ -36,15 +36,15 @@ code {
 }
 
 #stepFive{
-  margin-left: 24%;
+  margin-left: 28%;
 }
 
 #stepSix{
-  margin-left: 29%;
+  margin-left: 31.5%;
 }
 
 #stepSeven{
-  margin-left: 31%;
+  margin-left: 34%;
 }
 
 #stepEight{
@@ -67,6 +67,7 @@ td{
 
 .dropBox{  
   border-style: solid;
+  border-width: 1px;
   padding:12px;
   text-align: center;
   min-width: 20px;
