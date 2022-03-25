@@ -41,18 +41,22 @@ function DropBox(props){
             } 
             if(getScore() == 40*scoreMultiplier){
                 $("#stepFive").show();
+                showBoxes(41,42);
                 document.getElementById("stepsTutorial").innerText = steps[4];
             }
             if(getScore() == 50*scoreMultiplier){
                 $("#stepSix").show();
+                showBoxes(51,53);
                 document.getElementById("stepsTutorial").innerText = steps[5];   
             }
             if(getScore() == 60*scoreMultiplier){
                 $("#stepSeven").show();
+                showBoxes(61,65);
                 document.getElementById("stepsTutorial").innerText = steps[6];   
             }
             if(getScore() == 70*scoreMultiplier){
                 $("#stepEight").show();
+                showBoxes(71,80);
                 document.getElementById("stepsTutorial").innerText = steps[7];   
             }
             if(getScore() == 80*scoreMultiplier){
@@ -82,30 +86,37 @@ function DropBox(props){
                 setScore(0)
                 $("#nextBtn").show();
             }
-            // //Audio feedback for correct goes here
-            // const audio = new Audio(ding)
-            // audio.play();
+            //Audio feedback for correct goes here
+            const audio = new Audio(ding)
+            audio.play();
 
             if(getScore() == 42){
-                document.getElementById("stepsTutorial").innerText = steps[9];   
+                document.getElementById("stepsTutorial").innerText = steps[9];
+                showBoxes(43,45); 
             }
             if(getScore() == 45){
-                document.getElementById("stepsTutorial").innerText = steps[10];   
+                document.getElementById("stepsTutorial").innerText = steps[10];  
+                showBoxes(46,47)
             }
             if(getScore() == 47){
-                document.getElementById("stepsTutorial").innerText = steps[9];   
+                document.getElementById("stepsTutorial").innerText = steps[9]; 
+                showBoxes(48,50);    
             }
             if(getScore() == 53){
-                document.getElementById("stepsTutorial").innerText = steps[11];   
+                document.getElementById("stepsTutorial").innerText = steps[11];  
+                showBoxes(54,55); 
             }
             if(getScore() == 55){
-                document.getElementById("stepsTutorial").innerText = steps[12];   
+                document.getElementById("stepsTutorial").innerText = steps[12];
+                showBoxes(56,58);    
             }
             if(getScore() == 58){
-                document.getElementById("stepsTutorial").innerText = steps[13];   
+                document.getElementById("stepsTutorial").innerText = steps[13]; 
+                showBoxes(59,60);      
             }
             if(getScore() == 65){
                 document.getElementById("stepsTutorial").innerText = steps[11];   
+                showBoxes(66,70);
             }
 
             setIsDone(true);
@@ -113,9 +124,9 @@ function DropBox(props){
             $(`#${props.id}`).show()
             $(`#${props.id}`).fadeOut(400)
 
-            // //Audio feedback for wrong goes here goes here 
-            // const audio = new Audio(sike)
-            // audio.play();
+            //Audio feedback for wrong goes here goes here 
+            const audio = new Audio(sike)
+            audio.play();
 
             document.getElementById("feedback").innerText = "Wrong"
             
@@ -132,11 +143,17 @@ function DropBox(props){
     }
 
     return(
-    <td draggable onDragStart={() => {if(number != 0)setDraggedItem(number)}} className="dropBox" onDragOver={(e)=> e.preventDefault()} onDragEnd={(e)=> e.preventDefault()} onDrop={() => {dropNumber()}}>
+    <td id={'box'+props.id} draggable onDragStart={() => {if(number != 0)setDraggedItem(number)}} className="dropBox" onDragOver={(e)=> e.preventDefault()} onDragEnd={(e)=> e.preventDefault()} onDrop={() => {dropNumber()}}>
         {(number == 0)?null:number}
         <div id={props.id} style={{color:"red"}}>X</div>
     </td>
     )    
+}
+
+function showBoxes(from, to){
+    for(let i = from; i <= to; i++){
+        $(`#box${i}`).show()
+    }
 }
 
 export default DropBox;
