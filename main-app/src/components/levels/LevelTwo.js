@@ -2,7 +2,7 @@ import makeArray from "../makeRandomArray";
 import Numbers from "../Numbers";
 import DropBox from "../DropBox";
 import { useState, useEffect } from "react";
-import { mergeSort, resetSteps, emailEntered, changeLevel, getLevel} from "../../App";
+import { mergeSort, resetSteps, emailEntered, changeLevel, getLevel, resetLives} from "../../App";
 import $ from "jquery";
 import ReactDOM from 'react-dom';
 import LevelThree from "./LevelThree";
@@ -62,6 +62,7 @@ function LevelTwo(){
           }
         })
       
+        setScore(0);
         ReactDOM.render(<LevelThree />, document.getElementById('root'));
     
       }
@@ -297,7 +298,7 @@ function LevelTwo(){
         </table>
         <p id="feedback"></p>
         <p id="stepsTutorial">Split the Array as Evenly as Possible by dragging the numbers given in the corresponding empty box</p>
-        <button id="nextBtn" onClick={()=> {resetSteps(); nextLevel()}}>Next Level</button>
+        <button id="nextBtn" onClick={()=> {resetSteps(); resetLives(); nextLevel(); }}>Next Level</button>
         </div>
     )
 }

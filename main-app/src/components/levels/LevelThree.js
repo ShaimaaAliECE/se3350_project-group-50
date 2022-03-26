@@ -4,7 +4,7 @@ import DropBox from "../DropBox";
 import FuilurePageMenu from "../FailurePageMenu";
 import ReactDOM from 'react-dom';
 import { useState, useEffect } from "react";
-import { mergeSort, resetSteps } from "../../App";
+import { mergeSort, resetLives, resetSteps } from "../../App";
 import $ from "jquery";
 import LevelFour from "./LevelFour";
 import { MergeSortMenu, emailEntered, changeLevel, getLevel } from "../../App";
@@ -289,7 +289,7 @@ function LevelThree(){
         </tbody>
         </table>
         <p id="feedback"></p>
-        <button id="nextBtn" onClick={()=> {resetSteps(); nextLevel()}}>Next Level</button>
+        <button id="nextBtn" onClick={()=> {resetSteps(); resetLives(); nextLevel(); }}>Next Level</button>
         </div>
     )
 }
