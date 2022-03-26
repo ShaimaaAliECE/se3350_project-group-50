@@ -85,7 +85,7 @@ function LevelTwo(){
             <p id="timer" style={{float:"left", padding:"50px"}}>00:00:00</p>
             <p id="lives" style={{float:"right", padding:"50px"}}>Lives: 3</p>
         </div>
-        <table style={{marginLeft:"36%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
+        <table style={{marginLeft:"35%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
             <tr>
             <DropBox key={"1"} divideVal={array[0]} withSteps={true} id="1"/>

@@ -90,12 +90,12 @@ function LevelFour(){
     return(
         <div>
         <div>
-            <p id="timer" style={{float:"left", padding:"50px"}}></p>
+            <p id="timer" style={{float:"left", padding:"50px"}}>00:00:00</p>
             <p id="lives" style={{float:"right", padding:"50px"}}>Lives: 3</p>
         </div>
-        <table style={{marginLeft:"32%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
+        <table style={{marginLeft:"25%"}}><tbody><tr><Numbers array={array}/></tr></tbody></table>
         <table><tbody>{ReactDOM.render(
-            <tr>
+            <tr style={{marginLeft:"25%"}}>
             <DropBox key={"1"} scoreMultiplier={2} divideVal={array[0]} id="1"/>
             <DropBox key={"2"} scoreMultiplier={2} divideVal={array[1]} id="2"/>
             <DropBox key={"3"} scoreMultiplier={2} divideVal={array[2]} id="3"/>

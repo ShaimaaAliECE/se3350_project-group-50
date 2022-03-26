@@ -94,8 +94,8 @@ function DropBox(props){
                 $("#nextBtn").show();
             }
             //Audio feedback for correct goes here
-            const audio = new Audio(ding)
-            audio.play();
+            //const audio = new Audio(ding)
+           // audio.play();
 
             if(getScore() == 42){
                 document.getElementById("stepsTutorial").innerText = steps[9];
@@ -132,8 +132,8 @@ function DropBox(props){
             $(`#${props.id}`).fadeOut(400)
 
             //Audio feedback for wrong goes here goes here 
-            const audio = new Audio(sike)
-            audio.play();
+            //const audio = new Audio(sike)
+            //audio.play();
 
             document.getElementById("feedback").innerText = "Wrong"
             
