@@ -13,7 +13,6 @@ app.use(express.urlencoded({
 }))
 
 app.get("/user-time", (req, res) => {
-    //let email = req.body.email;
     let conn = newConnection();
     conn.connect();
         conn.query(`SELECT * FROM Customer;`
@@ -111,19 +110,6 @@ app.post("/level-completion", (req, res) => {
                         }
                         })
                     }
-                    
-                    // switch(completedLevel){
-                    //     case 1:
-                    //         if(r.LevelOneTime === undefined || completedTime > r.LevelOneTime){
-                    //             conn.query(`UPDATE Customer SET LevelOneTime = ${completedTime}
-                    //                         WHERE emailAddress = "${email}" `)
-                    //         }
-                    // }
-
-                    // if(r.LevelThreeTime === undefined || completedTime > r.LevelThreeTime){
-                    //     conn.query(`UPDATE Customer SET LevelThree
-                    //                 `)
-                    // }
                     console.log(r.LevelReached)
                     console.log("COMPLETED TIME: " + completedTime)
 
