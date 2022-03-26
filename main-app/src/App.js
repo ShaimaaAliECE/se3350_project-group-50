@@ -145,7 +145,7 @@ function AdminLoginMenu(){
       <h1>Admin Login Page</h1>
       <form id="login-form" onSubmit={(event)=>{event.preventDefault(); onClick();}}>
         Enter UserName: <input name='userName' type={"text"}></input><br/>
-        Enter Password: <input name='password' type={"text"}></input>
+        Enter Password: <input name='password' type={"password"}></input>
         <input type={"submit"}></input>
       </form>
       <button onClick= {()=> {ReactDOM.render(<HomePage/>, document.getElementById('root'))}}>Back</button>
