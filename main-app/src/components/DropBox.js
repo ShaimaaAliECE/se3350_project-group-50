@@ -98,32 +98,32 @@ function DropBox(props){
             audio.play();
 
             if(getScore() == 42){
-                document.getElementById("stepsTutorial").innerText = steps[9];
                 showBoxes(43,45); 
+                document.getElementById("stepsTutorial").innerText = steps[9];
             }
             if(getScore() == 45){
+                showBoxes(46,47);
                 document.getElementById("stepsTutorial").innerText = steps[10];  
-                showBoxes(46,47)
             }
             if(getScore() == 47){
-                document.getElementById("stepsTutorial").innerText = steps[9]; 
-                showBoxes(48,50);    
+                showBoxes(48,50); 
+                document.getElementById("stepsTutorial").innerText = steps[9];    
             }
             if(getScore() == 53){
-                document.getElementById("stepsTutorial").innerText = steps[11];  
                 showBoxes(54,55); 
+                document.getElementById("stepsTutorial").innerText = steps[11];  
             }
             if(getScore() == 55){
-                document.getElementById("stepsTutorial").innerText = steps[12];
-                showBoxes(56,58);    
+                showBoxes(56,58); 
+                document.getElementById("stepsTutorial").innerText = steps[12];   
             }
             if(getScore() == 58){
-                document.getElementById("stepsTutorial").innerText = steps[13]; 
-                showBoxes(59,60);      
+                showBoxes(59,60); 
+                document.getElementById("stepsTutorial").innerText = steps[13];      
             }
             if(getScore() == 65){
-                document.getElementById("stepsTutorial").innerText = steps[11];   
                 showBoxes(66,70);
+                document.getElementById("stepsTutorial").innerText = steps[11];   
             }
 
             setIsDone(true);
