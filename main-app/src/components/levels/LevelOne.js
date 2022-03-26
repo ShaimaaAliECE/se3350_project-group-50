@@ -375,7 +375,8 @@ function LevelOne(){
     <div>
       
       <button onClick = {onClick} id='nextBtn' >Next Step</button>
-      <p class = "timer" id="timer">00:00:00</p>
+        <div class = "timer" id="timer">00:00:00</div>
+      <br/>
       <p id="feedback" style ={{textAlign: "center"}}>Merge Sort Algorithm</p> 
       <table style={{marginLeft:"35%"}}><tr><Numbers array={tree.value}/></tr></table>
           
