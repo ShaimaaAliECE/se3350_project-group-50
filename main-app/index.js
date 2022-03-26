@@ -12,6 +12,22 @@ app.use(express.urlencoded({
   extended: true
 }))
 
+app.get("/user-time", (req, res) => {
+    //let email = req.body.email;
+    let conn = newConnection();
+    conn.connect();
+        conn.query(`SELECT * FROM Customer;`
+        ,(err, rows, fields) =>{
+            if(err)
+                console.log(err)
+            else{
+                res.send(rows);
+            }
+            conn.end();
+        }
+    )
+})
+
 app.post('/user-login', (req, res) => {
 let email = req.body.email;
 let conn = newConnection();
