@@ -6,11 +6,17 @@ const bodyParser = require('body-parser');
 console.log("Server Started");
 
 const app = express()
+const path = require('path');
+app.use(express.static(path.resolve(__dirname, './build')));
 app.use(cookieParser("secret stuff"))
 app.use(bodyParser.json());
 app.use(express.urlencoded({
   extended: true
 }))
+
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './build', 'index.html'));
+});
 
 app.get("/user-time", (req, res) => {
     let conn = newConnection();
