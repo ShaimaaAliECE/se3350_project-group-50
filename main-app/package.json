@@ -23,8 +23,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node main-app/index.js",
+    "build": "cd main-app && npm install && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
