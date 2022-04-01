@@ -47,7 +47,7 @@ function LevelThree(){
     
         axios({
           method: "POST",
-          url: "/level-completion",
+          url: "http://localhost:3020/level-completion",
           data: {
             completedLevel: getLevel(),
             email: emailEntered,

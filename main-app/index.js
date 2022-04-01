@@ -8,6 +8,11 @@ console.log("Server Started");
 
 const app = express()
 
+let cors = require('cors');
+app.use(cors());
+
+
+
 app.use(cookieParser("secret stuff"))
 app.use(bodyParser.json());
 app.use(express.urlencoded({
@@ -122,4 +127,4 @@ app.post("/level-completion", (req, res) => {
     //console.log(completedLevel)
 })
 
-app.listen(3001);
+app.listen(3020);
