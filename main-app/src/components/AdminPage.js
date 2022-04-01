@@ -23,7 +23,7 @@ let LevelFiveTimeAvg = 0;
 
 axios({
   method: "GET",
-  url: "/user-time"
+  url: "http://localhost:3001/user-time"
 }).then(res => {
   userLevelTime = res;
   for(let i in res.data){
