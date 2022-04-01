@@ -350,7 +350,7 @@ function LevelOne(){
 
     axios({
       method: "POST",
-      url: "http://localhost:3001/level-completion",
+      url: "http://34.133.120.240:3001/level-completion",
       data: {
         completedLevel: getLevel(),
         email: emailEntered,
