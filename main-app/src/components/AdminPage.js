@@ -21,9 +21,11 @@ let LevelThreeTimeAvg = 0;
 let LevelFourTimeAvg = 0;
 let LevelFiveTimeAvg = 0;
 
+let ip = require('../axiosIP');
+
 axios({
   method: "GET",
-  url: "http://34.133.120.240:3001/user-time"
+  url: `${ip.getIP()}/user-time`
 }).then(res => {
   userLevelTime = res;
   for(let i in res.data){

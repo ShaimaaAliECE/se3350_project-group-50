@@ -48,13 +48,14 @@ function LevelTwo(){
         setTimerStart(true);
     }
 
+    let ip = require('../../axiosIP');
 
     function nextLevel(){
         //send to Backend code goes here
     
         axios({
           method: "POST",
-          url: "http://34.133.120.240:3001/level-completion",
+          url: `${ip.getIP()}/level-completion`,
           data: {
             completedLevel: getLevel(),
             email: emailEntered,

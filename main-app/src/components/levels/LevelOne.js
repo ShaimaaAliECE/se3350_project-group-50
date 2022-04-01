@@ -9,6 +9,7 @@ import {LevelTwo} from "./LevelTwo";
 import axios from "axios";
 import { MergeSortMenu } from "../../App";
 let Timer = require('../Timer');
+let ip = require('../../axiosIP');
 
 
 function mergeSort(array) {
@@ -350,7 +351,7 @@ function LevelOne(){
 
     axios({
       method: "POST",
-      url: "http://34.133.120.240:3001/level-completion",
+      url: `${ip.getIP()}/level-completion`,
       data: {
         completedLevel: getLevel(),
         email: emailEntered,

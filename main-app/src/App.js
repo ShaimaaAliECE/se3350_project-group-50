@@ -9,6 +9,7 @@ import AdminPage from './components/AdminPage';
 import { useImperativeHandle } from 'react';
 import axios from 'axios';
 import { stopTimer } from './components/Timer';
+let ip = require('./axiosIP');
 
 
 let draggedItem = null;
@@ -101,7 +102,7 @@ function UserLogin(){
     emailEntered = `${document.getElementById("email-field").value}`
     axios({
       method: "POST",
-      url: "http://34.133.120.240:3001/user-login",
+      url: `${ip.getIP()}/user-login`,
       data: {
         email: emailEntered
       }
