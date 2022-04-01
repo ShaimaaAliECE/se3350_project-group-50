@@ -1,7 +1,10 @@
-const ip = "http://34.133.120.240:3001"
+const ip = window.location.href;
 module.exports = {
     getIP : function() {
-        return ip; 
+        let iptemp = ip.split("/build")[0];
+        iptemp += ":3001/"
+        console.log(iptemp)
+        return iptemp; 
     },
 }
     

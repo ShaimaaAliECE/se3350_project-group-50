@@ -55,7 +55,7 @@ function LevelTwo(){
     
         axios({
           method: "POST",
-          url: `${ip.getIP()}/level-completion`,
+          url: `${ip.getIP()}level-completion`,
           data: {
             completedLevel: getLevel(),
             email: emailEntered,

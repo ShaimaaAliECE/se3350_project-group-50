@@ -102,7 +102,7 @@ function UserLogin(){
     emailEntered = `${document.getElementById("email-field").value}`
     axios({
       method: "POST",
-      url: `${ip.getIP()}/user-login`,
+      url: `${ip.getIP()}user-login`,
       data: {
         email: emailEntered
       }
