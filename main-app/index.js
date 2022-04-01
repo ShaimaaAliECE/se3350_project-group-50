@@ -8,8 +8,8 @@ console.log("Server Started");
 
 const app = express()
 
-let cors = require('cors');
-app.use(cors());
+// let cors = require('cors');
+// app.use(cors());
 
 
 app.use(cookieParser("secret stuff"))
