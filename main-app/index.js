@@ -3,6 +3,11 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
+var cors = require('cors')
+
+app.use(cors()) // Use this after the variable declaration
+
+
 console.log("Server Started");
 
 const app = express()
@@ -121,4 +126,4 @@ app.post("/level-completion", (req, res) => {
     //console.log(completedLevel)
 })
 
-app.listen(3001);
+app.listen(3000);
