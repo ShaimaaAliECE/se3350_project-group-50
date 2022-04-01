@@ -12,7 +12,6 @@ let cors = require('cors');
 app.use(cors());
 
 
-
 app.use(cookieParser("secret stuff"))
 app.use(bodyParser.json());
 app.use(express.urlencoded({
@@ -21,6 +20,7 @@ app.use(express.urlencoded({
 
 app.get("/user-time", (req, res) => {
     let conn = newConnection();
+    res.header("Access-Control-Allow-Origin: *");
     conn.connect();
         conn.query(`SELECT * FROM Customer;`
         ,(err, rows, fields) =>{
